@@ -12,14 +12,14 @@ const CSP = [
   "base-uri 'none'",
   "form-action 'self'",
   "frame-ancestors 'none'",
-  'upgrade-insecure-requests',
+  ...(config.prod ? ['upgrade-insecure-requests'] : []), // yerelde (http://localhost) tarayici alt kaynaklari https'e zorlamasin
 ].join('; ');
 
 function securityHeaders(req, res, next) {
   res.removeHeader('X-Powered-By');
   res.set({
     'Content-Security-Policy': CSP,
-    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
+    ...(config.prod ? { 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload' } : {}),
     'X-Frame-Options': 'DENY',
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'strict-origin-when-cross-origin',

@@ -1,3 +1,24 @@
 User-agent: *
 Allow: /
+# Private or account-related pages
+Disallow: /hyr
+Disallow: /regjistrohu
+Disallow: /dil
+Disallow: /verifiko
+Disallow: /ridergo
+Disallow: /harrova
+Disallow: /rivendos
+Disallow: /profili
+Disallow: /shkruaj
+Disallow: /healthz
+Disallow: /en/login
+Disallow: /en/register
+Disallow: /en/logout
+Disallow: /en/verify
+Disallow: /en/resend
+Disallow: /en/forgot
+Disallow: /en/reset
+Disallow: /en/profile
+Disallow: /en/write
+
 Sitemap: https://ankese.com/sitemap.xml

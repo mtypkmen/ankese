@@ -32,12 +32,21 @@ cp .env.example .env                  # fill in the values
 set -a; . ./migrate.env; set +a       # DB_* for the migrate user
 node server/scripts/migrate.js
 node server/scripts/create-admin.js   # ADMIN_EMAIL / ADMIN_NAME, password prompted
-npm start
+npm run dev    # local; in production run it as a service, see docs/DEPLOYMENT.md
 ```
 
 Put nginx in front (see `deploy/nginx/` for a working example) and serve `public/` statically. The admin panel
 is served from the host in `PANEL_ORIGIN`; a staff account must complete TOTP setup at first login.
 In development set `MAIL_MODE=log` to print emails to the console.
+
+## Documentation
+
+- [Deployment guide](docs/DEPLOYMENT.md): self-hosting step by step
+- [Architecture](docs/ARCHITECTURE.md): request flow, sessions, data model
+- [Moderation pipeline](docs/MODERATION.md): how complaints are screened
+- [Contributing](CONTRIBUTING.md), [Security policy](SECURITY.md), [Code of conduct](CODE_OF_CONDUCT.md), [Changelog](CHANGELOG.md)
+
+Run the tests with `npm test`.
 
 ## Layout
 
@@ -45,6 +54,8 @@ In development set `MAIL_MODE=log` to print emails to the console.
 server/        Express app (routes, lib, panel, scripts)
 public/        static assets and fallback pages (served by nginx)
 migrations/    SQL migrations (applied in order by server/scripts/migrate.js)
+tests/         unit tests (node --test, no database needed)
+docs/          architecture, deployment and moderation docs
 deploy/        example nginx / systemd / backup configuration
 ```
 

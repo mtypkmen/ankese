@@ -5,9 +5,7 @@ const { sha256 } = require('./crypto');
 
 // ---------- sozluk (DB'den, 60 sn onbellek) ----------
 let cache = { at: 0, exact: new Map(), stems: [], phrases: [] };
-async function loadBlocklist(force = false) {
-  if (!force && Date.now() - cache.at < 60000) return cache;
-  const [rows] = await pool.query('SELECT term, kind, severity, mode FROM blocklist');
+function compile(rows) {
   const exact = new Map(), stems = [], phrases = [];
   for (const r of rows) {
     const e = { term: r.term, kind: r.kind, sev: r.severity };
@@ -15,9 +13,16 @@ async function loadBlocklist(force = false) {
     else if (r.mode === 'stem') stems.push({ ...e, key: collapse(r.term) });
     else exact.set(collapse(r.term), e);
   }
-  cache = { at: Date.now(), exact, stems, phrases };
+  return { exact, stems, phrases };
+}
+async function loadBlocklist(force = false) {
+  if (!force && Date.now() - cache.at < 60000) return cache;
+  const [rows] = await pool.query('SELECT term, kind, severity, mode FROM blocklist');
+  cache = { at: Date.now(), ...compile(rows) };
   return cache;
 }
+// Testler icin: veritabani olmadan sozluk ver (onbellek bir sure gecerli sayilir)
+function setBlocklistForTests(rows) { cache = { at: Date.now() + 3600000, ...compile(rows) }; }
 const invalidate = () => { cache.at = 0; };
 
 // ---------- normalizasyon ----------
@@ -204,4 +209,4 @@ function mask(text, flags, field, kinds) {
   return out;
 }
 
-module.exports = { screenText, contextFlags, score, level, mask, hashBody, invalidate, loadBlocklist };
+module.exports = { screenText, contextFlags, score, level, mask, hashBody, invalidate, loadBlocklist, setBlocklistForTests };

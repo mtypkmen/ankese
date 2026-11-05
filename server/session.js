@@ -95,7 +95,7 @@ function checkPost(req) {
   if (!src) return 'csrf';
   try {
     // Host zaten hostGuard ile izinli listeden dogrulandi; Origin ayni host olmali
-    if (new URL(src).host !== req.headers.host || new URL(src).protocol !== 'https:') return 'csrf';
+    if (new URL(src).host !== req.headers.host || (config.prod && new URL(src).protocol !== 'https:')) return 'csrf';
   } catch { return 'csrf'; }
   const c = (req.cookies || {})[CSRF];
   if (!c || !safeEq(String((req.body || {})._csrf || ''), hmac('csrf:' + c))) return 'csrf';
