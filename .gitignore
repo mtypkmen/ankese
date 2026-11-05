@@ -1,0 +1,8 @@
+.env
+.env.*
+node_modules/
+*.log
+storage/
+
+# dahili notlar (acik kaynak repoya girmez)
+docs/internal/

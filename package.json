@@ -1,0 +1,23 @@
+{
+  "name": "ankese",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ankese.com - tuketici sikayet platformu (AL/XK)",
+  "license": "AGPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtypkmen/ankese.git"
+  },
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "migrate": "node server/scripts/migrate.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
+  }
+}

@@ -1,0 +1,36 @@
+[Unit]
+Description=Ankese.com (Express)
+After=network.target mysql.service
+Wants=mysql.service
+
+[Service]
+Type=simple
+User=ankese
+Group=ankese
+WorkingDirectory=/var/www/ankese
+EnvironmentFile=/var/www/ankese/.env
+ExecStart=/usr/bin/node --max-old-space-size=192 server/index.js
+Restart=on-failure
+RestartSec=3
+MemoryMax=320M
+TasksMax=128
+
+# sandbox
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+RestrictNamespaces=true
+LockPersonality=true
+SystemCallFilter=@system-service
+SystemCallArchitectures=native
+CapabilityBoundingSet=
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
