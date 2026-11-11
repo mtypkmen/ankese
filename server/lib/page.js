@@ -3,10 +3,10 @@ const PATHS = require('./paths');
 const { layout } = require('./html');
 
 // Ortak sayfa yaniti. otherPath: dil degistirici hedefi
-function page(req, res, loc, { status = 200, title, body, otherPath, robots, canonical, description, alternates }) {
+function page(req, res, loc, { status = 200, title, body, otherPath, robots, canonical, description, alternates, head }) {
   const other = loc === 'sq' ? 'en' : 'sq';
   res.status(status).set('Cache-Control', 'private, no-cache').type('html').send(
-    layout({ loc, title, body, user: req.user, csrf: req.csrfToken, otherPath: otherPath || PATHS[other].home, robots, canonical, description, alternates }));
+    layout({ loc, title, body, user: req.user, csrf: req.csrfToken, otherPath: otherPath || PATHS[other].home, robots, canonical, description, alternates, head }));
 }
 
 const slugify = (s) => String(s).normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'x';

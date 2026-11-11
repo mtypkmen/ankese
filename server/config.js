@@ -12,6 +12,8 @@ const config = {
   resendKey: e.RESEND_API_KEY || '',
   // E-posta gercekten gidiyorsa true. Degilse giris/kayit baglantilari gizlenir (dogrulama maili ulasmaz)
   mailLive: e.MAIL_MODE !== 'log' && !!e.RESEND_API_KEY,
+  // Giris/kayit/ankese yaz baglantilari: uretimde yalnizca mail canliysa, gelistirmede her zaman
+  get showAuth() { return this.mailLive || !this.prod; },
   db: {
     host: e.DB_HOST || '127.0.0.1',
     port: Number(e.DB_PORT) || 3306,

@@ -36,6 +36,13 @@ app.get('/healthz', async (req, res) => {
   }
 });
 
+// Yalnizca gelistirme: uretimde public/ nginx tarafindan sunulur
+if (!config.prod) {
+  app.use('/assets', express.static(require('path').join(__dirname, '..', 'public', 'assets')));
+  app.get('/preview/', (req, res) => res.redirect('/preview/hero-d.html'));
+  app.use('/preview', express.static(require('path').join(__dirname, '..', 'public', 'preview')));
+}
+
 app.use(session.load);
 const site = (r) => (req, res, next) => (req.isPanel ? next() : r(req, res, next));
 app.use((req, res, next) => (req.isPanel ? panelRouter(req, res, next) : next()));

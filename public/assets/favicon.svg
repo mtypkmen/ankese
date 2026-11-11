@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#1f6feb"/><path d="M32 12 14 52h8l3.5-9h13L42 52h8L32 12Zm0 15 4.5 11h-9L32 27Z" fill="#ffffff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Ankese">
+<path fill="#2ED573" d="M5 58h14L37 7H23Z"/>
+<path fill="#10B981" d="M27 7h14l18 51H45Z"/>
+<path fill="#6C5CE7" d="M19 37h33l-3.2 9H15.8Z"/>
+</svg>

@@ -21,7 +21,7 @@ async function build() {
   const out = [], S = PATHS.sq, E = PATHS.en;
   out.push(entry(S.home, E.home));
   for (const k of ['terms', 'privacy', 'rules', 'cookies', 'contact']) out.push(entry(S[k], E[k]));
-  const [cats] = await pool.query('SELECT slug FROM categories ORDER BY sort');
+  const [cats] = await pool.query("SELECT slug FROM categories WHERE id IN (SELECT category_id FROM companies WHERE status = 'active') ORDER BY sort");
   for (const c of cats) out.push(entry(`${S.category}/${c.slug}`, `${E.category}/${c.slug}`));
   const [cities] = await pool.query("SELECT DISTINCT ci.slug FROM cities ci JOIN companies c ON c.city_id = ci.id AND c.status = 'active'");
   for (const c of cities) out.push(entry(`${S.city}/${c.slug}`, `${E.city}/${c.slug}`));

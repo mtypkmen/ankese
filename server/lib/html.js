@@ -2,6 +2,7 @@
 const PATHS = require('./paths');
 const S = require('./i18n');
 const config = require('../config');
+const footer = require('./footer');
 
 const MAP = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;', '`': '&#96;' };
 const esc = (v) => String(v ?? '').replace(/[&<>"'`]/g, (c) => MAP[c]);
@@ -32,35 +33,45 @@ function select(id, label, options, { value = '', required = true, placeholder =
   return `<div class="field"><label for="${id}">${esc(label)}</label><select id="${id}" name="${id}"${required ? ' required' : ''}>${html}</select></div>`;
 }
 
-const FOOT = { sq: { terms: 'Kushtet', privacy: 'Privatësia', rules: 'Rregullat', cookies: 'Cookies', contact: 'Kontakt', source: 'Kodi burimor' }, en: { terms: 'Terms', privacy: 'Privacy', rules: 'Rules', cookies: 'Cookies', contact: 'Contact', source: 'Source code' } };
+const NAV = { sq: { complaints: 'Ankesat', top: 'Top 20', best: 'Më të mirët e muajit', write: 'Shkruaj ankesë' }, en: { complaints: 'Complaints', top: 'Top 20', best: 'Best of Month', write: 'Write a complaint' } };
 
-function layout({ loc, title, body, user, csrf, otherPath, robots = 'noindex,nofollow', canonical = '', description = '', alternates = [] }) {
+// head: sayfaya ozel ek <link>/<script> etiketleri (ana sayfa home.css + home.js)
+function layout({ loc, title, body, user, csrf, otherPath, robots = 'noindex,nofollow', canonical = '', description = '', alternates = [], head = '' }) {
   const t = S[loc], p = PATHS[loc];
   const userNav = user
     ? `<a class="navlink" href="${p.profile}">${esc(t.profile)}</a>` +
       `<form method="post" action="${p.logout}" class="inline"><input type="hidden" name="_csrf" value="${esc(csrf)}"><button class="linkbtn" type="submit">${esc(t.logout)}</button></form>`
-    : config.mailLive ? `<a class="navlink" href="${p.login}">${esc(t.login)}</a><a class="btn" href="${p.register}">${esc(t.register)}</a>` : '';
-  const f = FOOT[loc];
-  const footNav = ['terms', 'privacy', 'rules', 'cookies', 'contact'].map((k) => `<a href="${p[k]}">${esc(f[k])}</a>`).join('') +
-    `<a href="https://github.com/mtypkmen/ankese" rel="noopener">${esc(f.source)}</a>`;
+    : config.showAuth ? `<span class="acc"><a href="${p.login}">${esc(t.login)}</a><i aria-hidden="true">/</i><a href="${p.register}">${esc(t.register)}</a></span><a class="btn" href="${p.write}">${esc(NAV[loc].write)}</a>` : '';
+  const nav = NAV[loc];
+  const menu = `<nav class="menu" aria-label="Menu"><a href="${p.complaints}">${esc(nav.complaints)}</a><a href="${p.top}">${esc(nav.top)}</a><a href="${p.best}">${esc(nav.best)}</a></nav>`;
+  const isHome = body.startsWith('<div class="home">');
+  // AL / EN: aktif dil koyu, digeri gri baglanti
+  const langItem = (code, label) => (code === loc ? `<b aria-current="true">${label}</b>` : `<a href="${esc(otherPath)}" hreflang="${code}" lang="${code}">${label}</a>`);
+  const langSwitch = `<span class="lng">${langItem('sq', 'AL')}<i aria-hidden="true">/</i>${langItem('en', 'EN')}</span>`;
   const alt = alternates.map((a) => `\n<link rel="alternate" hreflang="${esc(a.lang)}" href="${esc(a.href)}">`).join('');
+  const d = description ? `\n<meta property="og:description" content="${esc(description)}">\n<meta name="twitter:description" content="${esc(description)}">` : '';
+  const og = `\n<meta property="og:type" content="website">\n<meta property="og:site_name" content="Ankese.com">\n<meta property="og:locale" content="${loc === 'sq' ? 'sq_AL' : 'en_US'}">\n<meta property="og:title" content="${esc(title)}">\n<meta property="og:image" content="${config.siteOrigin}/assets/favicon-512.png">${canonical ? `\n<meta property="og:url" content="${esc(canonical)}">` : ''}${d}\n<meta name="twitter:card" content="summary">`;
   return `<!doctype html>
 <html lang="${t.htmlLang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="${robots}">
-<title>${esc(title)} – Ankese.com</title>${description ? `\n<meta name="description" content="${esc(description)}">` : ''}${canonical ? `\n<link rel="canonical" href="${esc(canonical)}">` : ''}${alt}
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="stylesheet" href="/assets/css/site.css?v=9">
+<title>${esc(title)} – Ankese.com</title>${description ? `\n<meta name="description" content="${esc(description)}">` : ''}${canonical ? `\n<link rel="canonical" href="${esc(canonical)}">` : ''}${alt}${og}
+<link rel="icon" href="/assets/favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3">
+<link rel="stylesheet" href="/assets/css/site.css?v=22">
+<script src="/assets/js/header.js?v=3" defer></script>${head}
 </head>
 <body>
-<header class="bar"><div class="w row">
-<a class="logo" href="${p.home}"><i>A</i>Ankese<em>.com</em></a>
-<div class="right"><span class="lang"><b>${loc.toUpperCase()}</b><a href="${esc(otherPath)}">${t.other}</a></span>${userNav}</div>
+<header class="bar${isHome ? ' bar-home' : ''}">${isHome ? '<span class="bar-tint" aria-hidden="true"></span>' : ''}<div class="w row">
+<a class="logo" href="${p.home}"><img src="/assets/img/logo-ankese-128.png" width="139" height="128" alt=""><span>Ankese<em>.com</em></span></a>
+${menu}
+<div class="right">${userNav}${langSwitch}</div>
 </div></header>
-${body.startsWith('<div class="home">') ? `<main>${body}</main>` : `<main class="w ${body.startsWith('<div class="pub">') ? 'pubmain' : 'auth'}">${body}</main>`}
-<footer class="foot"><div class="w row"><span>© ${new Date().getUTCFullYear()} Ankese.com · ${esc(t.footer)}</span><nav class="fnav">${footNav}<a href="mailto:info@ankese.com">info@ankese.com</a></nav></div></footer>
+${isHome ? `<main>${body}</main>` : `<main class="w ${body.startsWith('<div class="pub">') ? 'pubmain' : 'auth'}">${body}</main>`}
+${footer.render(loc, otherPath)}
 </body>
 </html>`;
 }

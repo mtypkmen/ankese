@@ -35,7 +35,9 @@ function layout({ user, csrf, title, body, active = '', flash = '' }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>${esc(title)} – Ankese Panel</title>
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" href="/assets/favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3">
 <link rel="stylesheet" href="/assets/panel.css?v=1">
 </head>
 <body class="${user ? '' : 'nologin'}">

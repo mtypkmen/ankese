@@ -129,7 +129,65 @@ function mount(loc) {
         body: wide(`<h1>${esc(t.search)}</h1><form method="get" action="${p.search}" class="searchrow"><input type="search" name="q" value="${esc(q)}" placeholder="${esc(t.search_ph)}" maxlength="80" aria-label="${esc(t.search_ph)}" required><button class="btn" type="submit">${esc(t.search)}</button></form>${list}`) });
     } catch (e) { next(e); }
   });
+
+  // ---------- header menusu: tum ankesalar / top 20 / ayin en iyileri ----------
+  const L = LISTS[loc];
+  const rankList = (rows, unit) => `<ol class="plist rankl">${rows.map((r, i) => `<li><span><b><span class="rk">${i + 1}</span><a href="${p.company}/${esc(r.slug)}">${esc(r.name)}</a></b><small>${esc(r.city || '')}${r.city ? ', ' : ''}${esc(t.countries[r.country_code])} · ${r.n} ${esc(unit)}</small></span></li>`).join('')}</ol>`;
+
+  router.get(p.complaints, async (req, res, next) => {
+    try {
+      const pg = pageNo(req.query.page);
+      const [rows] = await pool.query(
+        `SELECT x.id, x.title, x.body, x.status, DATE_FORMAT(x.published_at, '%d.%m.%Y') AS pub, c.slug, c.name AS cname, u.display_name AS author
+           FROM complaints x JOIN companies c ON c.id = x.company_id JOIN users u ON u.id = x.user_id
+          WHERE x.status IN ('published','resolved') AND c.status = 'active'
+          ORDER BY x.published_at DESC, x.id DESC LIMIT ? OFFSET ?`, [PER + 1, (pg - 1) * PER]);
+      const hasNext = rows.length > PER;
+      const list = rows.length ? rows.slice(0, PER).map((x) => `<article class="cmp"><h3><a href="${p.company}/${esc(x.slug)}/${x.id}-${slugify(x.title)}">${esc(x.title)}</a></h3><p class="meta"><a href="${p.company}/${esc(x.slug)}">${esc(x.cname)}</a> · ${esc(publicName(x.author))} · ${esc(x.pub)}${x.status === 'resolved' ? ` · <span class="tag ok">${esc(t.st_resolved)}</span>` : ''}</p><p>${esc(excerpt(x.body, 180))}</p></article>`).join('') : `<p>${esc(L.empty)}</p>`;
+      out(req, res, { title: L.allH, otherPath: o.complaints, canonical: `${config.siteOrigin}${p.complaints}`, robots: rows.length ? 'index,follow' : 'noindex,follow', description: L.allP,
+        body: wide(`<h1>${esc(L.allH)}</h1><p class="lead2">${esc(L.allP)}</p>${list}${pager(p.complaints, pg, hasNext, t)}`) });
+    } catch (e) { next(e); }
+  });
+
+  router.get(p.top, async (req, res, next) => {
+    try {
+      const [rows] = await pool.query(`${COMPANY_SQL} WHERE c.status = 'active' HAVING n > 0 ORDER BY n DESC, c.name LIMIT 20`);
+      out(req, res, { title: L.topH, otherPath: o.top, canonical: `${config.siteOrigin}${p.top}`, robots: rows.length ? 'index,follow' : 'noindex,follow', description: L.topP,
+        body: wide(`<h1>${esc(L.topH)}</h1><p class="lead2">${esc(L.topP)}</p>${rows.length ? rankList(rows, t.complaints.toLowerCase()) : `<p>${esc(L.empty)}</p>`}`) });
+    } catch (e) { next(e); }
+  });
+
+  router.get(p.best, async (req, res, next) => {
+    try {
+      const now = new Date();
+      const from = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1));
+      const to = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + 1, 1));
+      const [rows] = await pool.query(
+        `SELECT c.slug, c.name, c.country_code, ci.name AS city, COUNT(*) AS n
+           FROM complaints x JOIN companies c ON c.id = x.company_id LEFT JOIN cities ci ON ci.id = c.city_id
+          WHERE x.status = 'resolved' AND c.status = 'active' AND x.resolved_at >= ? AND x.resolved_at < ?
+          GROUP BY c.id ORDER BY n DESC, c.name LIMIT 20`, [from, to]);
+      const month = `${L.months[now.getUTCMonth()]} ${now.getUTCFullYear()}`;
+      out(req, res, { title: L.bestH, otherPath: o.best, canonical: `${config.siteOrigin}${p.best}`, robots: rows.length ? 'index,follow' : 'noindex,follow', description: L.bestP(month),
+        body: wide(`<h1>${esc(L.bestH)}</h1><p class="lead2">${esc(L.bestP(month))}</p>${rows.length ? rankList(rows, L.resolvedN) : `<p>${esc(L.bestEmpty)}</p>`}`) });
+    } catch (e) { next(e); }
+  });
 }
+
+const LISTS = {
+  sq: {
+    allH: 'Të gjitha ankesat', allP: 'Ankesat e publikuara, nga më e reja te më e vjetra.', empty: 'Ende nuk ka ankesa të publikuara.',
+    topH: 'Top 20', topP: '20 kompanitë me më shumë ankesa të publikuara.',
+    bestH: 'Më të mirët e muajit', bestP: (m) => `Kompanitë që zgjidhën më shumë ankesa në ${m}.`, bestEmpty: 'Këtë muaj ende nuk është zgjidhur asnjë ankesë.', resolvedN: 'të zgjidhura',
+    months: ['janar', 'shkurt', 'mars', 'prill', 'maj', 'qershor', 'korrik', 'gusht', 'shtator', 'tetor', 'nëntor', 'dhjetor'],
+  },
+  en: {
+    allH: 'All complaints', allP: 'Published complaints, newest first.', empty: 'No complaints published yet.',
+    topH: 'Top 20', topP: 'The 20 companies with the most published complaints.',
+    bestH: 'Best of Month', bestP: (m) => `Companies that resolved the most complaints in ${m}.`, bestEmpty: 'No complaints have been resolved this month yet.', resolvedN: 'resolved',
+    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  },
+};
 
 mount('sq');
 mount('en');
