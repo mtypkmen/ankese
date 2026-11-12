@@ -41,9 +41,12 @@ const C = {
 const AUD = { members: ['removal', 'data', 'other'], business: ['reply', 'removal', 'other'] };
 const aud = (v) => (v === 'business' ? 'business' : 'members');
 const msg = (c, t) => `<p class="msg ${c}" role="status">${esc(t)}</p>`;
+const TOC = { sq: 'Në këtë faqe', en: 'On this page' };
+const shell = (loc, { title, intro, meta, toc = [], inner, cls = '' }) => `<div class="lp ${cls}"><header class="lhero"><div class="w"><nav class="crumbs" aria-label="breadcrumb"><a href="${PATHS[loc].home}">Ankese.com</a> / <span>${esc(title)}</span></nav><h1>${esc(title)}</h1>${intro ? `<p class="lintro">${intro}</p>` : ''}${meta ? `<p class="lmeta">${esc(meta)}</p>` : ''}</div></header>
+<div class="w lbody${toc.length ? ' hastoc' : ''}">${toc.length ? `<aside class="ltoc"><b>${TOC[loc]}</b>${toc.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join('')}</aside>` : ''}<div class="lmain">${inner}</div></div></div>`;
 const prose = (d, loc) => {
-  const sec = d.sections.map((s) => `<h2>${esc(s.h)}</h2>${s.p.map((x) => (typeof x === 'string' ? `<p>${esc(x)}</p>` : `<ul>${x.ul.map((li) => `<li>${esc(li)}</li>`).join('')}</ul>`)).join('')}`).join('');
-  return `<div class="pub prose"><h1>${esc(d.title)}</h1><p class="meta">${esc(L.UPDATED[loc])}</p>${d.intro ? `<p class="lead2">${esc(d.intro)}</p>` : ''}${sec}</div>`;
+  const sec = d.sections.map((s, i) => `<section class="lcard" id="s${i + 1}"><h2>${esc(s.h)}</h2>${s.p.map((x) => (typeof x === 'string' ? `<p>${esc(x)}</p>` : `<ul>${x.ul.map((li) => `<li>${esc(li)}</li>`).join('')}</ul>`)).join('')}</section>`).join('');
+  return shell(loc, { title: d.title, intro: d.intro ? esc(d.intro) : '', meta: L.UPDATED[loc], toc: d.sections.map((s, i) => ['s' + (i + 1), s.h]), inner: sec });
 };
 
 function mount(loc) {
@@ -59,13 +62,12 @@ function mount(loc) {
 
   router.get(p.faq, (req, res) => {
     const d = FAQ[loc];
-    const body = `<div class="pub prose faq"><h1>${esc(d.title)}</h1><p class="lead2">${esc(d.intro)}</p>${d.groups.map((g) => `<h2>${esc(g.h)}</h2>${g.q.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}`).join('')}<p class="more"><a href="${p.contact}">${esc(c.title)} →</a></p></div>`;
+    const body = shell(loc, { title: d.title, intro: esc(d.intro), cls: 'faq', toc: d.groups.map((g, i) => ['g' + (i + 1), g.h]), inner: d.groups.map((g, i) => `<section class="lcard" id="g${i + 1}"><h2>${esc(g.h)}</h2>${g.q.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</section>`).join('') + `<p class="more"><a href="${p.contact}">${esc(c.title)} →</a></p>` });
     page(req, res, loc, { title: d.title, body, otherPath: o.faq, robots: 'index,follow', canonical: `${config.siteOrigin}${p.faq}`, description: d.intro,
       alternates: [{ lang: 'sq', href: `${config.siteOrigin}${PATHS.sq.faq}` }, { lang: 'en', href: `${config.siteOrigin}${PATHS.en.faq}` }] });
   });
 
-  const form = (req, v = {}, m = '', a = 'members') => `<div class="pub"><h1>${esc(c.title)}</h1><p>${esc(c.intro)} <a href="mailto:info@ankese.com">info@ankese.com</a>.</p>
-<nav class="ctabs">${Object.keys(AUD).map((k) => `<a href="${p.contact}${k === 'business' ? '?for=business' : ''}"${k === a ? ' class="on" aria-current="page"' : ''}>${esc(c.tabs[k])}</a>`).join('')}</nav>${m}
+  const form = (req, v = {}, m = '', a = 'members') => shell(loc, { title: c.title, intro: `${esc(c.intro)} <a href="mailto:info@ankese.com">info@ankese.com</a>.`, cls: 'contact', inner: `<div class="lcard"><nav class="ctabs">${Object.keys(AUD).map((k) => `<a href="${p.contact}${k === 'business' ? '?for=business' : ''}"${k === a ? ' class="on" aria-current="page"' : ''}>${esc(c.tabs[k])}</a>`).join('')}</nav>${m}
 <form method="post" action="${p.contact}" class="form" novalidate>${csrfInput(req)}<input type="hidden" name="aud" value="${a}">
 <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
 ${select('type', c.type, AUD[a].map((k) => ({ value: k, label: c.types[k] })), { value: v.type, placeholder: '—' })}
@@ -73,7 +75,7 @@ ${field('name', c.name, { value: v.name, maxlength: 100, autocomplete: 'name' })
 ${field('email', c.email, { type: 'email', value: v.email, autocomplete: 'email' })}
 ${field('url', c.url, { value: v.url, required: false, maxlength: 300 })}
 ${textarea('message', c.message, { value: v.message, hint: c.hint, rows: 7, maxlength: 3000 })}
-<button class="btn block" type="submit">${esc(c.send)}</button></form></div>`;
+<button class="btn block" type="submit">${esc(c.send)}</button></form></div>` });
 
   router.get(p.contact, (req, res) => {
     page(req, res, loc, { title: c.title, body: form(req, {}, '', aud(req.query.for)), otherPath: o.contact, robots: 'index,follow', canonical: `${config.siteOrigin}${p.contact}`,
