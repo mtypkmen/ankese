@@ -404,3 +404,12 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 @media(max-width:860px){.lbody.hastoc{grid-template-columns:1fr}.ltoc{position:static;flex-direction:row;flex-wrap:wrap;gap:6px}.ltoc b{width:100%}.ltoc a{background:var(--lav-l)}.lcard{padding:24px 22px;border-radius:24px}}
 .lp.contact .lmain{margin:0}
 @media(max-width:860px){.ltoc{position:sticky;top:84px;z-index:4;flex-direction:row;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding:10px 12px;border-radius:18px;margin:0 -4px;-webkit-overflow-scrolling:touch}.ltoc b{display:none}.ltoc a{flex:none;white-space:nowrap}.lcard{scroll-margin-top:168px}}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cbox{display:flex;flex-direction:column;align-items:flex-start;gap:0}
+.cbox .btn{margin-top:auto;font-size:16px;padding:12px 26px}
+.cbox p:not(.cval){margin-bottom:22px}
+.cval{margin:12px 0 0;font-size:15px;font-weight:600;color:var(--mute)}
+#business .btn{background:#25a55f}#business .btn:hover{background:#1e8c50}
+.lp.contact .lcard{max-width:none}
+@media(max-width:700px){.cgrid{grid-template-columns:1fr}}
+.lcard a.btn{color:#fff}.lp.contact .lmain{max-width:none;width:100%}
