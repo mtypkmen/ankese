@@ -1,0 +1,3162 @@
+[
+ {
+  "name": "Adidas Kosovë",
+  "slug": "adidas-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://adidas.com",
+  "logo": "adidas-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fadidas.com&size=128"
+ },
+ {
+  "name": "Adidas Shqipëri",
+  "slug": "adidas-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://adidas.com",
+  "logo": "adidas-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fadidas.com&size=128"
+ },
+ {
+  "name": "Adria Ferries",
+  "slug": "adria-ferries",
+  "country": "AL",
+  "city": "durres",
+  "category": "trans",
+  "website": "https://www.adriaferries.com",
+  "logo": "adria-ferries.png",
+  "logoSource": "https://www.adriaferries.com/templates/yoo_avenue/apple_touch_icon.png"
+ },
+ {
+  "name": "Aegean Airlines",
+  "slug": "aegean-airlines",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://aegeanair.com",
+  "logo": "aegean-airlines.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Faegeanair.com&size=128"
+ },
+ {
+  "name": "Aeroporti Ndërkombëtar i Tiranës",
+  "slug": "aeroporti-nderkombetar-i-tiranes",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://tirana-airport.com",
+  "logo": "aeroporti-nderkombetar-i-tiranes.png",
+  "logoSource": "https://tirana-airport.com/apple-touch-icon.png"
+ },
+ {
+  "name": "Air Albania",
+  "slug": "air-albania",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://airalbania.com.al",
+  "logo": "air-albania.png",
+  "logoSource": "https://airalbania.com.al/favicon@2x.png"
+ },
+ {
+  "name": "Air Serbia",
+  "slug": "air-serbia",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://airserbia.com",
+  "logo": "air-serbia.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fairserbia.com&size=128"
+ },
+ {
+  "name": "Airbnb",
+  "slug": "airbnb",
+  "country": "AL",
+  "city": "tirane",
+  "category": "travel",
+  "website": "https://airbnb.com",
+  "logo": "airbnb.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fairbnb.com&size=128"
+ },
+ {
+  "name": "Airbnb Kosovë",
+  "slug": "airbnb-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "travel",
+  "website": "https://airbnb.com",
+  "logo": "airbnb-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fairbnb.com&size=128"
+ },
+ {
+  "name": "Albawings Kosovë",
+  "slug": "albawings-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://albawings.com",
+  "logo": "albawings-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Falbawings.com&size=128"
+ },
+ {
+  "name": "Albawings Shqipëri",
+  "slug": "albawings-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://albawings.com",
+  "logo": "albawings-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Falbawings.com&size=128"
+ },
+ {
+  "name": "Albgaz",
+  "slug": "albgaz",
+  "country": "AL",
+  "city": "tirane",
+  "category": "energy",
+  "website": "https://albgaz.al",
+  "logo": "albgaz.png",
+  "logoSource": "https://albgaz.al/wp-content/uploads/2020/10/favicon.png"
+ },
+ {
+  "name": "Albi Mall",
+  "slug": "albi-mall",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://albimall.com",
+  "logo": "albi-mall.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Falbimall.com&size=128"
+ },
+ {
+  "name": "Albi Market",
+  "slug": "albi-market",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://albimarket.com",
+  "logo": "albi-market.png",
+  "logoSource": "https://albimarket.com/wp-content/uploads/2024/11/cropped-Frame-9-180x180.png"
+ },
+ {
+  "name": "Albpetrol",
+  "slug": "albpetrol",
+  "country": "AL",
+  "city": "fier",
+  "category": "energy",
+  "website": "https://albpetrol.al",
+  "logo": "albpetrol.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Falbpetrol.al&size=128"
+ },
+ {
+  "name": "Albsig",
+  "slug": "albsig",
+  "country": "AL",
+  "city": "tirane",
+  "category": "ins",
+  "website": "https://www.albsig.al",
+  "logo": "albsig.png",
+  "logoSource": "https://www.albsig.al/wp-content/uploads/2025/10/albsig-favicon.png"
+ },
+ {
+  "name": "AliExpress Kosovë",
+  "slug": "aliexpress-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://www.aliexpress.com",
+  "logo": "aliexpress-kosove.png",
+  "logoSource": "https://ae-pic-a1.aliexpress-media.com/images/eng/wholesale/icon/aliexpress.ico"
+ },
+ {
+  "name": "AliExpress Shqipëri",
+  "slug": "aliexpress-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://www.aliexpress.com",
+  "logo": "aliexpress-shqiperi.png",
+  "logoSource": "https://ae-pic-a1.aliexpress-media.com/images/eng/wholesale/icon/aliexpress.ico"
+ },
+ {
+  "name": "Allianz Kosovë",
+  "slug": "allianz-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "ins",
+  "website": "https://allianz.com",
+  "logo": "allianz-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fallianz.com&size=128"
+ },
+ {
+  "name": "Allianz Shqipëri",
+  "slug": "allianz-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "ins",
+  "website": "https://allianz.com",
+  "logo": "allianz-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fallianz.com&size=128"
+ },
+ {
+  "name": "Amazon Kosovë",
+  "slug": "amazon-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://www.amazon.com",
+  "logo": "amazon-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.amazon.com&size=128"
+ },
+ {
+  "name": "Amazon Shqipëri",
+  "slug": "amazon-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://www.amazon.com",
+  "logo": "amazon-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.amazon.com&size=128"
+ },
+ {
+  "name": "American Bank of Investments (ABI Bank)",
+  "slug": "american-bank-of-investments-abi-bank",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://abi.al",
+  "logo": "american-bank-of-investments-abi-bank.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fabi.al&size=128"
+ },
+ {
+  "name": "Anek Lines",
+  "slug": "anek-lines",
+  "country": "AL",
+  "city": "durres",
+  "category": "trans",
+  "website": "https://anekitalia.com",
+  "logo": "anek-lines.png",
+  "logoSource": "https://anekitalia.com/wp-content/uploads/2018/06/anek_favicon.png"
+ },
+ {
+  "name": "Artmotion",
+  "slug": "artmotion",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "tel",
+  "website": "https://artmotion.net",
+  "logo": "artmotion.png",
+  "logoSource": "https://artmotion.net/wp-content/uploads/2022/11/cropped-artmotion-black-512x512-1-180x180.png"
+ },
+ {
+  "name": "Atlantik",
+  "slug": "atlantik",
+  "country": "AL",
+  "city": "tirane",
+  "category": "ins",
+  "website": "https://www.atlantik.al",
+  "logo": "atlantik.png",
+  "logoSource": "https://www.atlantik.al/wp-content/uploads/2022/07/cropped-Unt5435324523itled-2-180x180.png"
+ },
+ {
+  "name": "Audi Kosovë",
+  "slug": "audi-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.audi.com",
+  "logo": "audi-kosove.png",
+  "logoSource": "https://www.audi.com/apple-touch-icon.png"
+ },
+ {
+  "name": "Audi Shqipëri",
+  "slug": "audi-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.audi.com",
+  "logo": "audi-shqiperi.png",
+  "logoSource": "https://www.audi.com/apple-touch-icon.png"
+ },
+ {
+  "name": "Austrian Airlines",
+  "slug": "austrian-airlines",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://austrian.com",
+  "logo": "austrian-airlines.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Faustrian.com&size=128"
+ },
+ {
+  "name": "Austrian Airlines Shqipëri",
+  "slug": "austrian-airlines-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://austrian.com",
+  "logo": "austrian-airlines-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Faustrian.com&size=128"
+ },
+ {
+  "name": "Avis",
+  "slug": "avis",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://avis.com",
+  "logo": "avis.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Favis.com&size=128"
+ },
+ {
+  "name": "Avis Kosovë",
+  "slug": "avis-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://avis.com",
+  "logo": "avis-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Favis.com&size=128"
+ },
+ {
+  "name": "Baboon",
+  "slug": "baboon",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://baboon.al",
+  "logo": "baboon.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fbaboon.al&size=128"
+ },
+ {
+  "name": "Banka Kombëtare Tregtare (BKT)",
+  "slug": "banka-kombetare-tregtare-bkt",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://www.bkt.com.al",
+  "logo": "banka-kombetare-tregtare-bkt.png",
+  "logoSource": "https://www.bkt.com.al/assets/img/favicon.png"
+ },
+ {
+  "name": "Banka për Biznes (BPB)",
+  "slug": "banka-per-biznes-bpb",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://bpbbank.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Bershka Shqipëri",
+  "slug": "bershka-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://bershka.com",
+  "logo": "bershka-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fbershka.com&size=128"
+ },
+ {
+  "name": "Best Western Kosovë",
+  "slug": "best-western-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "travel",
+  "website": "https://bestwestern.com",
+  "logo": "best-western-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fbestwestern.com&size=128"
+ },
+ {
+  "name": "Best Western Shqipëri",
+  "slug": "best-western-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "travel",
+  "website": "https://bestwestern.com",
+  "logo": "best-western-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fbestwestern.com&size=128"
+ },
+ {
+  "name": "Big Market",
+  "slug": "big-market",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://bigmarket.al",
+  "logo": "big-market.png",
+  "logoSource": "https://bigmarket.al/images/admin/BIG.png"
+ },
+ {
+  "name": "Birra Korça",
+  "slug": "birra-korca",
+  "country": "AL",
+  "city": "korce",
+  "category": "food",
+  "website": "https://birrakorca.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Birra Peja",
+  "slug": "birra-peja",
+  "country": "XK",
+  "city": "peje",
+  "category": "food",
+  "website": "https://birrapeja.com",
+  "logo": "birra-peja.png",
+  "logoSource": "https://birrapeja.com/wp-content/uploads/2025/07/LogoIcon-Gold-Fit.png"
+ },
+ {
+  "name": "BKT Kosovë",
+  "slug": "bkt-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://bkt-ks.com",
+  "logo": "bkt-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fbkt-ks.com&size=128"
+ },
+ {
+  "name": "Bolt Kosovë",
+  "slug": "bolt-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://bolt.eu",
+  "logo": "bolt-kosove.png",
+  "logoSource": "https://assets.homepage.bolt.eu/1.24.28/public/common-assets/apple-icon.png"
+ },
+ {
+  "name": "Bolt Shqipëri",
+  "slug": "bolt-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://bolt.eu",
+  "logo": "bolt-shqiperi.png",
+  "logoSource": "https://assets.homepage.bolt.eu/1.24.28/public/common-assets/apple-icon.png"
+ },
+ {
+  "name": "Booking.com",
+  "slug": "booking-com",
+  "country": "AL",
+  "city": "tirane",
+  "category": "travel",
+  "website": "https://www.booking.com",
+  "logo": "booking-com.png",
+  "logoSource": "https://www.booking.com/apple-touch-icon.png"
+ },
+ {
+  "name": "Booking.com Kosovë",
+  "slug": "booking-com-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "travel",
+  "website": "https://www.booking.com",
+  "logo": "booking-com-kosove.png",
+  "logoSource": "https://www.booking.com/apple-touch-icon.png"
+ },
+ {
+  "name": "Bosch Kosovë",
+  "slug": "bosch-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://www.bosch-home.com",
+  "logo": "bosch-kosove.png",
+  "logoSource": "https://www.bosch-home.com/store/medias/sys_master/root/h45/h0e/12376790990878/apple-touch-icon-180x180.png"
+ },
+ {
+  "name": "Bosch Shqipëri",
+  "slug": "bosch-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://www.bosch-home.com",
+  "logo": "bosch-shqiperi.png",
+  "logoSource": "https://www.bosch-home.com/store/medias/sys_master/root/h45/h0e/12376790990878/apple-touch-icon-180x180.png"
+ },
+ {
+  "name": "British Airways Kosovë",
+  "slug": "british-airways-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://britishairways.com",
+  "logo": "british-airways-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fbritishairways.com&size=128"
+ },
+ {
+  "name": "British Airways Shqipëri",
+  "slug": "british-airways-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://britishairways.com",
+  "logo": "british-airways-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fbritishairways.com&size=128"
+ },
+ {
+  "name": "Burger King Kosovë",
+  "slug": "burger-king-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://www.bk.com",
+  "logo": "burger-king-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.bk.com&size=128"
+ },
+ {
+  "name": "Burger King Shqipëri",
+  "slug": "burger-king-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://www.bk.com",
+  "logo": "burger-king-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.bk.com&size=128"
+ },
+ {
+  "name": "Calvin Klein Kosovë",
+  "slug": "calvin-klein-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://calvinklein.com",
+  "logo": "calvin-klein-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fcalvinklein.com&size=128"
+ },
+ {
+  "name": "Calvin Klein Shqipëri",
+  "slug": "calvin-klein-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://calvinklein.com",
+  "logo": "calvin-klein-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fcalvinklein.com&size=128"
+ },
+ {
+  "name": "Citroën Kosovë",
+  "slug": "citroen-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.citroen.com",
+  "logo": "citroen-kosove.png",
+  "logoSource": "https://www.citroen.com/etc/designs/citroen/favicon.png"
+ },
+ {
+  "name": "Citroën Shqipëri",
+  "slug": "citroen-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.citroen.com",
+  "logo": "citroen-shqiperi.png",
+  "logoSource": "https://www.citroen.com/etc/designs/citroen/favicon.png"
+ },
+ {
+  "name": "City Park Tirana",
+  "slug": "city-park-tirana",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://cityparkalbania.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Coca-Cola HBC Shqipëri",
+  "slug": "coca-cola-hbc-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://www.coca-colahellenic.com",
+  "logo": "coca-cola-hbc-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.coca-colahellenic.com&size=128"
+ },
+ {
+  "name": "Coca-Cola Kosovë",
+  "slug": "coca-cola-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://www.coca-cola.com",
+  "logo": "coca-cola-kosove.png",
+  "logoSource": "https://www.coca-cola.com/onexp-theme/79577bff17ba65dcdc02dc9a7d318368796b5dec7e20bcbc28597c382a50fb80/resources/favicons/apple-touch-icon.png"
+ },
+ {
+  "name": "Coca-Cola Shqipëri",
+  "slug": "coca-cola-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://www.coca-cola.com",
+  "logo": "coca-cola-shqiperi.png",
+  "logoSource": "https://www.coca-cola.com/onexp-theme/79577bff17ba65dcdc02dc9a7d318368796b5dec7e20bcbc28597c382a50fb80/resources/favicons/apple-touch-icon.png"
+ },
+ {
+  "name": "Conad Shqipëri",
+  "slug": "conad-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://www.conadalbania.al",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Costa Coffee Kosovë",
+  "slug": "costa-coffee-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://costacoffee.com",
+  "logo": "costa-coffee-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fcostacoffee.com&size=128"
+ },
+ {
+  "name": "Costa Coffee Shqipëri",
+  "slug": "costa-coffee-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://costacoffee.com",
+  "logo": "costa-coffee-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fcostacoffee.com&size=128"
+ },
+ {
+  "name": "Credins Bank Kosovë",
+  "slug": "credins-bank-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://credinsbank.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Dacia Kosovë",
+  "slug": "dacia-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.renaultgroup.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Dacia Shqipëri",
+  "slug": "dacia-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.renaultgroup.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "DeFacto Shqipëri",
+  "slug": "defacto-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://defacto.com.tr",
+  "logo": "defacto-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fdefacto.com.tr&size=128"
+ },
+ {
+  "name": "Devolli Corporation",
+  "slug": "devolli-corporation",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://devollicorporation.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "DigitAlb",
+  "slug": "digitalb",
+  "country": "AL",
+  "city": "tirane",
+  "category": "tel",
+  "website": "https://digitalb.al",
+  "logo": "digitalb.png",
+  "logoSource": "https://digitalb.al/favicon.ico"
+ },
+ {
+  "name": "Domino's Kosovë",
+  "slug": "domino-s-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://www.dominos.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Domino's Shqipëri",
+  "slug": "domino-s-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://www.dominos.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Dukagjini Coffee",
+  "slug": "dukagjini-coffee",
+  "country": "XK",
+  "city": "peje",
+  "category": "food",
+  "website": "https://dukagjini.com",
+  "logo": "dukagjini-coffee.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fdukagjini.com&size=128"
+ },
+ {
+  "name": "easyJet Kosovë",
+  "slug": "easyjet-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://easyjet.com",
+  "logo": "easyjet-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Feasyjet.com&size=128"
+ },
+ {
+  "name": "easyJet Shqipëri",
+  "slug": "easyjet-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://easyjet.com",
+  "logo": "easyjet-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Feasyjet.com&size=128"
+ },
+ {
+  "name": "Eco Market",
+  "slug": "eco-market",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://ecomarket.al",
+  "logo": "eco-market.png",
+  "logoSource": "https://ecomarket.al/wp-content/uploads/2024/03/cropped-ecoFavIcon-scaled-2-180x180.webp"
+ },
+ {
+  "name": "Elkos Group",
+  "slug": "elkos-group",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://elkosgroup.com",
+  "logo": "elkos-group.png",
+  "logoSource": "https://elkosgroup.com/images/logon-1.png"
+ },
+ {
+  "name": "Emirates Kosovë",
+  "slug": "emirates-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://emirates.com",
+  "logo": "emirates-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Femirates.com&size=128"
+ },
+ {
+  "name": "Emirates Shqipëri",
+  "slug": "emirates-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://emirates.com",
+  "logo": "emirates-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Femirates.com&size=128"
+ },
+ {
+  "name": "Etihad Airways Kosovë",
+  "slug": "etihad-airways-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://etihad.com",
+  "logo": "etihad-airways-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fetihad.com&size=128"
+ },
+ {
+  "name": "Etihad Airways Shqipëri",
+  "slug": "etihad-airways-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://etihad.com",
+  "logo": "etihad-airways-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fetihad.com&size=128"
+ },
+ {
+  "name": "Euroins",
+  "slug": "euroins",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "ins",
+  "website": "https://www.euroins.com",
+  "logo": "euroins.png",
+  "logoSource": "https://www.euroins.com/images/favicons/apple-touch-icon.png"
+ },
+ {
+  "name": "Europcar",
+  "slug": "europcar",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.europcar.com",
+  "logo": "europcar.png",
+  "logoSource": "https://static.europcar.com/_nuxt/icons/icon_512x512.8e91c7.png"
+ },
+ {
+  "name": "Europcar Kosovë",
+  "slug": "europcar-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.europcar.com",
+  "logo": "europcar-kosove.png",
+  "logoSource": "https://static.europcar.com/_nuxt/icons/icon_512x512.8e91c7.png"
+ },
+ {
+  "name": "Eurosig",
+  "slug": "eurosig",
+  "country": "AL",
+  "city": "tirane",
+  "category": "ins",
+  "website": "https://eurosig.al",
+  "logo": "eurosig.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Feurosig.al&size=128"
+ },
+ {
+  "name": "Eurowings",
+  "slug": "eurowings",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://eurowings.com",
+  "logo": "eurowings.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Feurowings.com&size=128"
+ },
+ {
+  "name": "Eurowings Shqipëri",
+  "slug": "eurowings-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://eurowings.com",
+  "logo": "eurowings-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Feurowings.com&size=128"
+ },
+ {
+  "name": "FedEx Kosovë",
+  "slug": "fedex-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://fedex.com",
+  "logo": "fedex-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Ffedex.com&size=128"
+ },
+ {
+  "name": "FedEx Shqipëri",
+  "slug": "fedex-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://fedex.com",
+  "logo": "fedex-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Ffedex.com&size=128"
+ },
+ {
+  "name": "Fiat Kosovë",
+  "slug": "fiat-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://fiat.com",
+  "logo": "fiat-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Ffiat.com&size=128"
+ },
+ {
+  "name": "Fiat Shqipëri",
+  "slug": "fiat-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://fiat.com",
+  "logo": "fiat-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Ffiat.com&size=128"
+ },
+ {
+  "name": "Flixbus",
+  "slug": "flixbus",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://www.flixbus.com",
+  "logo": "flixbus.png",
+  "logoSource": "https://cdn-cf.cms.flixbus.com/drupal-assets/favicon/flixbus/apple-icon-180x180.png"
+ },
+ {
+  "name": "Flixbus Kosovë",
+  "slug": "flixbus-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://www.flixbus.com",
+  "logo": "flixbus-kosove.png",
+  "logoSource": "https://cdn-cf.cms.flixbus.com/drupal-assets/favicon/flixbus/apple-icon-180x180.png"
+ },
+ {
+  "name": "Ford Kosovë",
+  "slug": "ford-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://ford.com",
+  "logo": "ford-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fford.com&size=128"
+ },
+ {
+  "name": "Generali Kosovë",
+  "slug": "generali-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "ins",
+  "website": "https://www.generali.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Generali Shqipëri",
+  "slug": "generali-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "ins",
+  "website": "https://www.generali.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Gjirafa",
+  "slug": "gjirafa",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://gjirafa.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Gjirafa50",
+  "slug": "gjirafa50",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://gjirafa50.com",
+  "logo": "gjirafa50.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fgjirafa50.com&size=128"
+ },
+ {
+  "name": "Glovo Kosovë",
+  "slug": "glovo-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://glovoapp.com",
+  "logo": "glovo-kosove.png",
+  "logoSource": "https://glovoapp.com/apple-icon.png"
+ },
+ {
+  "name": "Glovo Shqipëri",
+  "slug": "glovo-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://glovoapp.com",
+  "logo": "glovo-shqiperi.png",
+  "logoSource": "https://glovoapp.com/apple-icon.png"
+ },
+ {
+  "name": "H&M Kosovë",
+  "slug": "h-and-m-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://hm.com",
+  "logo": "h-and-m-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fhm.com&size=128"
+ },
+ {
+  "name": "H&M Shqipëri",
+  "slug": "h-and-m-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://hm.com",
+  "logo": "h-and-m-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fhm.com&size=128"
+ },
+ {
+  "name": "Hekurudha Shqiptare",
+  "slug": "hekurudha-shqiptare",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://hekurudha.al",
+  "logo": "hekurudha-shqiptare.png",
+  "logoSource": "https://hekurudha.al/wp-content/uploads/2022/08/cropped-HSH-Logo-standard-revised-1-180x180.png"
+ },
+ {
+  "name": "Hertz",
+  "slug": "hertz",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.hertz.com",
+  "logo": "hertz.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.hertz.com&size=128"
+ },
+ {
+  "name": "Hertz Kosovë",
+  "slug": "hertz-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.hertz.com",
+  "logo": "hertz-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.hertz.com&size=128"
+ },
+ {
+  "name": "Hib Petrol",
+  "slug": "hib-petrol",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "energy",
+  "website": "https://www.hibpetrol.com",
+  "logo": "hib-petrol.png",
+  "logoSource": "https://www.hibpetrol.com/wp-content/uploads/2018/11/cropped-logo-png-192x192.png"
+ },
+ {
+  "name": "Hilton Garden Inn Tirana",
+  "slug": "hilton-garden-inn-tirana",
+  "country": "AL",
+  "city": "tirane",
+  "category": "travel",
+  "website": "https://hilton.com",
+  "logo": "hilton-garden-inn-tirana.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fhilton.com&size=128"
+ },
+ {
+  "name": "Hilton Kosovë",
+  "slug": "hilton-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "travel",
+  "website": "https://hilton.com",
+  "logo": "hilton-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fhilton.com&size=128"
+ },
+ {
+  "name": "Holiday Inn Kosovë",
+  "slug": "holiday-inn-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "travel",
+  "website": "https://ihg.com",
+  "logo": "holiday-inn-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fihg.com&size=128"
+ },
+ {
+  "name": "Holiday Inn Shqipëri",
+  "slug": "holiday-inn-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "travel",
+  "website": "https://ihg.com",
+  "logo": "holiday-inn-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fihg.com&size=128"
+ },
+ {
+  "name": "Honda Kosovë",
+  "slug": "honda-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://honda.com",
+  "logo": "honda-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fhonda.com&size=128"
+ },
+ {
+  "name": "Honda Shqipëri",
+  "slug": "honda-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://honda.com",
+  "logo": "honda-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fhonda.com&size=128"
+ },
+ {
+  "name": "Hotel Emerald Prishtinë",
+  "slug": "hotel-emerald-prishtine",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "travel",
+  "website": "https://www.diamondhotels.in",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Huawei Kosovë",
+  "slug": "huawei-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://www.huawei.com",
+  "logo": "huawei-kosove.png",
+  "logoSource": "https://www.huawei.com/-/media/htemplate-home/1.0.1.20251205144752/components/assets/img/apple-touch-icon-precomposed-180.png"
+ },
+ {
+  "name": "Huawei Shqipëri",
+  "slug": "huawei-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://www.huawei.com",
+  "logo": "huawei-shqiperi.png",
+  "logoSource": "https://www.huawei.com/-/media/htemplate-home/1.0.1.20251205144752/components/assets/img/apple-touch-icon-precomposed-180.png"
+ },
+ {
+  "name": "Hyundai Kosovë",
+  "slug": "hyundai-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.hyundai.com",
+  "logo": "hyundai-kosove.png",
+  "logoSource": "https://www.hyundai.com/apple-touch-icon.png"
+ },
+ {
+  "name": "Hyundai Shqipëri",
+  "slug": "hyundai-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://hyundai.al",
+  "logo": "hyundai-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fhyundai.al&size=128"
+ },
+ {
+  "name": "INSIG",
+  "slug": "insig",
+  "country": "AL",
+  "city": "tirane",
+  "category": "ins",
+  "website": "https://www.insig.al",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Intermedica",
+  "slug": "intermedica",
+  "country": "AL",
+  "city": "tirane",
+  "category": "health",
+  "website": "https://intermedica.al",
+  "logo": "intermedica.png",
+  "logoSource": "https://intermedica.al/wp-content/uploads/2023/12/cropped-baner-intermedica-180x180.png"
+ },
+ {
+  "name": "Intersig",
+  "slug": "intersig",
+  "country": "AL",
+  "city": "tirane",
+  "category": "ins",
+  "website": "https://intersig.al",
+  "logo": "intersig.png",
+  "logoSource": "https://intersig.al/media/olalqlqi/intersig-logo-2-1.png"
+ },
+ {
+  "name": "Intesa Sanpaolo Bank Albania",
+  "slug": "intesa-sanpaolo-bank-albania",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://intesasanpaolobank.al",
+  "logo": "intesa-sanpaolo-bank-albania.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fintesasanpaolobank.al&size=128"
+ },
+ {
+  "name": "IPKO",
+  "slug": "ipko",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "tel",
+  "website": "https://ipko.com",
+  "logo": "ipko.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fipko.com&size=128"
+ },
+ {
+  "name": "ITA Airways",
+  "slug": "ita-airways",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://ita-airways.com",
+  "logo": "ita-airways.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fita-airways.com&size=128"
+ },
+ {
+  "name": "JYSK Kosovë",
+  "slug": "jysk-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://jysk.com",
+  "logo": "jysk-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fjysk.com&size=128"
+ },
+ {
+  "name": "JYSK Shqipëri",
+  "slug": "jysk-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://jysk.al",
+  "logo": "jysk-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fjysk.al&size=128"
+ },
+ {
+  "name": "Kastrati",
+  "slug": "kastrati",
+  "country": "AL",
+  "city": "tirane",
+  "category": "energy",
+  "website": "https://kastrati.al",
+  "logo": "kastrati.png",
+  "logoSource": "https://kastrati.al/wp-content/uploads/2024/07/cropped-favicon-180x180.png"
+ },
+ {
+  "name": "KEDS",
+  "slug": "keds",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "energy",
+  "website": "https://keds-energy.com",
+  "logo": "keds.ico",
+  "logoSource": "https://keds-energy.com/favicon.ico"
+ },
+ {
+  "name": "KESH",
+  "slug": "kesh",
+  "country": "AL",
+  "city": "tirane",
+  "category": "energy",
+  "website": "https://kesh.al",
+  "logo": "kesh.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fkesh.al&size=128"
+ },
+ {
+  "name": "KFC Kosovë",
+  "slug": "kfc-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://kfc.com",
+  "logo": "kfc-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fkfc.com&size=128"
+ },
+ {
+  "name": "KFC Shqipëri",
+  "slug": "kfc-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://www.kfc.al",
+  "logo": "kfc-shqiperi.png",
+  "logoSource": "https://www.kfc.al/uc/favicon/favicon.ico"
+ },
+ {
+  "name": "Kia Kosovë",
+  "slug": "kia-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.kia-kosova.com",
+  "logo": "kia-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.kia-kosova.com&size=128"
+ },
+ {
+  "name": "Kiabi Shqipëri",
+  "slug": "kiabi-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://kiabi.com",
+  "logo": "kiabi-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fkiabi.com&size=128"
+ },
+ {
+  "name": "KLM Kosovë",
+  "slug": "klm-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://klm.com",
+  "logo": "klm-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fklm.com&size=128"
+ },
+ {
+  "name": "KLM Shqipëri",
+  "slug": "klm-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://klm.com",
+  "logo": "klm-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fklm.com&size=128"
+ },
+ {
+  "name": "Kohavision",
+  "slug": "kohavision",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "tel",
+  "website": "https://kohavision.net",
+  "logo": "kohavision.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fkohavision.net&size=128"
+ },
+ {
+  "name": "Kolegji AAB",
+  "slug": "kolegji-aab",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "edu",
+  "website": "https://aab-edu.net",
+  "logo": "kolegji-aab.ico",
+  "logoSource": "https://aab-edu.net/wp-content/themes/Kolegji-AAB/dist/img/favicon.ico"
+ },
+ {
+  "name": "Kolegji Dardania",
+  "slug": "kolegji-dardania",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "edu",
+  "website": "https://kolegjidardania.com",
+  "logo": "kolegji-dardania.png",
+  "logoSource": "https://kolegjidardania.com/wp-content/uploads/2021/06/logo_kd_png-300x300.png"
+ },
+ {
+  "name": "Kolegji Heimerer",
+  "slug": "kolegji-heimerer",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "edu",
+  "website": "https://kolegji-heimerer.eu",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Kolegji Universum",
+  "slug": "kolegji-universum",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "edu",
+  "website": "https://universum-ks.org",
+  "logo": "kolegji-universum.png",
+  "logoSource": "https://universum-ks.org/brand/uni-apple-touch-icon.png"
+ },
+ {
+  "name": "Kosova e Re",
+  "slug": "kosova-e-re",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "ins",
+  "website": "https://kosovaere.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Kosova Petrol",
+  "slug": "kosova-petrol",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "energy",
+  "website": "https://kosovapetrol.com",
+  "logo": "kosova-petrol.png",
+  "logoSource": "https://www.sheaney.ie/wp-content/uploads/2021/02/cropped-Marine-White-100-1-180x180.jpg"
+ },
+ {
+  "name": "KOSTT",
+  "slug": "kostt",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "energy",
+  "website": "https://kostt.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Kujtesa",
+  "slug": "kujtesa",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "tel",
+  "website": "https://kujtesa.net",
+  "logo": "kujtesa.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fkujtesa.net&size=128"
+ },
+ {
+  "name": "LG Kosovë",
+  "slug": "lg-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://www.lg.com",
+  "logo": "lg-kosove.png",
+  "logoSource": "https://www.lg.com/lg5-common-gp/favicons/152x152.png"
+ },
+ {
+  "name": "LG Shqipëri",
+  "slug": "lg-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://www.lg.com",
+  "logo": "lg-shqiperi.png",
+  "logoSource": "https://www.lg.com/lg5-common-gp/favicons/152x152.png"
+ },
+ {
+  "name": "LOT Polish Airlines",
+  "slug": "lot-polish-airlines",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://www.lot.com",
+  "logo": "lot-polish-airlines.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.lot.com&size=128"
+ },
+ {
+  "name": "Lufthansa",
+  "slug": "lufthansa",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://lufthansa.com",
+  "logo": "lufthansa.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Flufthansa.com&size=128"
+ },
+ {
+  "name": "Lufthansa Shqipëri",
+  "slug": "lufthansa-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://lufthansa.com",
+  "logo": "lufthansa-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Flufthansa.com&size=128"
+ },
+ {
+  "name": "Marriott Tirana",
+  "slug": "marriott-tirana",
+  "country": "AL",
+  "city": "tirane",
+  "category": "travel",
+  "website": "https://marriott.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Massimo Dutti Shqipëri",
+  "slug": "massimo-dutti-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://massimodutti.com",
+  "logo": "massimo-dutti-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fmassimodutti.com&size=128"
+ },
+ {
+  "name": "Mazda Kosovë",
+  "slug": "mazda-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.mazda.com",
+  "logo": "mazda-kosove.png",
+  "logoSource": "https://www.mazda.com/etc.clientlibs/mazda-com/clientlibs/clientlib-site/resources/images/apple-touch-icon.png?202510"
+ },
+ {
+  "name": "Mazda Shqipëri",
+  "slug": "mazda-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.mazda.com",
+  "logo": "mazda-shqiperi.png",
+  "logoSource": "https://www.mazda.com/etc.clientlibs/mazda-com/clientlibs/clientlib-site/resources/images/apple-touch-icon.png?202510"
+ },
+ {
+  "name": "McDonald's Kosovë",
+  "slug": "mcdonald-s-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://mcdonalds.com",
+  "logo": "mcdonald-s-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fmcdonalds.com&size=128"
+ },
+ {
+  "name": "McDonald's Shqipëri",
+  "slug": "mcdonald-s-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://mcdonalds.com",
+  "logo": "mcdonald-s-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fmcdonalds.com&size=128"
+ },
+ {
+  "name": "Mercedes-Benz Kosovë",
+  "slug": "mercedes-benz-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://mercedes-benz.com",
+  "logo": "mercedes-benz-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fmercedes-benz.com&size=128"
+ },
+ {
+  "name": "Mercedes-Benz Shqipëri",
+  "slug": "mercedes-benz-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.mercedes-benz.al",
+  "logo": "mercedes-benz-shqiperi.png",
+  "logoSource": "https://d2638j3z8ek976.cloudfront.net/ee68127afa7d4555c0e89c20183204491b5fa75f/1793885679/images/ico/apple-touch-icon-144-precomposed.png"
+ },
+ {
+  "name": "Meridian Express",
+  "slug": "meridian-express",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://meridian.al",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Merrjep Kosovë",
+  "slug": "merrjep-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://www.merrjep.com",
+  "logo": "merrjep-kosove.png",
+  "logoSource": "https://www.merrjep.com/apple-touch-icon.png"
+ },
+ {
+  "name": "Merrjep Shqipëri",
+  "slug": "merrjep-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://www.merrjep.al",
+  "logo": "merrjep-shqiperi.png",
+  "logoSource": "https://www.merrjep.al/apple-touch-icon.png"
+ },
+ {
+  "name": "Mitsubishi Motors Kosovë",
+  "slug": "mitsubishi-motors-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.mitsubishi-motors.com",
+  "logo": "mitsubishi-motors-kosove.png",
+  "logoSource": "https://www.mitsubishi-motors.com/assets_corporate/img/apple-touch-icon.png"
+ },
+ {
+  "name": "Mitsubishi Motors Shqipëri",
+  "slug": "mitsubishi-motors-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.mitsubishi-motors.com",
+  "logo": "mitsubishi-motors-shqiperi.png",
+  "logoSource": "https://www.mitsubishi-motors.com/assets_corporate/img/apple-touch-icon.png"
+ },
+ {
+  "name": "MoneyGram Kosovë",
+  "slug": "moneygram-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://moneygram.com",
+  "logo": "moneygram-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fmoneygram.com&size=128"
+ },
+ {
+  "name": "MoneyGram Shqipëri",
+  "slug": "moneygram-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://moneygram.com",
+  "logo": "moneygram-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fmoneygram.com&size=128"
+ },
+ {
+  "name": "Mr Bricolage Kosovë",
+  "slug": "mr-bricolage-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://mr-bricolage.com",
+  "logo": "mr-bricolage-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fmr-bricolage.com&size=128"
+ },
+ {
+  "name": "Neptun Kosovë",
+  "slug": "neptun-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://neptun-ks.com",
+  "logo": "neptun-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fneptun-ks.com&size=128"
+ },
+ {
+  "name": "Neptun Shqipëri",
+  "slug": "neptun-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://neptun.al",
+  "logo": "neptun-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fneptun.al&size=128"
+ },
+ {
+  "name": "Nestlé Kosovë",
+  "slug": "nestle-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://nestle.com",
+  "logo": "nestle-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fnestle.com&size=128"
+ },
+ {
+  "name": "Nestlé Shqipëri",
+  "slug": "nestle-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://nestle.com",
+  "logo": "nestle-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fnestle.com&size=128"
+ },
+ {
+  "name": "Netflix Kosovë",
+  "slug": "netflix-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://netflix.com",
+  "logo": "netflix-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fnetflix.com&size=128"
+ },
+ {
+  "name": "Netflix Shqipëri",
+  "slug": "netflix-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://netflix.com",
+  "logo": "netflix-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fnetflix.com&size=128"
+ },
+ {
+  "name": "Nike Kosovë",
+  "slug": "nike-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://nike.com",
+  "logo": "nike-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fnike.com&size=128"
+ },
+ {
+  "name": "Nike Shqipëri",
+  "slug": "nike-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://nike.com",
+  "logo": "nike-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fnike.com&size=128"
+ },
+ {
+  "name": "Nissan Kosovë",
+  "slug": "nissan-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.nissan-global.com",
+  "logo": "nissan-kosove.png",
+  "logoSource": "https://www.nissan-global.com/library/assets/img/apple-touch-icon.png"
+ },
+ {
+  "name": "Nissan Shqipëri",
+  "slug": "nissan-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.nissan-global.com",
+  "logo": "nissan-shqiperi.png",
+  "logoSource": "https://www.nissan-global.com/library/assets/img/apple-touch-icon.png"
+ },
+ {
+  "name": "NLB Banka Kosovë",
+  "slug": "nlb-banka-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://www.nlb-kos.com",
+  "logo": "nlb-banka-kosove.png",
+  "logoSource": "https://www.nlb-kos.com/etc.clientlibs/nlb/clientlibs/clientlib-site/resources/images/favicon/nlb-apple-touch-icon-180x180.png"
+ },
+ {
+  "name": "Norwegian Kosovë",
+  "slug": "norwegian-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://norwegian.com",
+  "logo": "norwegian-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fnorwegian.com&size=128"
+ },
+ {
+  "name": "Norwegian Shqipëri",
+  "slug": "norwegian-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://norwegian.com",
+  "logo": "norwegian-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fnorwegian.com&size=128"
+ },
+ {
+  "name": "Okazion",
+  "slug": "okazion",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://okazion.al",
+  "logo": "okazion.png",
+  "logoSource": "https://okazion.al/apple-icon.png?8392329ebc3f429d"
+ },
+ {
+  "name": "One Albania",
+  "slug": "one-albania",
+  "country": "AL",
+  "city": "tirane",
+  "category": "tel",
+  "website": "https://www.one.al",
+  "logo": "one-albania.png",
+  "logoSource": "https://www.one.al/assets/favicon-DZlvzkM8.ico"
+ },
+ {
+  "name": "Opel Kosovë",
+  "slug": "opel-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://opel.com",
+  "logo": "opel-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fopel.com&size=128"
+ },
+ {
+  "name": "Opel Shqipëri",
+  "slug": "opel-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://opel.com",
+  "logo": "opel-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fopel.com&size=128"
+ },
+ {
+  "name": "OSHEE",
+  "slug": "oshee",
+  "country": "AL",
+  "city": "tirane",
+  "category": "energy",
+  "website": "https://oshee.al",
+  "logo": "oshee.png",
+  "logoSource": "https://oshee.al/wp-content/uploads/2023/10/cropped-cropped-icon-180x180.png"
+ },
+ {
+  "name": "OTP Bank Albania",
+  "slug": "otp-bank-albania",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://otpbank.al",
+  "logo": "otp-bank-albania.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fotpbank.al&size=128"
+ },
+ {
+  "name": "Papa John's Kosovë",
+  "slug": "papa-john-s-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://www.papajohns.com",
+  "logo": "papa-john-s-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.papajohns.com&size=128"
+ },
+ {
+  "name": "Papa John's Shqipëri",
+  "slug": "papa-john-s-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://www.papajohns.com",
+  "logo": "papa-john-s-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.papajohns.com&size=128"
+ },
+ {
+  "name": "PayPal Kosovë",
+  "slug": "paypal-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://paypal.com",
+  "logo": "paypal-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fpaypal.com&size=128"
+ },
+ {
+  "name": "PayPal Shqipëri",
+  "slug": "paypal-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://paypal.com",
+  "logo": "paypal-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fpaypal.com&size=128"
+ },
+ {
+  "name": "Paysera Albania",
+  "slug": "paysera-albania",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://www.paysera.al",
+  "logo": "paysera-albania.png",
+  "logoSource": "https://www.paysera.al/v2/compiled/apple-touch-icon-v2.02dc84ca16eaddd2925e35fa6310c4e7.png"
+ },
+ {
+  "name": "Pegasus Airlines",
+  "slug": "pegasus-airlines",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://flypgs.com",
+  "logo": "pegasus-airlines.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fflypgs.com&size=128"
+ },
+ {
+  "name": "Pegasus Airlines Shqipëri",
+  "slug": "pegasus-airlines-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://flypgs.com",
+  "logo": "pegasus-airlines-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fflypgs.com&size=128"
+ },
+ {
+  "name": "Pepsi Kosovë",
+  "slug": "pepsi-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://www.pepsi.com",
+  "logo": "pepsi-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.pepsi.com&size=128"
+ },
+ {
+  "name": "Pepsi Shqipëri",
+  "slug": "pepsi-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://www.pepsi.com",
+  "logo": "pepsi-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.pepsi.com&size=128"
+ },
+ {
+  "name": "Peugeot Kosovë",
+  "slug": "peugeot-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://peugeot.com",
+  "logo": "peugeot-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fpeugeot.com&size=128"
+ },
+ {
+  "name": "Peugeot Shqipëri",
+  "slug": "peugeot-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://peugeot.al",
+  "logo": "peugeot-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fpeugeot.al&size=128"
+ },
+ {
+  "name": "Philips Kosovë",
+  "slug": "philips-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://www.philips.com",
+  "logo": "philips-kosove.png",
+  "logoSource": "https://www.philips.com/c-etc/philips/clientlibs/foundation-base/clientlibs-css/img/favicon/favicon-hd.png"
+ },
+ {
+  "name": "Philips Shqipëri",
+  "slug": "philips-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://www.philips.com",
+  "logo": "philips-shqiperi.png",
+  "logoSource": "https://www.philips.com/c-etc/philips/clientlibs/foundation-base/clientlibs-css/img/favicon/favicon-hd.png"
+ },
+ {
+  "name": "Pizza Hut Kosovë",
+  "slug": "pizza-hut-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://pizzahut.com",
+  "logo": "pizza-hut-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fpizzahut.com&size=128"
+ },
+ {
+  "name": "Pizza Hut Shqipëri",
+  "slug": "pizza-hut-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://pizzahut.com",
+  "logo": "pizza-hut-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fpizzahut.com&size=128"
+ },
+ {
+  "name": "PLUS Communication",
+  "slug": "plus-communication",
+  "country": "AL",
+  "city": "tirane",
+  "category": "tel",
+  "website": "https://plus.al",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Posta e Kosovës",
+  "slug": "posta-e-kosoves",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://postakosoves.com",
+  "logo": "posta-e-kosoves.png",
+  "logoSource": "https://postakosoves.com/wp-content/uploads/2025/08/cropped-Posta-FAV-180x180.png"
+ },
+ {
+  "name": "Posta Shqiptare",
+  "slug": "posta-shqiptare",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://postashqiptare.al",
+  "logo": "posta-shqiptare.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fpostashqiptare.al&size=128"
+ },
+ {
+  "name": "Prime Insurance",
+  "slug": "prime-insurance",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "ins",
+  "website": "https://prime-ks.com",
+  "logo": "prime-insurance.png",
+  "logoSource": "https://img1.wsimg.com/isteam/ip/static/pwa-app/logo-default.png/:/rs=w:180,h:180,m"
+ },
+ {
+  "name": "Prishtina Mall",
+  "slug": "prishtina-mall",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://www.prishtinamall.com",
+  "logo": "prishtina-mall.png",
+  "logoSource": "https://www.prishtinamall.com/wp-content/uploads/sites/92/2026/04/cropped-path4-180x180.png"
+ },
+ {
+  "name": "ProCredit Bank Kosovo",
+  "slug": "procredit-bank-kosovo",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://www.procreditbank-kos.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Pull&Bear Shqipëri",
+  "slug": "pull-and-bear-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://pullandbear.com",
+  "logo": "pull-and-bear-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fpullandbear.com&size=128"
+ },
+ {
+  "name": "Puma Kosovë",
+  "slug": "puma-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://about.puma.com",
+  "logo": "puma-kosove.png",
+  "logoSource": "https://about.puma.com/themes/custom/dreist/build/assets/images/favicon/apple-touch-icon.png"
+ },
+ {
+  "name": "Puma Shqipëri",
+  "slug": "puma-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://about.puma.com",
+  "logo": "puma-shqiperi.png",
+  "logoSource": "https://about.puma.com/themes/custom/dreist/build/assets/images/favicon/apple-touch-icon.png"
+ },
+ {
+  "name": "QTU",
+  "slug": "qtu",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://www.qtu.al",
+  "logo": "qtu.png",
+  "logoSource": "https://cdn-files.eu.placewise.com/f/CJmGPRC_BxoTY21zX3dlYnNpdGVfZmF2aWNvbiIDMTcxOMihzUm3dt4iw2kjSftxMmgqii88?transform=output=format:webp/resize=height:180"
+ },
+ {
+  "name": "Radisson Kosovë",
+  "slug": "radisson-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "travel",
+  "website": "https://radissonhotels.com",
+  "logo": "radisson-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fradissonhotels.com&size=128"
+ },
+ {
+  "name": "Radisson Shqipëri",
+  "slug": "radisson-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "travel",
+  "website": "https://radissonhotels.com",
+  "logo": "radisson-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fradissonhotels.com&size=128"
+ },
+ {
+  "name": "Raiffeisen Bank Albania",
+  "slug": "raiffeisen-bank-albania",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://www.raiffeisen.al",
+  "logo": "raiffeisen-bank-albania.png",
+  "logoSource": "https://www.raiffeisen.al/apple-touch-icon.png"
+ },
+ {
+  "name": "Raiffeisen Bank Kosovo",
+  "slug": "raiffeisen-bank-kosovo",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://raiffeisen-kosovo.com",
+  "logo": "raiffeisen-bank-kosovo.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fraiffeisen-kosovo.com&size=128"
+ },
+ {
+  "name": "Renault Kosovë",
+  "slug": "renault-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.renaultgroup.com",
+  "logo": "renault-kosove.png",
+  "logoSource": "https://www.renaultgroup.com/favicon.ico"
+ },
+ {
+  "name": "Reserved Kosovë",
+  "slug": "reserved-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://www.reserved.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Revolut Kosovë",
+  "slug": "revolut-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://revolut.com",
+  "logo": "revolut-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Frevolut.com&size=128"
+ },
+ {
+  "name": "Revolut Shqipëri",
+  "slug": "revolut-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://revolut.com",
+  "logo": "revolut-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Frevolut.com&size=128"
+ },
+ {
+  "name": "Rezonanca",
+  "slug": "rezonanca",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "health",
+  "website": "https://rezonanca.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Rogner Hotel Tirana",
+  "slug": "rogner-hotel-tirana",
+  "country": "AL",
+  "city": "tirane",
+  "category": "travel",
+  "website": "https://rogner.com",
+  "logo": "rogner-hotel-tirana.png",
+  "logoSource": "https://rogner.com/assets/images/rihr-logo-500x126.png"
+ },
+ {
+  "name": "Rossmann Kosovë",
+  "slug": "rossmann-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://www.rossmann.de",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "RTK",
+  "slug": "rtk",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "tel",
+  "website": "https://www.rtklive.com",
+  "logo": "rtk.png",
+  "logoSource": "https://www.rtklive.com/apple-touch-icon.png"
+ },
+ {
+  "name": "RTSH",
+  "slug": "rtsh",
+  "country": "AL",
+  "city": "tirane",
+  "category": "tel",
+  "website": "https://rtsh.al",
+  "logo": "rtsh.png",
+  "logoSource": "https://rtsh.al/wp-content/uploads/2026/09/cropped-Favicon-512x512-1-180x180.jpg"
+ },
+ {
+  "name": "Ryanair",
+  "slug": "ryanair",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://www.ryanair.com",
+  "logo": "ryanair.png",
+  "logoSource": "https://assets.ryanair.com/resources/ui/ryanair3.0/favicons/apple-touch-icon-152x152.png"
+ },
+ {
+  "name": "Ryanair Kosovë",
+  "slug": "ryanair-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://www.ryanair.com",
+  "logo": "ryanair-kosove.png",
+  "logoSource": "https://assets.ryanair.com/resources/ui/ryanair3.0/favicons/apple-touch-icon-152x152.png"
+ },
+ {
+  "name": "Salus Hospital",
+  "slug": "salus-hospital",
+  "country": "AL",
+  "city": "tirane",
+  "category": "health",
+  "website": "https://salus.al",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Samsung Kosovë",
+  "slug": "samsung-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://samsung.com",
+  "logo": "samsung-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fsamsung.com&size=128"
+ },
+ {
+  "name": "Samsung Shqipëri",
+  "slug": "samsung-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://samsung.com",
+  "logo": "samsung-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fsamsung.com&size=128"
+ },
+ {
+  "name": "Sbarro Prishtinë",
+  "slug": "sbarro-prishtine",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://sbarro.com",
+  "logo": "sbarro-prishtine.png",
+  "logoSource": "https://sbarro.com/wp-content/themes/foundationpress/assets/images/icons/apple-icon-180x180.png?v=2"
+ },
+ {
+  "name": "SEAT Kosovë",
+  "slug": "seat-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.seat.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "SEAT Shqipëri",
+  "slug": "seat-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.seat.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Shein Kosovë",
+  "slug": "shein-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://shein.com",
+  "logo": "shein-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fshein.com&size=128"
+ },
+ {
+  "name": "Shein Shqipëri",
+  "slug": "shein-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://shein.com",
+  "logo": "shein-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fshein.com&size=128"
+ },
+ {
+  "name": "Shell Albania",
+  "slug": "shell-albania",
+  "country": "AL",
+  "city": "tirane",
+  "category": "energy",
+  "website": "https://www.shell.al",
+  "logo": "shell-albania.png",
+  "logoSource": "https://www.shell.al/etc.clientlibs/amidala/clientlibs/theme-base/resources/favicon/apple-touch-icon.png"
+ },
+ {
+  "name": "SIGAL Uniqa Group Austria Shqipëri",
+  "slug": "sigal-uniqa-group-austria-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "ins",
+  "website": "https://sigal.com.al",
+  "logo": "sigal-uniqa-group-austria-shqiperi.png",
+  "logoSource": "https://sigal.com.al/wp-content/uploads/2025/10/e9a6bded-scaled.png"
+ },
+ {
+  "name": "SIGAL Uniqa Kosovë",
+  "slug": "sigal-uniqa-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "ins",
+  "website": "https://sigal-ks.com",
+  "logo": "sigal-uniqa-kosove.png",
+  "logoSource": "https://sigal-ks.com/wp-content/uploads/2026/01/cropped-Sigal-KS-fav-Logo-1-180x180.webp"
+ },
+ {
+  "name": "Sigma Vienna Insurance Group",
+  "slug": "sigma-vienna-insurance-group",
+  "country": "AL",
+  "city": "tirane",
+  "category": "ins",
+  "website": "https://sigma.al",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Sinsay Kosovë",
+  "slug": "sinsay-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://www.sinsay.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Sixt",
+  "slug": "sixt",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://sixt.com",
+  "logo": "sixt.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fsixt.com&size=128"
+ },
+ {
+  "name": "Sixt Kosovë",
+  "slug": "sixt-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://sixt.com",
+  "logo": "sixt-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fsixt.com&size=128"
+ },
+ {
+  "name": "Skoda Kosovë",
+  "slug": "skoda-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.skoda-auto.com",
+  "logo": "skoda-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.skoda-auto.com&size=128"
+ },
+ {
+  "name": "Škoda Shqipëri",
+  "slug": "skoda-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.skoda-auto.com",
+  "logo": "skoda-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.skoda-auto.com&size=128"
+ },
+ {
+  "name": "Sony Kosovë",
+  "slug": "sony-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://sony.com",
+  "logo": "sony-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fsony.com&size=128"
+ },
+ {
+  "name": "Sony Shqipëri",
+  "slug": "sony-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://sony.com",
+  "logo": "sony-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fsony.com&size=128"
+ },
+ {
+  "name": "Spar Shqipëri",
+  "slug": "spar-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://spar.al",
+  "logo": "spar-shqiperi.png",
+  "logoSource": "https://spar.al/images/logo-spar.png"
+ },
+ {
+  "name": "Sport Vision Shqipëri",
+  "slug": "sport-vision-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://www.sportvision.al",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Spotify Kosovë",
+  "slug": "spotify-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://open.spotify.com",
+  "logo": "spotify-kosove.png",
+  "logoSource": "https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png"
+ },
+ {
+  "name": "Spotify Shqipëri",
+  "slug": "spotify-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://open.spotify.com",
+  "logo": "spotify-shqiperi.png",
+  "logoSource": "https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png"
+ },
+ {
+  "name": "Starbucks Kosovë",
+  "slug": "starbucks-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://www.starbucks.com",
+  "logo": "starbucks-kosove.png",
+  "logoSource": "https://www.starbucks.com/apple-touch-icon.png"
+ },
+ {
+  "name": "Starbucks Shqipëri",
+  "slug": "starbucks-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "food",
+  "website": "https://www.starbucks.com",
+  "logo": "starbucks-shqiperi.png",
+  "logoSource": "https://www.starbucks.com/apple-touch-icon.png"
+ },
+ {
+  "name": "Stradivarius Shqipëri",
+  "slug": "stradivarius-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://stradivarius.com",
+  "logo": "stradivarius-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fstradivarius.com&size=128"
+ },
+ {
+  "name": "Superfast Ferries",
+  "slug": "superfast-ferries",
+  "country": "AL",
+  "city": "durres",
+  "category": "trans",
+  "website": "https://www.superfast.com",
+  "logo": "superfast-ferries.png",
+  "logoSource": "https://www.superfast.com/imgs/favicons/superfast/apple-touch-icon.png"
+ },
+ {
+  "name": "Suzuki Kosovë",
+  "slug": "suzuki-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.globalsuzuki.com",
+  "logo": "suzuki-kosove.png",
+  "logoSource": "https://www.globalsuzuki.com/favicon.ico"
+ },
+ {
+  "name": "Suzuki Shqipëri",
+  "slug": "suzuki-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://www.globalsuzuki.com",
+  "logo": "suzuki-shqiperi.png",
+  "logoSource": "https://www.globalsuzuki.com/favicon.ico"
+ },
+ {
+  "name": "Swiss",
+  "slug": "swiss",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://swiss.com",
+  "logo": "swiss.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fswiss.com&size=128"
+ },
+ {
+  "name": "Swiss Shqipëri",
+  "slug": "swiss-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://swiss.com",
+  "logo": "swiss-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fswiss.com&size=128"
+ },
+ {
+  "name": "Swissotel Prishtinë",
+  "slug": "swissotel-prishtine",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "travel",
+  "website": "https://www.swissotel.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Temu Kosovë",
+  "slug": "temu-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://www.temu.com",
+  "logo": "temu-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.temu.com&size=128"
+ },
+ {
+  "name": "Temu Shqipëri",
+  "slug": "temu-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://www.temu.com",
+  "logo": "temu-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.temu.com&size=128"
+ },
+ {
+  "name": "Tirana Bank",
+  "slug": "tirana-bank",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://tiranabank.al",
+  "logo": "tirana-bank.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Ftiranabank.al&size=128"
+ },
+ {
+  "name": "Tirana East Gate",
+  "slug": "tirana-east-gate",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://www.teg.al",
+  "logo": "tirana-east-gate.png",
+  "logoSource": "https://cdn-files.eu.placewise.com/f/CJiGPRC-BxoTY21zX3dlYnNpdGVfZmF2aWNvbiIDMTU5OKCS4kkypdhT1S-LPXqpRVoZ4_Rf?transform=output=format:webp/resize=height:180"
+ },
+ {
+  "name": "Tommy Hilfiger Kosovë",
+  "slug": "tommy-hilfiger-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://tommy.com",
+  "logo": "tommy-hilfiger-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Ftommy.com&size=128"
+ },
+ {
+  "name": "Tommy Hilfiger Shqipëri",
+  "slug": "tommy-hilfiger-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://tommy.com",
+  "logo": "tommy-hilfiger-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Ftommy.com&size=128"
+ },
+ {
+  "name": "Top Channel",
+  "slug": "top-channel",
+  "country": "AL",
+  "city": "tirane",
+  "category": "tel",
+  "website": "https://top-channel.tv",
+  "logo": "top-channel.png",
+  "logoSource": "https://top-channel.tv/icons/apple-icon-180x180.png"
+ },
+ {
+  "name": "Toyota Kosovë",
+  "slug": "toyota-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://toyota.com",
+  "logo": "toyota-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Ftoyota.com&size=128"
+ },
+ {
+  "name": "Trainkos",
+  "slug": "trainkos",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://www.trainkos.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Trendyol Kosovë",
+  "slug": "trendyol-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://trendyol.com",
+  "logo": "trendyol-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Ftrendyol.com&size=128"
+ },
+ {
+  "name": "Trendyol Shqipëri",
+  "slug": "trendyol-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://trendyol.com",
+  "logo": "trendyol-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Ftrendyol.com&size=128"
+ },
+ {
+  "name": "Tring",
+  "slug": "tring",
+  "country": "AL",
+  "city": "tirane",
+  "category": "tel",
+  "website": "https://tring.al",
+  "logo": "tring.png",
+  "logoSource": "https://tring.al/logos/fav-tring.png"
+ },
+ {
+  "name": "Trusti",
+  "slug": "trusti",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://trusti.org",
+  "logo": "trusti.png",
+  "logoSource": "https://trusti.org/wp-content/uploads/2021/05/cropped-Logo_Trusti_2021_ueb-180x180.png"
+ },
+ {
+  "name": "Turkish Airlines",
+  "slug": "turkish-airlines",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://turkishairlines.com",
+  "logo": "turkish-airlines.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fturkishairlines.com&size=128"
+ },
+ {
+  "name": "Turkish Airlines Shqipëri",
+  "slug": "turkish-airlines-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://turkishairlines.com",
+  "logo": "turkish-airlines-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fturkishairlines.com&size=128"
+ },
+ {
+  "name": "Union Bank",
+  "slug": "union-bank",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://unionbank.al",
+  "logo": "union-bank.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Funionbank.al&size=128"
+ },
+ {
+  "name": "UNIQA Kosovë",
+  "slug": "uniqa-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "ins",
+  "website": "https://uniqa.at",
+  "logo": "uniqa-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Funiqa.at&size=128"
+ },
+ {
+  "name": "UNIQA Shqipëri",
+  "slug": "uniqa-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "ins",
+  "website": "https://uniqa.at",
+  "logo": "uniqa-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Funiqa.at&size=128"
+ },
+ {
+  "name": "Universiteti Aleksandër Moisiu Durrës",
+  "slug": "universiteti-aleksander-moisiu-durres",
+  "country": "AL",
+  "city": "durres",
+  "category": "edu",
+  "website": "https://uamd.edu.al",
+  "logo": "universiteti-aleksander-moisiu-durres.png",
+  "logoSource": "https://uamd.edu.al/wp-content/uploads/2022/05/cropped-Logo_e_Universitetit__Aleksander_Moisiu_-2-180x180.png"
+ },
+ {
+  "name": "Universiteti Aleksandër Xhuvani",
+  "slug": "universiteti-aleksander-xhuvani",
+  "country": "AL",
+  "city": "elbasan",
+  "category": "edu",
+  "website": "https://uniel.edu.al",
+  "logo": "universiteti-aleksander-xhuvani.png",
+  "logoSource": "https://uniel.edu.al/templates/uniel/images/touch-device.png"
+ },
+ {
+  "name": "Universiteti Bedër",
+  "slug": "universiteti-beder",
+  "country": "AL",
+  "city": "tirane",
+  "category": "edu",
+  "website": "https://beder.edu.al",
+  "logo": "universiteti-beder.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fbeder.edu.al&size=128"
+ },
+ {
+  "name": "Universiteti Epoka",
+  "slug": "universiteti-epoka",
+  "country": "AL",
+  "city": "tirane",
+  "category": "edu",
+  "website": "https://epoka.edu.al",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Universiteti Europian i Tiranës",
+  "slug": "universiteti-europian-i-tiranes",
+  "country": "AL",
+  "city": "tirane",
+  "category": "edu",
+  "website": "https://uet.edu.al",
+  "logo": "universiteti-europian-i-tiranes.png",
+  "logoSource": "https://uet.edu.al/wp-content/uploads/2021/09/cropped-cropped-uet-png-192x192-1-180x180.png"
+ },
+ {
+  "name": "Universiteti Fan S. Noli",
+  "slug": "universiteti-fan-s-noli",
+  "country": "AL",
+  "city": "korce",
+  "category": "edu",
+  "website": "https://unkorce.edu.al",
+  "logo": "universiteti-fan-s-noli.png",
+  "logoSource": "https://unkorce.edu.al/medngar/2026/05/Logo_e_Universitetit__Fan_Noli_-e1726660879862.png"
+ },
+ {
+  "name": "Universiteti i Gjakovës",
+  "slug": "universiteti-i-gjakoves",
+  "country": "XK",
+  "city": "gjakove",
+  "category": "edu",
+  "website": "https://uni-gjk.org",
+  "logo": "universiteti-i-gjakoves.png",
+  "logoSource": "https://uni-gjk.org/apple-touch-icon.png?v=1.02"
+ },
+ {
+  "name": "Universiteti i Mitrovicës",
+  "slug": "universiteti-i-mitrovices",
+  "country": "XK",
+  "city": "mitrovice",
+  "category": "edu",
+  "website": "https://umib.net",
+  "logo": "universiteti-i-mitrovices.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fumib.net&size=128"
+ },
+ {
+  "name": "Universiteti i Prishtinës",
+  "slug": "universiteti-i-prishtines",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "edu",
+  "website": "https://uni-pr.edu",
+  "logo": "universiteti-i-prishtines.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Funi-pr.edu&size=128"
+ },
+ {
+  "name": "Universiteti i Prizrenit",
+  "slug": "universiteti-i-prizrenit",
+  "country": "XK",
+  "city": "prizren",
+  "category": "edu",
+  "website": "https://uni-prizren.com",
+  "logo": "universiteti-i-prizrenit.png",
+  "logoSource": "https://uni-prizren.com/wp-content/uploads/2021/01/dropdown-lgoo.png"
+ },
+ {
+  "name": "Universiteti i Tiranës",
+  "slug": "universiteti-i-tiranes",
+  "country": "AL",
+  "city": "tirane",
+  "category": "edu",
+  "website": "https://unitir.edu.al",
+  "logo": "universiteti-i-tiranes.png",
+  "logoSource": "https://unitir.edu.al/wp-content/uploads/2019/08/cropped-logo-1-180x180.png"
+ },
+ {
+  "name": "Universiteti Ismail Qemali Vlorë",
+  "slug": "universiteti-ismail-qemali-vlore",
+  "country": "AL",
+  "city": "vlore",
+  "category": "edu",
+  "website": "https://univlora.edu.al",
+  "logo": "universiteti-ismail-qemali-vlore.png",
+  "logoSource": "https://univlora.edu.al/temauv/images/univlora_favicon.png"
+ },
+ {
+  "name": "Universiteti Luigj Gurakuqi",
+  "slug": "universiteti-luigj-gurakuqi",
+  "country": "AL",
+  "city": "shkoder",
+  "category": "edu",
+  "website": "https://unishk.edu.al",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Universiteti Marin Barleti",
+  "slug": "universiteti-marin-barleti",
+  "country": "AL",
+  "city": "tirane",
+  "category": "edu",
+  "website": "https://umb.edu.al",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Universiteti Mesdhetar i Shqipërisë",
+  "slug": "universiteti-mesdhetar-i-shqiperise",
+  "country": "AL",
+  "city": "tirane",
+  "category": "edu",
+  "website": "https://www.umsh.edu.al",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Universiteti New York Tirana",
+  "slug": "universiteti-new-york-tirana",
+  "country": "AL",
+  "city": "tirane",
+  "category": "edu",
+  "website": "https://www.unyt.edu.al",
+  "logo": "universiteti-new-york-tirana.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.unyt.edu.al&size=128"
+ },
+ {
+  "name": "Universiteti UBT",
+  "slug": "universiteti-ubt",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "edu",
+  "website": "https://www.ubt-uni.net",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "UPS Kosovë",
+  "slug": "ups-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://www.ups.com",
+  "logo": "ups-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.ups.com&size=128"
+ },
+ {
+  "name": "UPS Shqipëri",
+  "slug": "ups-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://www.ups.com",
+  "logo": "ups-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwww.ups.com&size=128"
+ },
+ {
+  "name": "Vienna Insurance Group Kosovë",
+  "slug": "vienna-insurance-group-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "ins",
+  "website": "https://group.vig",
+  "logo": "vienna-insurance-group-kosove.png",
+  "logoSource": "https://group.vig/assets/img/favicons/apple-touch-icon-152x152.png"
+ },
+ {
+  "name": "Vienna Insurance Group Shqipëri",
+  "slug": "vienna-insurance-group-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "ins",
+  "website": "https://group.vig",
+  "logo": "vienna-insurance-group-shqiperi.png",
+  "logoSource": "https://group.vig/assets/img/favicons/apple-touch-icon-152x152.png"
+ },
+ {
+  "name": "Viva Fresh Store",
+  "slug": "viva-fresh-store",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "food",
+  "website": "https://vivafreshstore.com",
+  "logo": "viva-fresh-store.png",
+  "logoSource": "https://img.sedoparking.com/templates/logos/sedo_logo.png"
+ },
+ {
+  "name": "Vodafone Albania",
+  "slug": "vodafone-albania",
+  "country": "AL",
+  "city": "tirane",
+  "category": "tel",
+  "website": "https://vodafone.al",
+  "logo": "vodafone-albania.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fvodafone.al&size=128"
+ },
+ {
+  "name": "Volkswagen Kosovë",
+  "slug": "volkswagen-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://www.volkswagen.de",
+  "logo": "volkswagen-kosove.png",
+  "logoSource": "https://www.volkswagen.de/etc.clientlibs/clientlibs/vwa-ngw18/ngw18-frontend/apps/resources/statics/favicons/apple-touch-icon.png"
+ },
+ {
+  "name": "Volkswagen Shqipëri",
+  "slug": "volkswagen-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://volkswagen.al",
+  "logo": "volkswagen-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fvolkswagen.al&size=128"
+ },
+ {
+  "name": "Volotea Kosovë",
+  "slug": "volotea-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://www.volotea.com",
+  "logo": "volotea-kosove.png",
+  "logoSource": "https://www.volotea.com/apple-touch-icon.png"
+ },
+ {
+  "name": "Volotea Shqipëri",
+  "slug": "volotea-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://www.volotea.com",
+  "logo": "volotea-shqiperi.png",
+  "logoSource": "https://www.volotea.com/apple-touch-icon.png"
+ },
+ {
+  "name": "Volvo Cars Kosovë",
+  "slug": "volvo-cars-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "auto",
+  "website": "https://volvocars.com",
+  "logo": "volvo-cars-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fvolvocars.com&size=128"
+ },
+ {
+  "name": "Volvo Cars Shqipëri",
+  "slug": "volvo-cars-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "auto",
+  "website": "https://volvocars.com",
+  "logo": "volvo-cars-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fvolvocars.com&size=128"
+ },
+ {
+  "name": "Western Union Kosovë",
+  "slug": "western-union-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://westernunion.com",
+  "logo": "western-union-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwesternunion.com&size=128"
+ },
+ {
+  "name": "Western Union Shqipëri",
+  "slug": "western-union-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://westernunion.com",
+  "logo": "western-union-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwesternunion.com&size=128"
+ },
+ {
+  "name": "Whirlpool Kosovë",
+  "slug": "whirlpool-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://whirlpool.com",
+  "logo": "whirlpool-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwhirlpool.com&size=128"
+ },
+ {
+  "name": "Whirlpool Shqipëri",
+  "slug": "whirlpool-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://whirlpool.com",
+  "logo": "whirlpool-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwhirlpool.com&size=128"
+ },
+ {
+  "name": "Wise Kosovë",
+  "slug": "wise-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://wise.com",
+  "logo": "wise-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwise.com&size=128"
+ },
+ {
+  "name": "Wise Shqipëri",
+  "slug": "wise-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "bank",
+  "website": "https://wise.com",
+  "logo": "wise-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwise.com&size=128"
+ },
+ {
+  "name": "Wizz Air",
+  "slug": "wizz-air",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "trans",
+  "website": "https://wizzair.com",
+  "logo": "wizz-air.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwizzair.com&size=128"
+ },
+ {
+  "name": "Wizz Air Shqipëri",
+  "slug": "wizz-air-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "trans",
+  "website": "https://wizzair.com",
+  "logo": "wizz-air-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fwizzair.com&size=128"
+ },
+ {
+  "name": "Xiaomi Kosovë",
+  "slug": "xiaomi-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://mi.com",
+  "logo": "xiaomi-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fmi.com&size=128"
+ },
+ {
+  "name": "Xiaomi Shqipëri",
+  "slug": "xiaomi-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://mi.com",
+  "logo": "xiaomi-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fmi.com&size=128"
+ },
+ {
+  "name": "Zalando Kosovë",
+  "slug": "zalando-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "shop",
+  "website": "https://zalando.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Zalando Shqipëri",
+  "slug": "zalando-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "shop",
+  "website": "https://zalando.com",
+  "logo": null,
+  "logoSource": null
+ },
+ {
+  "name": "Zara Kosovë",
+  "slug": "zara-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "retail",
+  "website": "https://zara.com",
+  "logo": "zara-kosove.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fzara.com&size=128"
+ },
+ {
+  "name": "Zara Shqipëri",
+  "slug": "zara-shqiperi",
+  "country": "AL",
+  "city": "tirane",
+  "category": "retail",
+  "website": "https://zara.com",
+  "logo": "zara-shqiperi.png",
+  "logoSource": "https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https%3A%2F%2Fzara.com&size=128"
+ },
+ {
+  "name": "Ziraat Bank Kosovë",
+  "slug": "ziraat-bank-kosove",
+  "country": "XK",
+  "city": "prishtine",
+  "category": "bank",
+  "website": "https://www.ziraatbank.com.tr",
+  "logo": "ziraat-bank-kosove.png",
+  "logoSource": "https://www.ziraatbank.com.tr/SiteAssets/images/favicon.ico"
+ }
+]

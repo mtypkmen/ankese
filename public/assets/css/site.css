@@ -93,7 +93,15 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 .searchrow{display:flex;gap:10px;margin:14px 0 20px}
 .searchrow input{flex:1;min-width:0;padding:12px 14px;font-size:16px;border:1px solid #cbd5e3;border-radius:14px}
 .plist{list-style:none;margin:0 0 8px;padding:0}
-.plist li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+.plist li{display:flex;justify-content:flex-start;align-items:center;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.clogo{flex:none;border-radius:10px;object-fit:contain;background:#fff;border:1px solid var(--line)}
+.clogo.ph{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;background:var(--navy);color:#fff;font-weight:700;border:0}
+.chead{display:flex;align-items:center;gap:16px;margin:0 0 10px}.chead h1{margin:0}
+.chead .clogo.ph{width:72px;height:72px;font-size:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.chips a{padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--navy);text-decoration:none}
+.chips a[aria-current]{background:var(--navy);border-color:var(--navy);color:#fff}
+.brandnote{margin:28px 0 0;font-size:13px;color:var(--mute)}
 .plist li:last-child{border-bottom:1px solid var(--line)}
 .plist small{display:block;color:var(--mute);font-size:14px}
 .plist a{color:var(--navy)}

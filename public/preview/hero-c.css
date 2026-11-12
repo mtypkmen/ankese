@@ -1,0 +1,47 @@
+/* ONIZLEME C: maskeli fotograflar + katmanli geometrik sekiller. Taban (.heroB, .tl, dots) hero-b.css'ten gelir. Ana sayfaya uygulanmadi. */
+.heroC{--pu:#6C5CE7;--gr:#2ED573;--ye:#FFC312;--lg:#F1F2F6}
+
+/* kolaj alani: tum elemanlar absolute, konumlar elle (% = kutuya gore) */
+.viz{position:absolute;z-index:2;right:0;bottom:0;width:min(52vw,860px);aspect-ratio:860/580;pointer-events:none}
+.viz>*{position:absolute;display:block}
+
+/* ---- arka katman (z 1-3) ---- */
+.viz .y1{left:27%;top:3%;width:41%;aspect-ratio:1;border-radius:50%;background:var(--ye);z-index:1}
+.viz .hp1{left:41%;top:57%;width:42%;height:31%;border-radius:0 0 999px 999px;background:var(--pu);z-index:2}
+.viz .hg1{left:63%;top:-1%;width:15%;height:11%;border-radius:0 0 999px 999px;background:var(--gr);z-index:2}
+.viz .pu2{left:90%;top:16%;width:5%;aspect-ratio:1;border-radius:50%;background:var(--pu);z-index:3}
+.viz .hq{left:81%;top:73%;width:14%;aspect-ratio:1;border-radius:100% 0 0 0;background:var(--pu);z-index:3}
+.viz .hy{left:6%;top:77%;width:12%;height:9%;border-radius:999px 999px 0 0;background:var(--ye);z-index:3}
+
+/* ---- fotograflar: maske (daire / yuvarlatilmis kare), arkada gradient placeholder ---- */
+.viz .ph{overflow:hidden;box-shadow:0 0 0 6px #fff,0 18px 40px rgba(108,92,231,.28)}
+.viz .ph img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+.viz .p1{left:35%;top:9%;width:40%;aspect-ratio:1;border-radius:50%;z-index:4;background:linear-gradient(135deg,#6C5CE7,#a29bfe)}
+.viz .p1 img{object-position:24% 50%}
+.viz .p2{left:73%;top:34%;width:26%;aspect-ratio:1;border-radius:30%;z-index:6;background:linear-gradient(135deg,#FFC312,#ffeaa7)}
+.viz .p2 img{object-position:70% 25%}
+.viz .p3{left:22%;top:57%;width:18%;aspect-ratio:1;border-radius:50%;z-index:7;background:linear-gradient(135deg,#2ED573,#7bed9f)}
+.viz .p3 img{object-position:55% 30%}
+
+/* ---- orta katman: fotograflarin hemen arkasinda, birbirine binen sekiller ---- */
+.viz .gs1{left:70.5%;top:40%;width:26%;aspect-ratio:1;border-radius:30%;background:var(--gr);transform:rotate(11deg);z-index:5}
+.viz .pc2{left:18.5%;top:53%;width:24%;aspect-ratio:1;border-radius:50%;background:var(--pu);z-index:6}
+
+/* ---- on katman (z 8+): fotograflarin ustune binen sekiller ---- */
+.viz .gr1{left:21%;top:27%;width:15%;height:11%;border-radius:999px 999px 0 0;background:var(--lg);transform:rotate(-24deg);z-index:8;box-shadow:0 8px 18px rgba(108,92,231,.18)}
+.viz .g2{left:31%;top:19%;width:6%;aspect-ratio:1;border-radius:50%;background:var(--gr);z-index:8}
+.viz .y2{left:64%;top:66%;width:7%;aspect-ratio:1;border-radius:50%;background:var(--ye);z-index:9;box-shadow:0 6px 14px rgba(0,0,0,.12)}
+
+/* ---- aksanlar: yildiz ve uc nokta ---- */
+.viz .st{fill:currentColor;z-index:9}
+.viz .s1{left:76%;top:11%;width:5.5%;color:var(--pu);transform:rotate(12deg)}
+.viz .s2{left:17%;top:19%;width:4%;color:var(--ye);transform:rotate(-10deg)}
+.viz .s3{left:55%;top:91%;width:3.5%;color:var(--gr)}
+.viz .dots{aspect-ratio:3/1;z-index:9;background:radial-gradient(circle closest-side,var(--c) 0 82%,transparent 90%) 0 0/33.3334% 100% repeat-x}
+.viz .d1{--c:var(--pu);left:6%;top:50%;width:8%}
+.viz .d2{--c:var(--ye);left:80%;top:3%;width:7%}
+.viz .d3{--c:var(--gr);left:44%;top:90%;width:6%}
+
+@media(max-width:960px){
+  .viz{order:2;position:relative;right:auto;bottom:auto;width:min(100%,520px);margin:8px auto 56px}
+}

@@ -37,9 +37,9 @@ const T = {
 // adresler simdiden sabit, sayfalar yazilinca buraya bagli kalir.
 const EXTRA = {
   sq: { about: '/rreth-nesh', business: '/biznes', awards: '/cmimet', transparency: '/transparenca', faq: '/pyetje',
-        memberPrivacy: '/privatesia/anetaret', visitorPrivacy: '/privatesia/vizitoret', reviewGuide: '/udhezuesi-i-vleresimit', newBrands: '/kompani?rendit=te-rejat' },
+        memberPrivacy: '/privatesia/anetaret', visitorPrivacy: '/privatesia/vizitoret', reviewGuide: '/udhezuesi-i-vleresimit' },
   en: { about: '/en/about', business: '/en/business', awards: '/en/awards', transparency: '/en/transparency', faq: '/en/faq',
-        memberPrivacy: '/en/privacy/members', visitorPrivacy: '/en/privacy/visitors', reviewGuide: '/en/review-guidelines', newBrands: '/en/company?sort=new' },
+        memberPrivacy: '/en/privacy/members', visitorPrivacy: '/en/privacy/visitors', reviewGuide: '/en/review-guidelines' },
 };
 
 const LANGS = [['sq', 'Shqip', 'al'], ['en', 'English', 'gb']];
@@ -70,7 +70,10 @@ function refresh() {
     const [brands] = await pool.query(
       `SELECT c.slug, c.name, COUNT(x.id) AS n FROM companies c LEFT JOIN complaints x ON x.company_id = c.id AND x.status IN ('published','resolved')
         WHERE c.status = 'active' GROUP BY c.id ORDER BY n DESC, c.name LIMIT 10`);
-    const [cats] = await pool.query('SELECT slug, name_sq, name_en FROM categories ORDER BY sort LIMIT 10');
+    // en cok markasi olan 10 tema (bos temalar listelenmez)
+    const [cats] = await pool.query(
+      `SELECT k.slug, k.name_sq, k.name_en FROM categories k JOIN companies c ON c.category_id = k.id AND c.status = 'active'
+        GROUP BY k.id ORDER BY COUNT(c.id) DESC, k.sort LIMIT 10`);
     data = { complaints, brands, cats };
     at = Date.now();
     return data;
@@ -91,7 +94,7 @@ function render(loc, otherPath) {
   const href = (k) => x[k] || p[k];
   const cols =
     col(t.complaints, d.complaints.map((c) => [c.title, `${p.company}/${c.slug}/${c.id}-${slugify(c.title)}`]), t.noComplaints, [[t.allComplaints, p.complaints]]) +
-    col(t.brands, d.brands.map((b) => [b.name, `${p.company}/${b.slug}`]), t.noBrands, [[t.allBrands, p.company], [t.newBrands, x.newBrands]]) +
+    col(t.brands, d.brands.map((b) => [b.name, `${p.company}/${b.slug}`]), t.noBrands, [[t.allBrands, p.brands], [t.newBrands, p.newBrands]]) +
     col(t.searched, [], t.soon, [[t.search, p.search]]) +
     col(t.top, [], t.soon, [[t.allTop, p.top]]) +
     col(t.topics, d.cats.map((k) => [k[`name_${loc}`], `${p.category}/${k.slug}`]), t.soon, [[t.allTopics, p.category]]);

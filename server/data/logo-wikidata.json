@@ -1,0 +1,898 @@
+{
+ "aegean-airlines": {
+  "qid": "Q380580",
+  "label": "Aegean Airlines",
+  "file": "Aegean Airlines Logo 2020.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Aegean_Airlines_Logo_2020.svg"
+ },
+ "adria-ferries": {
+  "qid": "Q3605595",
+  "label": "Adria Ferries",
+  "file": "Adria Ferries logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Adria_Ferries_logo.svg"
+ },
+ "adidas-shqiperi": {
+  "qid": "Q3895",
+  "label": "Adidas AG",
+  "file": "Adidas 2022 logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Adidas_2022_logo.svg"
+ },
+ "aeroporti-nderkombetar-i-tiranes": {
+  "qid": "Q217226",
+  "label": "Tirana International Airport Nënë Tereza",
+  "file": "Aeroporti Ndërkombëtar Nënë Tereza.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Aeroporti_Nd%C3%ABrkomb%C3%ABtar_N%C3%ABn%C3%AB_Tereza.svg"
+ },
+ "air-serbia": {
+  "qid": "Q460373",
+  "label": "Air Serbia",
+  "file": "Air Serbia logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Air_Serbia_logo.svg"
+ },
+ "airbnb": {
+  "qid": "Q63327",
+  "label": "Airbnb",
+  "file": "Airbnb Logo Bélo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Airbnb_Logo_B%C3%A9lo.svg"
+ },
+ "air-albania": {
+  "qid": "Q405497",
+  "label": "Air",
+  "file": "Air logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Air_logo.svg"
+ },
+ "albpetrol": {
+  "qid": "Q21022622",
+  "label": "Albpetrol",
+  "file": "Albpetrol.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Albpetrol.svg"
+ },
+ "aliexpress-shqiperi": {
+  "qid": "Q29904317",
+  "label": "AliExpress",
+  "file": "AliExpress 2024.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:AliExpress_2024.svg"
+ },
+ "allianz-shqiperi": {
+  "qid": "Q487292",
+  "label": "Allianz SE",
+  "file": "Allianz.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Allianz.svg"
+ },
+ "amazon-shqiperi": {
+  "qid": "Q3884",
+  "label": "Amazon",
+  "file": "Amazon logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Amazon_logo.svg"
+ },
+ "atlantik": {
+  "qid": "Q756504",
+  "label": "Atlantik-Brücke",
+  "file": "Atlantik-Brücke logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Atlantik-Br%C3%BCcke_logo.svg"
+ },
+ "austrian-airlines": {
+  "qid": "Q781770",
+  "label": "Austrian Airlines",
+  "file": "Austrian Airlines Logo 2018.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Austrian_Airlines_Logo_2018.svg"
+ },
+ "austrian-airlines-shqiperi": {
+  "qid": "Q781770",
+  "label": "Austrian Airlines",
+  "file": "Austrian Airlines Logo 2018.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Austrian_Airlines_Logo_2018.svg"
+ },
+ "audi-shqiperi": {
+  "qid": "Q23317",
+  "label": "Audi AG",
+  "file": "Audi-Logo 2016.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Audi-Logo_2016.svg"
+ },
+ "banka-per-biznes-bpb": {
+  "qid": "Q16349919",
+  "label": "Banka Për Biznes",
+  "file": "BPB Logo.jpg",
+  "ext": "jpg",
+  "filePage": "https://commons.wikimedia.org/wiki/File:BPB_Logo.jpg"
+ },
+ "bershka-shqiperi": {
+  "qid": "Q827258",
+  "label": "Bershka",
+  "file": "Bershka logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Bershka_logo.svg"
+ },
+ "best-western-shqiperi": {
+  "qid": "Q830334",
+  "label": "Best Western",
+  "file": "Best Western Hotels & Resorts logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Best_Western_Hotels_%26_Resorts_logo.svg"
+ },
+ "booking-com": {
+  "qid": "Q4035313",
+  "label": "booking.com",
+  "file": "Booking.com Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Booking.com_Logo.svg"
+ },
+ "bolt-shqiperi": {
+  "qid": "Q20529164",
+  "label": "Bolt",
+  "file": "Bolt Technology logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Bolt_Technology_logo.svg"
+ },
+ "bosch-shqiperi": {
+  "qid": "Q234021",
+  "label": "Robert Bosch",
+  "file": "Bosch-logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Bosch-logo.svg"
+ },
+ "burger-king-shqiperi": {
+  "qid": "Q177054",
+  "label": "Burger King",
+  "file": "Burger King 2020.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Burger_King_2020.svg"
+ },
+ "british-airways-shqiperi": {
+  "qid": "Q8766",
+  "label": "British Airways",
+  "file": "Logo wordmark British Airways.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Logo_wordmark_British_Airways.png"
+ },
+ "calvin-klein-shqiperi": {
+  "qid": "Q1068628",
+  "label": "Calvin Klein",
+  "file": "Calvin klein logo old.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Calvin_klein_logo_old.svg"
+ },
+ "costa-coffee-shqiperi": {
+  "qid": "Q608845",
+  "label": "Costa Coffee",
+  "file": "Costa Coffee Logo white on red.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Costa_Coffee_Logo_white_on_red.png"
+ },
+ "dacia-shqiperi": {
+  "qid": "Q27460",
+  "label": "Dacia",
+  "file": "Dacia 2021 logo green.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Dacia_2021_logo_green.svg"
+ },
+ "devolli-corporation": {
+  "qid": "Q110835078",
+  "label": "Devolli Corporation",
+  "file": "Devolli Corporation.jpg",
+  "ext": "jpg",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Devolli_Corporation.jpg"
+ },
+ "defacto-shqiperi": {
+  "qid": "Q6059861",
+  "label": "DeFacto",
+  "file": "DeFacto logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:DeFacto_logo.svg"
+ },
+ "digitalb": {
+  "qid": "Q837178",
+  "label": "DigitAlb",
+  "file": "Digitalb logo.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Digitalb_logo.png"
+ },
+ "easyjet-shqiperi": {
+  "qid": "Q191551",
+  "label": "easyJet",
+  "file": "EasyJet logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:EasyJet_logo.svg"
+ },
+ "eco-market": {
+  "qid": "Q384793",
+  "label": "green marketing",
+  "file": "LiV Green.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:LiV_Green.png"
+ },
+ "etihad-airways-shqiperi": {
+  "qid": "Q212304",
+  "label": "Etihad Airways",
+  "file": "Etihad-airways-logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Etihad-airways-logo.svg"
+ },
+ "domino-s-shqiperi": {
+  "qid": "Q839466",
+  "label": "Domino's Pizza",
+  "file": "Domino's 2025.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Domino's_2025.svg"
+ },
+ "emirates-shqiperi": {
+  "qid": "Q180432",
+  "label": "Emirates",
+  "file": "Emirates banner logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Emirates_banner_logo.svg"
+ },
+ "europcar": {
+  "qid": "Q1376256",
+  "label": "Europcar",
+  "file": "Europcar-Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Europcar-Logo.svg"
+ },
+ "eurowings-shqiperi": {
+  "qid": "Q168836",
+  "label": "Eurowings",
+  "file": "Eurowings Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Eurowings_Logo.svg"
+ },
+ "eurowings": {
+  "qid": "Q168836",
+  "label": "Eurowings",
+  "file": "Eurowings Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Eurowings_Logo.svg"
+ },
+ "fedex-shqiperi": {
+  "qid": "Q459477",
+  "label": "FedEx",
+  "file": "FedEx Corporation - 2016 Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:FedEx_Corporation_-_2016_Logo.svg"
+ },
+ "flixbus": {
+  "qid": "Q1881378",
+  "label": "FlixBus",
+  "file": "Flixbus 201x logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Flixbus_201x_logo.svg"
+ },
+ "fiat-shqiperi": {
+  "qid": "Q27597",
+  "label": "Fiat",
+  "file": "FIAT logo (2020).svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:FIAT_logo_(2020).svg"
+ },
+ "gjirafa": {
+  "qid": "Q25569794",
+  "label": "Gjirafa",
+  "file": "GjirafaLogo.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:GjirafaLogo.png"
+ },
+ "generali-shqiperi": {
+  "qid": "Q670482",
+  "label": "Assicurazioni Generali",
+  "file": "Generali wordmark logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Generali_wordmark_logo.svg"
+ },
+ "glovo-shqiperi": {
+  "qid": "Q30899488",
+  "label": "Glovo",
+  "file": "Glovo Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Glovo_Logo.svg"
+ },
+ "h-and-m-shqiperi": {
+  "qid": "Q188326",
+  "label": "H&M",
+  "file": "H&M-Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:H%26M-Logo.svg"
+ },
+ "hekurudha-shqiptare": {
+  "qid": "Q115984",
+  "label": "Hekurudha Shqiptare",
+  "file": "Hekurudha Shqiptare.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Hekurudha_Shqiptare.svg"
+ },
+ "hertz": {
+  "qid": "Q1543874",
+  "label": "The Hertz Corporation",
+  "file": "Hertz Car Rental logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Hertz_Car_Rental_logo.svg"
+ },
+ "hilton-garden-inn-tirana": {
+  "qid": "Q1162859",
+  "label": "Hilton Garden Inn",
+  "file": "HGI-Logo-Color HR.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:HGI-Logo-Color_HR.png"
+ },
+ "holiday-inn-shqiperi": {
+  "qid": "Q2717882",
+  "label": "Holiday Inn",
+  "file": "Holiday Inn by IHG logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Holiday_Inn_by_IHG_logo.svg"
+ },
+ "honda-shqiperi": {
+  "qid": "Q9584",
+  "label": "Honda",
+  "file": "Honda logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Honda_logo.svg"
+ },
+ "jysk-shqiperi": {
+  "qid": "Q138913",
+  "label": "Jysk",
+  "file": "Jysk logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Jysk_logo.svg"
+ },
+ "intesa-sanpaolo-bank-albania": {
+  "qid": "Q6057456",
+  "label": "Intesa Sanpaolo Bank Albania",
+  "file": "Intesa Sanpaolo - logo (Italy, 2007-).svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Intesa_Sanpaolo_-_logo_(Italy%2C_2007-).svg"
+ },
+ "ita-airways": {
+  "qid": "Q108251249",
+  "label": "ITA Airways",
+  "file": "ITA Airways Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:ITA_Airways_Logo.svg"
+ },
+ "keds": {
+  "qid": "Q2630615",
+  "label": "Keds",
+  "file": "Keds.jpeg",
+  "ext": "jpg",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Keds.jpeg"
+ },
+ "kfc-shqiperi": {
+  "qid": "Q524757",
+  "label": "KFC",
+  "file": "Kfc textlogo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Kfc_textlogo.svg"
+ },
+ "kiabi-shqiperi": {
+  "qid": "Q3196299",
+  "label": "Kiabi",
+  "file": "Kiabi logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Kiabi_logo.svg"
+ },
+ "kohavision": {
+  "qid": "Q1778452",
+  "label": "Kohavision",
+  "file": "Kohavision logo (2015).svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Kohavision_logo_(2015).svg"
+ },
+ "klm-shqiperi": {
+  "qid": "Q181912",
+  "label": "KLM",
+  "file": "KLM logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:KLM_logo.svg"
+ },
+ "kolegji-aab": {
+  "qid": "Q4649771",
+  "label": "AAB College",
+  "file": "Kolegji AAB.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Kolegji_AAB.png"
+ },
+ "kolegji-heimerer": {
+  "qid": "Q65315854",
+  "label": "Heimerer College",
+  "file": "Kampusi.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Kampusi.png"
+ },
+ "kosova-petrol": {
+  "qid": "Q174824",
+  "label": "Petrol Group",
+  "file": "Petrol Group logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Petrol_Group_logo.svg"
+ },
+ "kostt": {
+  "qid": "Q6335246",
+  "label": "KOSTT",
+  "file": "Logo Kostt.jpg",
+  "ext": "jpg",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Logo_Kostt.jpg"
+ },
+ "kujtesa": {
+  "qid": "Q6442358",
+  "label": "Kujtesa",
+  "file": "Kujtesa-logo-NEW.jpg",
+  "ext": "jpg",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Kujtesa-logo-NEW.jpg"
+ },
+ "lot-polish-airlines": {
+  "qid": "Q204268",
+  "label": "LOT Polish Airlines",
+  "file": "LOT wordmark.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:LOT_wordmark.svg"
+ },
+ "lufthansa": {
+  "qid": "Q9325",
+  "label": "Lufthansa",
+  "file": "Lufthansa Logo 2018.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Lufthansa_Logo_2018.svg"
+ },
+ "lg-shqiperi": {
+  "qid": "Q136778",
+  "label": "LG Group",
+  "file": "LG logo (2008–2014).svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:LG_logo_(2008%E2%80%932014).svg"
+ },
+ "lufthansa-shqiperi": {
+  "qid": "Q9325",
+  "label": "Lufthansa",
+  "file": "Lufthansa Logo 2018.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Lufthansa_Logo_2018.svg"
+ },
+ "massimo-dutti-shqiperi": {
+  "qid": "Q788231",
+  "label": "Massimo Dutti",
+  "file": "Massimo Dutti.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Massimo_Dutti.png"
+ },
+ "marriott-tirana": {
+  "qid": "Q1141173",
+  "label": "Marriott International",
+  "file": "Marriott International.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Marriott_International.svg"
+ },
+ "mazda-shqiperi": {
+  "qid": "Q35996",
+  "label": "Mazda",
+  "file": "Mazda logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Mazda_logo.svg"
+ },
+ "mcdonald-s-shqiperi": {
+  "qid": "Q38076",
+  "label": "McDonald's",
+  "file": "McDonald's with slogan 2020.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:McDonald's_with_slogan_2020.svg"
+ },
+ "mercedes-benz-shqiperi": {
+  "qid": "Q36008",
+  "label": "Mercedes-Benz",
+  "file": "Mercedes-Benz Logo 2010.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Logo_2010.svg"
+ },
+ "mitsubishi-motors-shqiperi": {
+  "qid": "Q36033",
+  "label": "Mitsubishi Motors",
+  "file": "Mitsubishi motors new logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Mitsubishi_motors_new_logo.svg"
+ },
+ "moneygram-shqiperi": {
+  "qid": "Q1944412",
+  "label": "MoneyGram",
+  "file": "MoneyGram Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:MoneyGram_Logo.svg"
+ },
+ "norwegian-shqiperi": {
+  "qid": "Q215392",
+  "label": "Norwegian Air Shuttle",
+  "file": "Norwegian Logo 2024.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Norwegian_Logo_2024.svg"
+ },
+ "one-albania": {
+  "qid": "Q316322",
+  "label": "One",
+  "file": "One TV Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:One_TV_Logo.svg"
+ },
+ "opel-shqiperi": {
+  "qid": "Q40966",
+  "label": "Opel",
+  "file": "Opel Logo 2021.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Opel_Logo_2021.svg"
+ },
+ "otp-bank-albania": {
+  "qid": "Q912778",
+  "label": "OTP Bank",
+  "file": "Otp bank Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Otp_bank_Logo.svg"
+ },
+ "papa-john-s-shqiperi": {
+  "qid": "Q2759586",
+  "label": "Papa John's",
+  "file": "Papa John's Logo 2019.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Papa_John's_Logo_2019.svg"
+ },
+ "paysera-albania": {
+  "qid": "Q16469123",
+  "label": "Paysera",
+  "file": "Paysera logo 2022.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Paysera_logo_2022.png"
+ },
+ "pegasus-airlines": {
+  "qid": "Q1100424",
+  "label": "Pegasus Airlines",
+  "file": "Pegasus Airlines logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Pegasus_Airlines_logo.svg"
+ },
+ "paypal-shqiperi": {
+  "qid": "Q483959",
+  "label": "PayPal",
+  "file": "Paypal.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Paypal.svg"
+ },
+ "pegasus-airlines-shqiperi": {
+  "qid": "Q1100424",
+  "label": "Pegasus Airlines",
+  "file": "Pegasus Airlines logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Pegasus_Airlines_logo.svg"
+ },
+ "peugeot-shqiperi": {
+  "qid": "Q6742",
+  "label": "Peugeot",
+  "file": "Wordmark Peugeot 2021.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Wordmark_Peugeot_2021.svg"
+ },
+ "pepsi-shqiperi": {
+  "qid": "Q334800",
+  "label": "PepsiCo",
+  "file": "PepsiCologo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:PepsiCologo.svg"
+ },
+ "philips-shqiperi": {
+  "qid": "Q1536003",
+  "label": "Philips Records",
+  "file": "Philips old logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Philips_old_logo.svg"
+ },
+ "pizza-hut-shqiperi": {
+  "qid": "Q191615",
+  "label": "Pizza Hut",
+  "file": "Pizza Hut classic logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Pizza_Hut_classic_logo.svg"
+ },
+ "posta-e-kosoves": {
+  "qid": "Q939510",
+  "label": "Post and Telecom of Kosovo",
+  "file": "PTK (Unternehmen) logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:PTK_(Unternehmen)_logo.svg"
+ },
+ "prishtina-mall": {
+  "qid": "Q116294446",
+  "label": "Prishtina Mall",
+  "file": "Prishtina Mall.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Prishtina_Mall.png"
+ },
+ "pull-and-bear-shqiperi": {
+  "qid": "Q691029",
+  "label": "Pull&Bear",
+  "file": "Pull and Bear logo 1991.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Pull_and_Bear_logo_1991.svg"
+ },
+ "procredit-bank-kosovo": {
+  "qid": "Q20091911",
+  "label": "ProCredit Bank",
+  "file": "Logo ProCredit Bank.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Logo_ProCredit_Bank.svg"
+ },
+ "puma-shqiperi": {
+  "qid": "Q157064",
+  "label": "Puma",
+  "file": "Puma-logo-(text).svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Puma-logo-(text).svg"
+ },
+ "radisson-shqiperi": {
+  "qid": "Q19724671",
+  "label": "Radisson Hotel Group",
+  "file": "Radisson Hotel Group Logo.jpg",
+  "ext": "jpg",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Radisson_Hotel_Group_Logo.jpg"
+ },
+ "raiffeisen-bank-albania": {
+  "qid": "Q2127528",
+  "label": "Raiffeisen Bank International",
+  "file": "Raiffeisen Bank International logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Raiffeisen_Bank_International_logo.svg"
+ },
+ "raiffeisen-bank-kosovo": {
+  "qid": "Q2127528",
+  "label": "Raiffeisen Bank International",
+  "file": "Raiffeisen Bank International logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Raiffeisen_Bank_International_logo.svg"
+ },
+ "rogner-hotel-tirana": {
+  "qid": "Q30634777",
+  "label": "Rogner Hotel Tirana",
+  "file": "Rogner Hotel Tirana.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Rogner_Hotel_Tirana.svg"
+ },
+ "revolut-shqiperi": {
+  "qid": "Q22908307",
+  "label": "Revolut",
+  "file": "Revolut logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Revolut_logo.svg"
+ },
+ "seat-shqiperi": {
+  "qid": "Q188217",
+  "label": "SEAT",
+  "file": "SEAT S.A. logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:SEAT_S.A._logo.svg"
+ },
+ "shein-shqiperi": {
+  "qid": "Q107377209",
+  "label": "Shein",
+  "file": "Shein Logo 2017.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Shein_Logo_2017.svg"
+ },
+ "shell-albania": {
+  "qid": "Q154950",
+  "label": "Shell",
+  "file": "Shell wordmark 2019.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Shell_wordmark_2019.svg"
+ },
+ "sixt": {
+  "qid": "Q705664",
+  "label": "SIXT",
+  "file": "Sixt-Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Sixt-Logo.svg"
+ },
+ "skoda-shqiperi": {
+  "qid": "Q29637",
+  "label": "Škoda Auto",
+  "file": "Laurin & Klement logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Laurin_%26_Klement_logo.svg"
+ },
+ "sony-shqiperi": {
+  "qid": "Q41187",
+  "label": "Sony Group",
+  "file": "Sony Group logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Sony_Group_logo.svg"
+ },
+ "spar-shqiperi": {
+  "qid": "Q610492",
+  "label": "Spar",
+  "file": "Spar-logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Spar-logo.svg"
+ },
+ "spotify-shqiperi": {
+  "qid": "Q689141",
+  "label": "Spotify",
+  "file": "Spotify logo with text.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Spotify_logo_with_text.svg"
+ },
+ "stradivarius-shqiperi": {
+  "qid": "Q3322945",
+  "label": "Stradivarius",
+  "file": "Stradivarius logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Stradivarius_logo.svg"
+ },
+ "starbucks-shqiperi": {
+  "qid": "Q37158",
+  "label": "Starbucks",
+  "file": "Starbucks coffee wordmark.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Starbucks_coffee_wordmark.png"
+ },
+ "swiss-shqiperi": {
+  "qid": "Q39",
+  "label": "Switzerland",
+  "file": "Logo der Schweizerischen Eidgenossenschaft.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Logo_der_Schweizerischen_Eidgenossenschaft.svg"
+ },
+ "swiss": {
+  "qid": "Q39",
+  "label": "Switzerland",
+  "file": "Logo der Schweizerischen Eidgenossenschaft.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Logo_der_Schweizerischen_Eidgenossenschaft.svg"
+ },
+ "temu-shqiperi": {
+  "qid": "Q114258161",
+  "label": "Temu",
+  "file": "Temu logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Temu_logo.svg"
+ },
+ "tommy-hilfiger-shqiperi": {
+  "qid": "Q634881",
+  "label": "Tommy Hilfiger B.V.",
+  "file": "Tommy hilfig vectorlogo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Tommy_hilfig_vectorlogo.svg"
+ },
+ "top-channel": {
+  "qid": "Q968899",
+  "label": "Top Channel",
+  "file": "Top Channel.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Top_Channel.svg"
+ },
+ "trendyol-shqiperi": {
+  "qid": "Q20473304",
+  "label": "Trendyol",
+  "file": "Trendyol logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Trendyol_logo.svg"
+ },
+ "turkish-airlines": {
+  "qid": "Q4548",
+  "label": "Turkish Airlines",
+  "file": "Turkish Airlines logo 2019 compact.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Turkish_Airlines_logo_2019_compact.svg"
+ },
+ "turkish-airlines-shqiperi": {
+  "qid": "Q4548",
+  "label": "Turkish Airlines",
+  "file": "Turkish Airlines logo 2019 compact.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Turkish_Airlines_logo_2019_compact.svg"
+ },
+ "union-bank": {
+  "qid": "Q2004078",
+  "label": "Union Bank of India",
+  "file": "Union Bank of India Logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Union_Bank_of_India_Logo.svg"
+ },
+ "uniqa-shqiperi": {
+  "qid": "Q1022419",
+  "label": "Uniqa Insurance Group",
+  "file": "Uniqa Insurance Group logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Uniqa_Insurance_Group_logo.svg"
+ },
+ "universiteti-i-gjakoves": {
+  "qid": "Q31666747",
+  "label": "University of Gjakova",
+  "file": "Ugjfa.jpg",
+  "ext": "jpg",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Ugjfa.jpg"
+ },
+ "universiteti-i-prishtines": {
+  "qid": "Q29659",
+  "label": "University of Pristina",
+  "file": "University of Prishtina logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:University_of_Prishtina_logo.svg"
+ },
+ "universiteti-ubt": {
+  "qid": "Q19946137",
+  "label": "University for Business and Technology",
+  "file": "Ubtlogo.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Ubtlogo.png"
+ },
+ "vienna-insurance-group-shqiperi": {
+  "qid": "Q694257",
+  "label": "Vienna Insurance Group",
+  "file": "Vienna Insurance Group.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Vienna_Insurance_Group.svg"
+ },
+ "vodafone-albania": {
+  "qid": "Q122141",
+  "label": "Vodafone",
+  "file": "Vodafone logo 1997.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Vodafone_logo_1997.png"
+ },
+ "volkswagen-shqiperi": {
+  "qid": "Q246",
+  "label": "Volkswagen",
+  "file": "Volkswagen logo 2019.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Volkswagen_logo_2019.svg"
+ },
+ "volotea-shqiperi": {
+  "qid": "Q2296193",
+  "label": "Volotea",
+  "file": "Volotea.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Volotea.svg"
+ },
+ "volvo-cars-shqiperi": {
+  "qid": "Q215293",
+  "label": "Volvo Cars",
+  "file": "Volvo Trucks Logo.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Volvo_Trucks_Logo.png"
+ },
+ "western-union-shqiperi": {
+  "qid": "Q861042",
+  "label": "Western Union",
+  "file": "Western Union Logo 2019.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Western_Union_Logo_2019.svg"
+ },
+ "whirlpool-shqiperi": {
+  "qid": "Q11254284",
+  "label": "Whirlpool",
+  "file": "Whirlpool Logo.png",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Whirlpool_Logo.png"
+ },
+ "xiaomi-shqiperi": {
+  "qid": "Q1636958",
+  "label": "Xiaomi",
+  "file": "Xiaomi logo (2021-).svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Xiaomi_logo_(2021-).svg"
+ },
+ "zalando-shqiperi": {
+  "qid": "Q136570",
+  "label": "Zalando",
+  "file": "Zalando logo.svg",
+  "ext": "png",
+  "filePage": "https://commons.wikimedia.org/wiki/File:Zalando_logo.svg"
+ }
+}

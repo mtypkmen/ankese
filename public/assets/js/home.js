@@ -141,6 +141,8 @@
     current = o.getAttribute('data-v');
     val.textContent = o.textContent;
     opts.forEach(function (x) { x.setAttribute('aria-selected', x === o ? 'true' : 'false'); });
+    // secilen kategorinin listesini goster (listeler sunucudan hazir gelir)
+    Array.prototype.forEach.call(root.querySelectorAll('.lb'), function (l) { l.hidden = l.getAttribute('data-pane') !== current; });
     close(true);
   }
 

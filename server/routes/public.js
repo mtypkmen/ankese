@@ -22,12 +22,18 @@ function pager(base, pg, hasNext, t) {
   return `<nav class="pager">${pg > 1 ? `<a href="${j(pg - 1)}">← ${esc(t.prev)}</a>` : '<span></span>'}${hasNext ? `<a href="${j(pg + 1)}">${esc(t.next)} →</a>` : ''}</nav>`;
 }
 
+// logo varsa gosterir, yoksa bas harfli daire; dosya adi DB'den gelir ama yine de kisitli desenle dogrulanir
+const logoOk = (s) => typeof s === 'string' && /^[a-z0-9-]{1,100}\.(png|jpg|webp|gif|ico)$/.test(s);
+const logoTag = (r, size = 44) => logoOk(r.logo)
+  ? `<img class="clogo" src="/assets/logos/${r.logo}" width="${size}" height="${size}" alt="${esc(r.name)}" loading="lazy">`
+  : `<span class="clogo ph" aria-hidden="true">${esc([...r.name][0].toUpperCase())}</span>`;
+
 function companyList(rows, t, p) {
   if (!rows.length) return `<p>${esc(t.no_companies)}</p>`;
-  return `<ul class="plist">${rows.map((r) => `<li><span><b><a href="${p.company}/${esc(r.slug)}">${esc(r.name)}</a></b><small>${esc(r.city || '')}${r.city ? ', ' : ''}${esc(t.countries[r.country_code])} · ${r.n} ${esc(t.complaints.toLowerCase())}</small></span></li>`).join('')}</ul>`;
+  return `<ul class="plist">${rows.map((r) => `<li>${logoTag(r)}<span><b><a href="${p.company}/${esc(r.slug)}">${esc(r.name)}</a></b><small>${esc(r.city || '')}${r.city ? ', ' : ''}${esc(t.countries[r.country_code])} · ${r.n} ${esc(t.complaints.toLowerCase())}</small></span></li>`).join('')}</ul>`;
 }
 
-const COMPANY_SQL = `SELECT c.id, c.slug, c.name, c.country_code, ci.name AS city,
+const COMPANY_SQL = `SELECT c.id, c.slug, c.name, c.logo, c.country_code, ci.name AS city,
   (SELECT COUNT(*) FROM complaints x WHERE x.company_id = c.id AND x.status IN ('published','resolved')) AS n
   FROM companies c LEFT JOIN cities ci ON ci.id = c.city_id`;
 
@@ -42,7 +48,7 @@ function mount(loc) {
     try {
       if (!slugOk(req.params.slug)) return notFound(req, res);
       const [cr] = await pool.query(
-        `SELECT c.id, c.slug, c.name, c.country_code, c.website, ci.name AS city, ci.slug AS city_slug, k.slug AS cat_slug, k.name_${loc} AS cat
+        `SELECT c.id, c.slug, c.name, c.logo, c.country_code, c.website, ci.name AS city, ci.slug AS city_slug, k.slug AS cat_slug, k.name_${loc} AS cat
            FROM companies c LEFT JOIN cities ci ON ci.id = c.city_id JOIN categories k ON k.id = c.category_id
           WHERE c.slug = ? AND c.status = 'active'`, [req.params.slug]);
       const c = cr[0]; if (!c) return notFound(req, res);
@@ -56,10 +62,11 @@ function mount(loc) {
       const list = rows.slice(0, PER).map((r) => `<article class="cmp"><h3><a href="${p.company}/${esc(c.slug)}/${r.id}-${slugify(r.title)}">${esc(r.title)}</a></h3>
 <p class="meta">${esc(publicName(r.author))} · ${esc(r.pub)}${r.status === 'resolved' ? ` · <span class="tag ok">${esc(t.st_resolved)}</span>` : ''}</p><p>${esc(excerpt(r.body))}</p></article>`).join('');
       const body = wide(`<nav class="crumbs"><a href="${p.home}">${esc(t.home)}</a> › <a href="${p.category}/${esc(c.cat_slug)}">${esc(c.cat)}</a></nav>
-<h1>${esc(c.name)}</h1><p class="meta">${esc(c.city || '')}${c.city ? ', ' : ''}${esc(t.countries[c.country_code])} · ${esc(c.cat)}</p>
+<div class="chead">${logoTag(c, 72)}<h1>${esc(c.name)}</h1></div><p class="meta">${esc(c.city || '')}${c.city ? ', ' : ''}${esc(t.countries[c.country_code])} · ${esc(c.cat)}</p>
 <p class="stats"><b>${st.total}</b> ${esc(t.complaints.toLowerCase())} · <b>${st.resolved || 0}</b> ${esc(t.resolved_count)}</p>
 <p><a class="btn" href="${p.write}/${c.id}">${esc(t.write_for_company)}</a></p>
-<h2 class="sec">${esc(t.published_complaints)}</h2>${list || `<p>${esc(t.no_complaints)}</p>`}${pager(`${p.company}/${c.slug}`, pg, hasNext, t)}`);
+<h2 class="sec">${esc(t.published_complaints)}</h2>${list || `<p>${esc(t.no_complaints)}</p>`}${pager(`${p.company}/${c.slug}`, pg, hasNext, t)}
+<p class="brandnote">${esc(t.brand_note)}</p>`);
       out(req, res, { title: c.name, body, otherPath: `${o.company}/${c.slug}`, canonical: `${config.siteOrigin}${p.company}/${c.slug}`,
         robots: st.total > 0 ? 'index,follow' : 'noindex,follow', description: `${c.name}: ${st.total} ${t.complaints.toLowerCase()}` });
     } catch (e) { next(e); }
@@ -132,7 +139,7 @@ function mount(loc) {
 
   // ---------- header menusu: tum ankesalar / top 20 / ayin en iyileri ----------
   const L = LISTS[loc];
-  const rankList = (rows, unit) => `<ol class="plist rankl">${rows.map((r, i) => `<li><span><b><span class="rk">${i + 1}</span><a href="${p.company}/${esc(r.slug)}">${esc(r.name)}</a></b><small>${esc(r.city || '')}${r.city ? ', ' : ''}${esc(t.countries[r.country_code])} · ${r.n} ${esc(unit)}</small></span></li>`).join('')}</ol>`;
+  const rankList = (rows, unit) => `<ol class="plist rankl">${rows.map((r, i) => `<li>${logoTag(r)}<span><b><span class="rk">${i + 1}</span><a href="${p.company}/${esc(r.slug)}">${esc(r.name)}</a></b><small>${esc(r.city || '')}${r.city ? ', ' : ''}${esc(t.countries[r.country_code])} · ${r.n} ${esc(unit)}</small></span></li>`).join('')}</ol>`;
 
   router.get(p.complaints, async (req, res, next) => {
     try {
@@ -163,7 +170,7 @@ function mount(loc) {
       const from = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1));
       const to = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + 1, 1));
       const [rows] = await pool.query(
-        `SELECT c.slug, c.name, c.country_code, ci.name AS city, COUNT(*) AS n
+        `SELECT c.slug, c.name, c.logo, c.country_code, ci.name AS city, COUNT(*) AS n
            FROM complaints x JOIN companies c ON c.id = x.company_id LEFT JOIN cities ci ON ci.id = c.city_id
           WHERE x.status = 'resolved' AND c.status = 'active' AND x.resolved_at >= ? AND x.resolved_at < ?
           GROUP BY c.id ORDER BY n DESC, c.name LIMIT 20`, [from, to]);
@@ -172,6 +179,38 @@ function mount(loc) {
         body: wide(`<h1>${esc(L.bestH)}</h1><p class="lead2">${esc(L.bestP(month))}</p>${rows.length ? rankList(rows, L.resolvedN) : `<p>${esc(L.bestEmpty)}</p>`}`) });
     } catch (e) { next(e); }
   });
+
+  // ---------- tum markalar / yeni markalar (?c=al|xk ulke filtresi) ----------
+  const BPER = 48;
+  async function brandsPage(req, res, kind) {
+    const cc = { al: 'AL', xk: 'XK' }[String(req.query.c || '').toLowerCase()];
+    const pg = pageNo(req.query.page);
+    const where = `c.status = 'active'${kind === 'new' ? ' AND c.created_at >= UTC_TIMESTAMP() - INTERVAL 1 MONTH' : ''}${cc ? ' AND c.country_code = ?' : ''}`, args = cc ? [cc] : [];
+    const [rows] = await pool.query(
+      `${COMPANY_SQL} WHERE ${where} ORDER BY ${kind === 'new' ? 'c.created_at DESC, c.id DESC' : 'c.name'} LIMIT ? OFFSET ?`, [...args, BPER + 1, (pg - 1) * BPER]);
+    const [[tot]] = await pool.query(`SELECT COUNT(*) AS n FROM companies c WHERE ${where}`, args);
+    const path = kind === 'new' ? p.newBrands : p.brands, other = kind === 'new' ? o.newBrands : o.brands;
+    const q = cc ? `?c=${cc.toLowerCase()}` : '';
+    const chip = (label, code) => `<a href="${path}${code ? `?c=${code}` : ''}"${(cc || '').toLowerCase() === code ? ' aria-current="true"' : ''}>${esc(label)}</a>`;
+    const H = kind === 'new' ? L.newH : L.brandsH, P = kind === 'new' ? L.newP : L.brandsP;
+    out(req, res, { title: H, otherPath: `${other}${q}`, canonical: `${config.siteOrigin}${path}`, robots: cc || pg > 1 ? 'noindex,follow' : 'index,follow', description: P,
+      body: wide(`<h1>${esc(H)}</h1><p class="lead2">${esc(P)} <b>${tot.n}</b> ${esc(L.brandsN)}.</p>
+<nav class="chips" aria-label="${esc(t.country)}">${chip(L.all, '')}${chip(t.countries.AL, 'al')}${chip(t.countries.XK, 'xk')}</nav>
+${companyList(rows.slice(0, BPER), t, p)}${pager(`${path}${q}`, pg, rows.length > BPER, t)}`) });
+  }
+  // ---------- tum temalar (markasi olan sektorler) ----------
+  router.get(p.category, async (req, res, next) => {
+    try {
+      const [rows] = await pool.query(
+        `SELECT k.slug, k.name_${loc} AS name, COUNT(c.id) AS n FROM categories k JOIN companies c ON c.category_id = k.id AND c.status = 'active'
+          GROUP BY k.id ORDER BY k.sort`);
+      out(req, res, { title: L.topicsH, otherPath: o.category, canonical: `${config.siteOrigin}${p.category}`, robots: rows.length ? 'index,follow' : 'noindex,follow', description: L.topicsP,
+        body: wide(`<h1>${esc(L.topicsH)}</h1><p class="lead2">${esc(L.topicsP)}</p><ul class="plist">${rows.map((r) =>
+          `<li><span><b><a href="${p.category}/${esc(r.slug)}">${esc(r.name)}</a></b><small>${r.n} ${esc(L.brandsN)}</small></span></li>`).join('')}</ul>`) });
+    } catch (e) { next(e); }
+  });
+  router.get(p.brands, (req, res, next) => brandsPage(req, res, 'all').catch(next));
+  router.get(p.newBrands, (req, res, next) => brandsPage(req, res, 'new').catch(next));
 }
 
 const LISTS = {
@@ -179,12 +218,16 @@ const LISTS = {
     allH: 'Të gjitha ankesat', allP: 'Ankesat e publikuara, nga më e reja te më e vjetra.', empty: 'Ende nuk ka ankesa të publikuara.',
     topH: 'Top 20', topP: '20 kompanitë me më shumë ankesa të publikuara.',
     bestH: 'Më të mirët e muajit', bestP: (m) => `Kompanitë që zgjidhën më shumë ankesa në ${m}.`, bestEmpty: 'Këtë muaj ende nuk është zgjidhur asnjë ankesë.', resolvedN: 'të zgjidhura',
+    brandsH: 'Të gjitha markat', brandsP: 'Kompanitë dhe markat në Shqipëri e Kosovë, në rend alfabetik. Gjithsej', newH: 'Markat e reja', newP: 'Markat e shtuara gjatë një muajit të fundit, nga më e reja. Gjithsej', brandsN: 'marka', all: 'Të gjitha',
+    topicsH: 'Të gjitha temat', topicsP: 'Sektorët me kompani dhe marka në Ankese.com.',
     months: ['janar', 'shkurt', 'mars', 'prill', 'maj', 'qershor', 'korrik', 'gusht', 'shtator', 'tetor', 'nëntor', 'dhjetor'],
   },
   en: {
     allH: 'All complaints', allP: 'Published complaints, newest first.', empty: 'No complaints published yet.',
     topH: 'Top 20', topP: 'The 20 companies with the most published complaints.',
     bestH: 'Best of Month', bestP: (m) => `Companies that resolved the most complaints in ${m}.`, bestEmpty: 'No complaints have been resolved this month yet.', resolvedN: 'resolved',
+    brandsH: 'All brands', brandsP: 'Companies and brands in Albania and Kosovo, in alphabetical order. In total', newH: 'New brands', newP: 'Brands added in the last month, newest first. In total', brandsN: 'brands', all: 'All',
+    topicsH: 'All topics', topicsP: 'Sectors with companies and brands on Ankese.com.',
     months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
   },
 };

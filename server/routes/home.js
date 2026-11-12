@@ -28,7 +28,7 @@ const H = {
     bestH: 'Kompanitë më të suksesshme në zgjidhjen e ankesave', cat: 'Kategoria', catSearch: 'Kërko kategori…', cats: 'Kategoritë', catNone: 'Asnjë kategori nuk u gjet.',
     period: '6 muajt e fundit',
     bestNote: 'Kjo renditje tregon vetëm se si kompanitë u përgjigjen dhe i zgjidhin ankesat në Ankese.com. Nuk tregon nëse një kompani është e mirë apo e keqe, as madhësinë e saj.',
-    bestSoon: 'Renditja do të shfaqet sapo kompanitë të marrin vlerësimet e para.',
+    bestSoon: 'Renditja do të shfaqet sapo kompanitë të marrin vlerësimet e para.', resolvedL: 'të zgjidhura', sinceY: 'Nga dje', noChange: 'Pa ndryshim nga dje',
     corpEy: 'Për biznese', corpH: 'Kthejeni çdo ankesë në një klient besnik',
     corpP: 'Me anëtarësimin për biznese u përgjigjeni ankesave më shpejt, tregoni se kujdeseni për klientët dhe e bëni markën tuaj të dallohet para mijëra njerëzve që kërkojnë në Ankese.com përpara se të blejnë.',
     corpBtn: 'Shiko anëtarësimin për biznese', corpHref: '/biznes',
@@ -57,7 +57,7 @@ const H = {
     bestH: 'The most successful companies at resolving complaints', cat: 'Category', catSearch: 'Search categories…', cats: 'Categories', catNone: 'No category found.',
     period: 'Last 6 months',
     bestNote: 'This ranking only shows how companies reply to and resolve complaints on Ankese.com. It does not say whether a company is good or bad, nor how big it is.',
-    bestSoon: 'The ranking will appear once companies receive their first ratings.',
+    bestSoon: 'The ranking will appear once companies receive their first ratings.', resolvedL: 'resolved', sinceY: 'Since yesterday', noChange: 'No change since yesterday',
     corpEy: 'For businesses', corpH: 'Turn every complaint into a loyal customer',
     corpP: 'With a business membership you reply to complaints faster, show that you care about your customers and make your brand stand out to the thousands of people who search Ankese.com before they buy.',
     corpBtn: 'See business membership', corpHref: '/en/business',
@@ -90,7 +90,19 @@ async function data(loc) {
   const [top] = await pool.query(
     `SELECT c.slug, c.name, COUNT(x.id) AS n FROM companies c JOIN complaints x ON x.company_id = c.id AND x.status IN ('published','resolved')
       WHERE c.status = 'active' GROUP BY c.id ORDER BY n DESC, c.name LIMIT 3`);
-  const d = { st, cats, latest, top };
+  // kategori basina ilk 5: cozulen sikayet sayisina gore; esitlikte haftalik sabit "rastgele" sira (sayfa her yenilemede degismesin)
+  const [lbRows] = await pool.query(
+    `SELECT * FROM (
+       SELECT s.*, ROW_NUMBER() OVER (PARTITION BY s.category_id ORDER BY s.sc DESC, s.res DESC, CRC32(CONCAT(s.id, YEARWEEK(UTC_DATE(), 3))), s.id) AS rn
+         FROM (SELECT t.*, COALESCE(ROUND(100 * t.res / NULLIF(t.pub, 0)), 0) AS sc   -- skor = cozum orani (0-100)
+                 FROM (SELECT c.id, c.slug, c.name, c.logo, c.category_id, k.slug AS cat,
+                              (SELECT COUNT(*) FROM complaints x WHERE x.company_id = c.id AND x.status = 'resolved') AS res,
+                              (SELECT COUNT(*) FROM complaints x WHERE x.company_id = c.id AND x.status IN ('published','resolved')) AS pub
+                         FROM companies c JOIN categories k ON k.id = c.category_id WHERE c.status = 'active') t) s
+     ) r WHERE rn <= 5 ORDER BY category_id, rn`);
+  const lb = {};
+  for (const r of lbRows) (lb[r.cat] ||= []).push(r);
+  const d = { st, cats, latest, top, lb };
   cache[loc] = { at: Date.now(), d };
   return d;
 }
@@ -105,7 +117,16 @@ function mount(loc) {
   const t = H[loc], p = PATHS[loc], o = PATHS[loc === 'sq' ? 'en' : 'sq'];
   router.get(p.home, async (req, res, next) => {
     try {
-      const [{ st, cats, latest, top }] = await Promise.all([data(loc), footer.refresh()]);
+      const [{ st, cats, latest, top, lb }] = await Promise.all([data(loc), footer.refresh()]);
+      const bestCats = cats.filter((k) => lb[k.slug]); // yalnizca markasi olan kategoriler
+      const STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>';
+      // preview'daki baş harf kutusu sahte veri icindi; gercek markada logo, logo yoksa ayni renkli bas harf kutusu
+      const lbLogo = (r, i) => /^[a-z0-9-]{1,100}\.(png|jpg|webp|gif|ico)$/.test(r.logo || '')
+        ? `<img class="lg" src="/assets/logos/${r.logo}" width="76" height="76" alt="${esc(r.name)}" loading="lazy">`
+        : `<span class="av av${i % 6}" aria-hidden="true">${esc(initials(r.name))}</span>`;
+      const lbLists = bestCats.map((k, n) => `<ol class="lb" data-pane="${esc(k.slug)}"${n ? ' hidden' : ''}>${lb[k.slug].map((r, i) =>
+        // preview/hero-d ile ayni yapi: [degisim | logo | "1." + ad | skor]; gecmis veri olmadigi icin degisim hep "–"
+        `<li><div class="box"><span class="chg eq" title="${esc(t.noChange)}">–</span>${lbLogo(r, i)}<div class="nm"><span class="rk">${i + 1}.</span><a href="${p.company}/${esc(r.slug)}">${esc(r.name)}</a></div><div class="sc5"><i>${STAR}</i><b>${r.sc}</b><span>/ 100</span></div></div></li>`).join('')}</ol>`).join('');
       const cta = config.showAuth ? `<p class="cta2"><a class="btn" href="${p.write}">${esc(t.write)}</a></p>` : `<p class="soon">${esc(t.soon)}</p>`;
       const cUrl = (x) => `${p.company}/${esc(x.slug)}/${x.id}-${slugify(x.title)}`;
 
@@ -162,15 +183,15 @@ ${latest.length ? `<div class="ltrack-wrap" role="region" aria-roledescription="
 <section class="best" aria-labelledby="best-h">
 <div class="w">
 <h2 id="best-h">${esc(t.bestH)}</h2>
-${cats.length ? `<div class="best-ctl"><div class="dd" data-dd>
-<button type="button" class="dd-btn" aria-haspopup="listbox" aria-expanded="false" aria-controls="dd-panel"><span class="dd-lbl">${esc(t.cat)}</span><span class="dd-val">${esc(cats[0].name)}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+${bestCats.length ? `<div class="best-ctl"><div class="dd" data-dd>
+<button type="button" class="dd-btn" aria-haspopup="listbox" aria-expanded="false" aria-controls="dd-panel"><span class="dd-lbl">${esc(t.cat)}</span><span class="dd-val">${esc(bestCats[0].name)}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
 <div class="dd-panel" id="dd-panel" hidden>
 <div class="dd-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" placeholder="${esc(t.catSearch)}" aria-label="${esc(t.catSearch)}" role="combobox" aria-expanded="true" aria-controls="dd-list" aria-autocomplete="list" autocomplete="off"></div>
-<ul class="dd-list" id="dd-list" role="listbox" aria-label="${esc(t.cats)}">${cats.map((k) => `<li role="option" data-v="${esc(k.slug)}">${esc(k.name)}</li>`).join('')}</ul>
+<ul class="dd-list" id="dd-list" role="listbox" aria-label="${esc(t.cats)}">${bestCats.map((k, n) => `<li role="option" data-v="${esc(k.slug)}" aria-selected="${n ? 'false' : 'true'}">${esc(k.name)}</li>`).join('')}</ul>
 <p class="dd-empty" hidden>${esc(t.catNone)}</p>
 </div></div><span class="best-per">${esc(t.period)}</span></div>` : ''}
 <p class="best-note">${esc(t.bestNote)}</p>
-${soonBox(t, t.bestSoon, true, 'lb-empty')}
+${lbLists ? `<div class="lb-head" aria-hidden="true"><span>${esc(t.sinceY)}</span></div>${lbLists}` : soonBox(t, t.bestSoon, true, 'lb-empty')}
 </div></section>
 
 <section class="corp" aria-labelledby="corp-h"><div class="w"><div class="corp-box">
@@ -200,7 +221,7 @@ ${soonBox(t, t.bestSoon, true, 'lb-empty')}
 <a class="onec-link" href="https://joinonecommunity.com" target="_blank" rel="noopener">joinonecommunity.com</a></div></div>
 </div></div></section></div>`;
       page(req, res, loc, { title: t.title, body, otherPath: o.home, robots: 'index,follow', canonical: `${config.siteOrigin}${p.home}`, description: t.desc,
-        head: '\n<link rel="stylesheet" href="/assets/css/home.css?v=1">\n<script src="/assets/js/home.js?v=1" defer></script>',
+        head: '\n<link rel="stylesheet" href="/assets/css/home.css?v=2">\n<script src="/assets/js/home.js?v=2" defer></script>',
         alternates: [{ lang: 'sq', href: `${config.siteOrigin}/` }, { lang: 'en', href: `${config.siteOrigin}/en/` }, { lang: 'x-default', href: `${config.siteOrigin}/` }] });
     } catch (e) { next(e); }
   });
