@@ -20,7 +20,7 @@ const C = {
 const MAIL = 'info@ankese.com', WA = '+34 643 113 844', WA_URL = 'https://wa.me/34643113844';
 
 const TOC = { sq: 'Në këtë faqe', en: 'On this page' };
-const shell = (loc, { title, intro, meta, toc = [], inner, band = '', cls = '' }) => `<div class="lp ${cls}"><header class="lhero"><div class="w"><nav class="crumbs" aria-label="breadcrumb"><a href="${PATHS[loc].home}">Ankese.com</a> / <span>${esc(title)}</span></nav><h1>${esc(title)}</h1>${intro ? `<p class="lintro">${intro}</p>` : ''}${meta ? `<p class="lmeta">${esc(meta)}</p>` : ''}</div>${band ? `<div class="w cband">${band}</div>` : ''}</header>
+const shell = (loc, { title, intro, meta, toc = [], inner, band = '', cls = '' }) => `<div class="lp ${cls}"><header class="lhero"><div class="w"><nav class="crumbs" aria-label="breadcrumb"><a href="${PATHS[loc].home}">Ankese.com</a> / <span>${esc(title)}</span></nav><h1>${esc(title)}</h1>${intro ? `<p class="lintro">${intro}</p>` : ''}${meta ? `<p class="lmeta">${esc(meta)}</p>` : ''}</div></header>${band ? `<div class="lband"><div class="w">${band}</div></div>` : ''}
 <div class="w lbody${toc.length ? ' hastoc' : ''}">${toc.length ? `<aside class="ltoc"><b>${TOC[loc]}</b>${toc.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join('')}</aside>` : ''}<div class="lmain">${inner}</div></div></div>`;
 const prose = (d, loc) => {
   const sec = d.sections.map((s, i) => `<section class="lcard" id="s${i + 1}"><h2>${esc(s.h)}</h2>${s.p.map((x) => (typeof x === 'string' ? `<p>${esc(x)}</p>` : `<ul>${x.ul.map((li) => `<li>${esc(li)}</li>`).join('')}</ul>`)).join('')}</section>`).join('');
