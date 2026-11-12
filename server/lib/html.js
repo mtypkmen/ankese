@@ -61,7 +61,7 @@ function layout({ loc, title, body, user, csrf, otherPath, robots = 'noindex,nof
 <link rel="icon" href="/assets/favicon.ico?v=3" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=3">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3">
-<link rel="stylesheet" href="/assets/css/site.css?v=22">
+<link rel="stylesheet" href="/assets/css/site.css?v=23">
 <script src="/assets/js/header.js?v=3" defer></script>${head}
 </head>
 <body>

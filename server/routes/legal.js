@@ -1,4 +1,5 @@
 'use strict';
+const FAQ = require('../lib/faq_text');
 const express = require('express');
 const config = require('../config');
 const pool = require('../db');
@@ -47,7 +48,7 @@ const prose = (d, loc) => {
 
 function mount(loc) {
   const p = PATHS[loc], o = PATHS[loc === 'sq' ? 'en' : 'sq'], c = C[loc];
-  for (const key of ['terms', 'privacy', 'rules', 'cookies', 'about']) {
+  for (const key of ['terms', 'privacy', 'rules', 'cookies', 'about', 'privacyMembers', 'privacyVisitors', 'reviewGuide', 'transparency']) {
     router.get(p[key], (req, res) => {
       const d = L[loc][key];
       page(req, res, loc, { title: d.title, body: prose(d, loc), otherPath: o[key], robots: 'index,follow', canonical: `${config.siteOrigin}${p[key]}`,
@@ -55,6 +56,13 @@ function mount(loc) {
         alternates: [{ lang: 'sq', href: `${config.siteOrigin}${PATHS.sq[key]}` }, { lang: 'en', href: `${config.siteOrigin}${PATHS.en[key]}` }] });
     });
   }
+
+  router.get(p.faq, (req, res) => {
+    const d = FAQ[loc];
+    const body = `<div class="pub prose faq"><h1>${esc(d.title)}</h1><p class="lead2">${esc(d.intro)}</p>${d.groups.map((g) => `<h2>${esc(g.h)}</h2>${g.q.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}`).join('')}<p class="more"><a href="${p.contact}">${esc(c.title)} →</a></p></div>`;
+    page(req, res, loc, { title: d.title, body, otherPath: o.faq, robots: 'index,follow', canonical: `${config.siteOrigin}${p.faq}`, description: d.intro,
+      alternates: [{ lang: 'sq', href: `${config.siteOrigin}${PATHS.sq.faq}` }, { lang: 'en', href: `${config.siteOrigin}${PATHS.en.faq}` }] });
+  });
 
   const form = (req, v = {}, m = '', a = 'members') => `<div class="pub"><h1>${esc(c.title)}</h1><p>${esc(c.intro)} <a href="mailto:info@ankese.com">info@ankese.com</a>.</p>
 <nav class="ctabs">${Object.keys(AUD).map((k) => `<a href="${p.contact}${k === 'business' ? '?for=business' : ''}"${k === a ? ' class="on" aria-current="page"' : ''}>${esc(c.tabs[k])}</a>`).join('')}</nav>${m}
