@@ -424,3 +424,5 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 .lbody:not(.hastoc) .lmain{max-width:none;margin:0}
 .lbody.hastoc{grid-template-columns:260px minmax(0,1fr)}
 @media(max-width:640px){.lhero .w,.lbody{padding-left:16px;padding-right:16px}}
+.lp:not(.contact){background:var(--bg)}
+.lp:not(.contact) .lhero{background:linear-gradient(180deg,var(--lav-l) 0%,var(--bg) 100%);border-bottom:0}
