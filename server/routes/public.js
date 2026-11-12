@@ -158,7 +158,7 @@ function mount(loc) {
 
   router.get(p.top, async (req, res, next) => {
     try {
-      const [rows] = await pool.query(`${COMPANY_SQL} WHERE c.status = 'active' HAVING n > 0 ORDER BY n DESC, c.name LIMIT 20`);
+      const [rows] = await pool.query(`${COMPANY_SQL} WHERE c.status = 'active' ORDER BY n DESC, CRC32(CONCAT(c.id, YEARWEEK(UTC_DATE(), 3))), c.id LIMIT 20`); // sikayet yokken esitlikte haftalik sabit rastgele 20
       out(req, res, { title: L.topH, otherPath: o.top, canonical: `${config.siteOrigin}${p.top}`, robots: rows.length ? 'index,follow' : 'noindex,follow', description: L.topP,
         body: wide(`<h1>${esc(L.topH)}</h1><p class="lead2">${esc(L.topP)}</p>${rows.length ? rankList(rows, t.complaints.toLowerCase()) : `<p>${esc(L.empty)}</p>`}`) });
     } catch (e) { next(e); }
