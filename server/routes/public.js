@@ -55,6 +55,10 @@ function mount(loc) {
            FROM companies c LEFT JOIN cities ci ON ci.id = c.city_id JOIN categories k ON k.id = c.category_id
           WHERE c.slug = ? AND c.status = 'active'`, [req.params.slug]);
       const c = cr[0]; if (!c) return notFound(req, res);
+      // gunluk goruntulenme sayaci (Top 20 trendi); botlari ve ikinci sayfalari sayma, hata sayfayi bozmasin
+      if (!/bot|crawl|spider|slurp|preview|headless/i.test(req.get('user-agent') || '') && !req.query.page) {
+        pool.query('INSERT INTO company_visits (company_id, day, hits) VALUES (?, UTC_DATE(), 1) ON DUPLICATE KEY UPDATE hits = hits + 1', [c.id]).catch(() => {});
+      }
       const pg = pageNo(req.query.page);
       const [[st]] = await pool.query(`SELECT COUNT(*) total, SUM(status = 'resolved') resolved FROM complaints WHERE company_id = ? AND status IN ('published','resolved')`, [c.id]);
       const [rows] = await pool.query(
@@ -162,9 +166,9 @@ function mount(loc) {
   router.get(p.top, async (req, res, next) => {
     try {
       const [rows] = await pool.query(`${COMPANY_SQL} WHERE c.status = 'active' ORDER BY n DESC, CRC32(CONCAT(c.id, YEARWEEK(UTC_DATE(), 3))), c.id LIMIT 20`); // sikayet yokken esitlikte haftalik sabit rastgele 20
-      // trend verisi (demo) yalniz gelistirmede; uretimde sade liste, uydurma rakam yok
-      const trend = !config.prod && rows.length
-        ? `<script type="application/json" id="t20-data">${JSON.stringify(require('../lib/top20_demo').build(rows, loc, (r) => `${p.company}/${r.slug}`, (r) => `${r.city ? `${r.city}, ` : ''}${t.countries[r.country_code]}`)).replace(/</g, '\\u003c')}</script>` : '';
+      // trend verisi: company_visits + complaints (gercek); JSON sayfaya gomulur, top20.js cizer
+      const trend = rows.length
+        ? `<script type="application/json" id="t20-data">${JSON.stringify(await require('../lib/top20_data').build(rows, loc, p, (r) => `${r.city ? `${r.city}, ` : ''}${t.countries[r.country_code]}`)).replace(/</g, '\\u003c')}</script>` : '';
       out(req, res, { title: L.topH, otherPath: o.top, canonical: `${config.siteOrigin}${p.top}`, robots: rows.length ? 'index,follow' : 'noindex,follow', description: L.topP,
         head: `<link rel="stylesheet" href="/assets/css/home.css?v=2">${trend ? '<script src="/assets/js/top20.js" defer></script>' : ''}`,
         body: top20Body(rows, L, t, p) + trend });

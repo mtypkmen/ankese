@@ -7,9 +7,6 @@
   try { D = JSON.parse(raw.textContent); } catch (e) { return; }
   var S = D.s, data = D.items;
 
-  var EYE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>';
-  var HAND = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11v9H4v-9zM7 11l4-8a2.5 2.5 0 0 1 2.5 2.5V9h5.2a2 2 0 0 1 2 2.3l-1.2 7A2 2 0 0 1 17.5 20H7"/></svg>';
-  var BUBBLE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg>';
   function sum(a) { return a.reduce(function (s, x) { return s + x; }, 0); }
   function fmtN(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, S.sep); }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
@@ -19,16 +16,15 @@
     var pts = v.map(function (y, i) { return (i * (W / (v.length - 1))).toFixed(1) + ',' + (H - p - (y - mn) / r * (H - 2 * p)).toFixed(1); }).join(' ');
     return '<svg class="sp" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" aria-hidden="true"><polyline points="' + pts + '"/></svg>';
   }
+  // gunler sunucudan (UTC, YYYY-MM-DD), en eskiden bugune
   var DAYS = [], LONG = [];
-  (function () {
-    var d = new Date();
-    for (var i = 13; i >= 0; i--) {
-      var x = new Date(d); x.setDate(d.getDate() - i);
-      DAYS.push(('0' + x.getDate()).slice(-2) + '.' + ('0' + (x.getMonth() + 1)).slice(-2));
-      LONG.push(x.getDate() + ' ' + S.mon[x.getMonth()] + ' ' + S.wd[x.getDay()]);
-    }
-  })();
+  S.days.forEach(function (s) {
+    var x = new Date(Date.UTC(+s.slice(0, 4), +s.slice(5, 7) - 1, +s.slice(8, 10)));
+    DAYS.push(s.slice(8, 10) + '.' + s.slice(5, 7));
+    LONG.push(x.getUTCDate() + ' ' + S.mon[x.getUTCMonth()] + ' ' + S.wd[x.getUTCDay()]);
+  });
   function niceMax(v) {
+    v = Math.max(v, 3);   // tum degerler sifirsa eksen yine de cizilsin
     var step = v / 3, p = Math.pow(10, Math.floor(Math.log10(step))), m = step / p;
     m = m <= 1 ? 1 : m <= 2 ? 2 : m <= 2.5 ? 2.5 : m <= 5 ? 5 : 10;
     return m * p * 3;
@@ -87,16 +83,15 @@
 
   list.classList.add('live');
   list.innerHTML = data.map(function (d, k) {
-    var pct = Math.round((sum(d.vis.slice(7)) / Math.max(1, sum(d.vis.slice(0, 7))) - 1) * 100);
+    var prevSum = sum(d.vis.slice(0, 7)), curSum = sum(d.vis.slice(7));
+    var pct = prevSum ? Math.round((curSum / prevSum - 1) * 100) : null;   // onceki 7 gun 0 ise yuzde tanimsiz
     var sign = pct > 0 ? '+' : (pct < 0 ? '−' : '');
     var id = 't20p' + k;
     var cards = d.list.map(function (c, j) {
-      return '<a class="t20c" href="' + esc(d.href) + '">' +
+      return '<a class="t20c" href="' + esc(c[3]) + '">' +
         '<div class="u"><span class="av av' + (j % 6) + '" aria-hidden="true">' + initials(c[0]) + '</span><div><b>' + esc(c[0]) + '</b>' +
-        '<p class="meta">' + EYE + fmtN(c[3]) + ' ' + esc(S.views) + '<i aria-hidden="true"></i><time>' + DAYS[13 - c[2]] + '</time></p></div></div>' +
-        '<h5>' + esc(c[1]) + '</h5>' +
-        '<p class="ft">' + (c[4] ? '<span class="sup">' + HAND + c[4] + ' ' + esc(S.support) + '</span>' : '') +
-        '<span>' + BUBBLE + c[5] + ' ' + esc(S.comments) + '</span></p></a>';
+        '<p class="meta"><time>' + DAYS[13 - c[2]] + '</time></p></div></div>' +
+        '<h5>' + esc(c[1]) + '</h5></a>';
     }).join('');
     var logo = d.logo ? '<img class="lg" src="/assets/logos/' + esc(d.logo) + '" width="92" height="64" alt="' + esc(d.name) + '" loading="lazy">'
       : '<span class="av lg av' + (k % 6) + '" aria-hidden="true">' + initials(d.name) + '</span>';
@@ -105,7 +100,7 @@
         '<span class="n">' + (k + 1) + '</span>' + logo +
         '<div class="nm"><a href="' + esc(d.href) + '">' + esc(d.name) + '</a><small>' + esc(d.cat) + '</small></div>' +
         spark(d.vis) +
-        '<div class="pc"><b' + (pct < 0 ? ' class="dn"' : '') + ' title="' + esc(S.pctTitle) + '">' + sign + Math.abs(pct) + '%</b><small>' + esc(S.twoWeeks) + '</small></div>' +
+        '<div class="pc"><b' + (pct !== null && pct < 0 ? ' class="dn"' : '') + ' title="' + esc(S.pctTitle) + '">' + (pct === null ? '–' : sign + Math.abs(pct) + '%') + '</b><small>' + esc(S.twoWeeks) + '</small></div>' +
         '<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>' +
       '</div>' +
       '<div class="t20-pan" id="' + id + '"><div><div class="t20-in">' +
@@ -117,7 +112,7 @@
             '<p class="t20-co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5"/></svg><a href="' + esc(d.href) + '">' + esc(d.name) + '</a></p></div>' +
             '<div class="t20-nav"><button type="button" class="t20b prev" aria-label="' + esc(S.prev) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>' +
             '<button type="button" class="t20b next" aria-label="' + esc(S.next) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div></div>' +
-          '<div class="t20-sl"><div class="t20-tr">' + cards + '</div></div>' +
+          (cards ? '<div class="t20-sl"><div class="t20-tr">' + cards + '</div></div>' : '<p class="t20-none">' + esc(S.none) + '</p>') +
         '</div>' +
       '</div></div></div></li>';
   }).join('');
@@ -128,7 +123,7 @@
     var tr = li.querySelector('.t20-tr'), prev = li.querySelector('.prev'), next = li.querySelector('.next');
     var col = 0;
     function slide() {
-      if (!tr.children.length) { prev.disabled = next.disabled = true; return; }
+      if (!tr || !tr.children.length) { prev.disabled = next.disabled = true; return; }
       var max = Math.max(0, tr.children.length - 3);
       col = Math.max(0, Math.min(col, max));
       var g = parseFloat(getComputedStyle(tr).columnGap) || 0;

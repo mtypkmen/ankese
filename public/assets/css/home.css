@@ -396,6 +396,7 @@
 .t20page .top20{padding:64px 0 96px}
 .t20page .top20 h1{margin:0 0 14px;text-align:center;font-size:clamp(36px,3.8vw,56px);line-height:1.05;letter-spacing:-1px;font-weight:700;color:#1a1a2e}
 .t20page .top20 h1 span{color:var(--gr2)}
+.t20page .t20-none{margin:22px 0 0;color:#8A90A0;font-size:15px}
 .t20page .t20 img.lg{object-fit:contain;background:#fff;border:1px solid #E6E8EE;padding:8px;box-sizing:border-box}
 .t20page .t20:not(.live) .t20-row{grid-template-columns:40px 92px minmax(0,1fr) auto;cursor:default}
 .t20page .t20:not(.live) .pc b{color:#1a1a2e}
