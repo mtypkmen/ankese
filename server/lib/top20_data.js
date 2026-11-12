@@ -3,6 +3,9 @@
 // Gunler UTC, 14 gun, en eskiden bugune. Veri yoksa seriler sifir kalir; uydurma deger uretilmez.
 const pool = require('../db');
 const { publicName, slugify } = require('./page');
+const { esc } = require('./html');
+const S = require('./i18n');
+const PATHS = require('./paths');
 
 const TEXT = {
   sq: { sep: '.', mon: ['Jan', 'Shk', 'Mar', 'Pri', 'Maj', 'Qer', 'Kor', 'Gus', 'Sht', 'Tet', 'Nën', 'Dhj'], wd: ['Die', 'Hën', 'Mar', 'Mër', 'Enj', 'Pre', 'Sht'],
@@ -45,4 +48,24 @@ async function build(rows, loc, p, catOf) {
   return { s: { ...TEXT[loc], days }, items };
 }
 
-module.exports = { build };
+// Top 20 listesi: ana sayfa ve /top-20 ayni bloktan beslenir (ayni markalar, ayni sira).
+// Sira: yayinlanmis sikayet sayisi (cok -> az); esitlikte haftalik sabit sira (sayfa her yenilemede degismez).
+const TOP_SQL = `SELECT c.id, c.slug, c.name, c.logo, c.country_code, ci.name AS city,
+  (SELECT COUNT(*) FROM complaints x WHERE x.company_id = c.id AND x.status IN ('published','resolved')) AS n
+  FROM companies c LEFT JOIN cities ci ON ci.id = c.city_id
+  WHERE c.status = 'active' ORDER BY n DESC, CRC32(CONCAT(c.id, YEARWEEK(UTC_DATE(), 3))), c.id LIMIT 20`;
+
+// donus: { rows, html }; html = gri kutu + sade <ol> (JS'siz yedek) + #t20-data JSON (top20.js bunu ceker)
+async function block(loc) {
+  const p = PATHS[loc], t = S[loc];
+  const [rows] = await pool.query(TOP_SQL);
+  if (!rows.length) return { rows, html: '' };
+  const where = (r) => `${r.city ? `${r.city}, ` : ''}${t.countries[r.country_code]}`;
+  const li = rows.map((r, i) => `<li><div class="t20-row"><span class="n">${i + 1}</span>${LOGO_OK.test(r.logo || '')
+    ? `<img class="lg" src="/assets/logos/${r.logo}" width="92" height="64" alt="${esc(r.name)}" loading="lazy">`
+    : `<span class="av lg av${i % 6}" aria-hidden="true">${esc([...r.name][0].toUpperCase())}</span>`}<div class="nm"><a href="${p.company}/${esc(r.slug)}">${esc(r.name)}</a><small>${esc(where(r))}</small></div><div class="pc"><b>${r.n}</b><small>${esc(t.complaints.toLowerCase())}</small></div></div></li>`).join('');
+  const json = JSON.stringify(await build(rows, loc, p, where)).replace(/</g, '\\u003c');
+  return { rows, html: `<div class="top20-box"><ol class="t20">${li}</ol></div><script type="application/json" id="t20-data">${json}</script>` };
+}
+
+module.exports = { build, block };

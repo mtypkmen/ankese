@@ -396,9 +396,10 @@
 .t20page .top20{padding:64px 0 96px}
 .t20page .top20 h1{margin:0 0 14px;text-align:center;font-size:clamp(36px,3.8vw,56px);line-height:1.05;letter-spacing:-1px;font-weight:700;color:#1a1a2e}
 .t20page .top20 h1 span{color:var(--gr2)}
-.t20page .t20-none{margin:22px 0 0;color:#8A90A0;font-size:15px}
-.t20page .t20 img.lg{object-fit:contain;background:#fff;border:1px solid #E6E8EE;padding:8px;box-sizing:border-box}
-.t20page .t20:not(.live) .t20-row{grid-template-columns:40px 92px minmax(0,1fr) auto;cursor:default}
-.t20page .t20:not(.live) .pc b{color:#1a1a2e}
-@media(max-width:1000px){.t20page .t20 .sp{display:none}.t20page .t20-row{grid-template-columns:40px 92px minmax(0,1fr) auto 24px}.t20page .t20:not(.live) .t20-row{grid-template-columns:40px 92px minmax(0,1fr) auto}}
-@media(max-width:600px){.t20page .top20 .w{padding-left:16px;padding-right:16px}.t20page .top20-box{padding:14px}.t20page .t20-row{grid-template-columns:28px 56px minmax(0,1fr) auto 20px;column-gap:12px;height:96px;padding:0 14px}.t20page .t20:not(.live) .t20-row{grid-template-columns:28px 56px minmax(0,1fr) auto}.t20page .t20 .lg{width:56px;height:44px}.t20page .t20 .nm a{font-size:17px}.t20page .t20-in{margin:0 14px}}
+/* asagidakiler hem ana sayfadaki hem /top-20'deki Top 20 icin (ayni blok) */
+.t20-none{margin:22px 0 0;color:#8A90A0;font-size:15px}
+.t20 img.lg{object-fit:contain;background:#fff;border:1px solid #E6E8EE;padding:8px;box-sizing:border-box}
+.t20:not(.live) .t20-row{grid-template-columns:40px 92px minmax(0,1fr) auto;cursor:default}
+.t20:not(.live) .pc b{color:#1a1a2e}
+@media(max-width:1000px){.t20 .sp{display:none}.t20-row{grid-template-columns:40px 92px minmax(0,1fr) auto 24px}.t20:not(.live) .t20-row{grid-template-columns:40px 92px minmax(0,1fr) auto}}
+@media(max-width:600px){.top20 .w{padding-left:16px;padding-right:16px}.top20-box{padding:14px}.t20-row{grid-template-columns:28px 56px minmax(0,1fr) auto 20px;column-gap:12px;height:96px;padding:0 14px}.t20:not(.live) .t20-row{grid-template-columns:28px 56px minmax(0,1fr) auto}.t20 .lg{width:56px;height:44px}.t20 .nm a{font-size:17px}.t20-in{margin:0 14px}}
