@@ -48,7 +48,8 @@ const sq = {
     title: 'Cookies',
     intro: 'Ankese.com përdor vetëm cookie të nevojshme. Nuk përdorim cookie reklamimi dhe nuk përdorim analitikë të palëve të treta.',
     sections: [
-      { h: 'Cookie që vendosim', p: [{ ul: ['__Host-ank — seanca e hyrjes (vetëm nëse hyn në llogari).', '__Host-ank-c — mbrojtje kundër falsifikimit të formularëve (CSRF).'] }, 'Këto janë të domosdoshme për funksionimin dhe sigurinë dhe nuk kërkojnë pëlqim.'] },
+      { h: 'Cookie që vendosim', p: [{ ul: ['__Host-ank — seanca e hyrjes; vendoset vetëm kur hyn në llogari dhe zgjat 14 ditë (8 orë për stafin e moderimit).', '__Host-ank-c — mbrojtje kundër falsifikimit të formularëve (CSRF); vendoset për çdo vizitor në vizitën e parë dhe zgjat 30 ditë.', '__Host-ank-pre — hapi i dytë i verifikimit në hyrjen e stafit; zgjat vetëm 5 minuta dhe nuk vendoset për përdoruesit e zakonshëm.'] }, 'Të gjitha janë cookie HttpOnly, Secure dhe SameSite=Strict, pra nuk lexohen nga JavaScript dhe nuk dërgohen nga faqe të tjera. Janë të domosdoshme për funksionimin dhe sigurinë dhe nuk kërkojnë pëlqim.'] },
+      { h: 'Çfarë nuk përdorim', p: ['Nuk përdorim cookie reklamimi, gjurmimi apo analitike, dhe nuk ndajmë të dhëna me rrjete reklamash.'] },
       { h: 'Cookie nga shërbime të tjera', p: ['Cloudflare, që mbron dhe shpërndan faqen, mund të vendosë cookie teknike sigurie (p.sh. kundër robotëve). Këto përdoren vetëm për siguri.'] },
       { h: 'Si t\'i menaxhosh', p: ['Mund t\'i fshish ose t\'i bllokosh cookie nga cilësimet e shfletuesit; pa to hyrja në llogari nuk do të funksionojë.'] },
     ],
@@ -100,7 +101,8 @@ const en = {
     title: 'Cookies',
     intro: 'Ankese.com uses only necessary cookies. We do not use advertising cookies and we do not use third-party analytics.',
     sections: [
-      { h: 'Cookies we set', p: [{ ul: ['__Host-ank — the login session (only if you log in).', '__Host-ank-c — protection against form forgery (CSRF).'] }, 'These are strictly necessary for operation and security and do not require consent.'] },
+      { h: 'Cookies we set', p: [{ ul: ['__Host-ank — the login session; set only when you log in and lasts 14 days (8 hours for moderation staff).', '__Host-ank-c — protection against form forgery (CSRF); set for every visitor on the first visit and lasts 30 days.', '__Host-ank-pre — the second verification step of staff login; lasts only 5 minutes and is never set for regular users.'] }, 'All are HttpOnly, Secure and SameSite=Strict cookies, so JavaScript cannot read them and other sites cannot trigger them. They are strictly necessary for operation and security and do not require consent.'] },
+      { h: 'What we do not use', p: ['We do not use advertising, tracking or analytics cookies, and we do not share data with ad networks.'] },
       { h: 'Cookies from other services', p: ['Cloudflare, which protects and delivers the site, may set technical security cookies (for example against bots). They are used for security only.'] },
       { h: 'Managing them', p: ['You can delete or block cookies in your browser settings; without them login will not work.'] },
     ],
