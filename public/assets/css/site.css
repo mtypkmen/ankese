@@ -363,3 +363,4 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 .foot2 .f2-lang-list a:hover{background:#F0EEFF;color:#1a1a2e}
 .foot2 .f2-lang-list a[aria-current]{color:#6C5CE7;font-weight:700}
 .f2-empty{margin:0;font-size:14px;color:#8A90A0}
+.ctabs{display:flex;gap:8px;margin:0 0 18px}.ctabs a{padding:8px 16px;border:1px solid var(--line,#d9dee7);border-radius:999px;color:var(--navy);text-decoration:none;font-weight:600}.ctabs a.on{background:var(--navy);color:#fff;border-color:var(--navy)}
