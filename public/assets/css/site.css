@@ -414,3 +414,8 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 @media(max-width:700px){.cgrid{grid-template-columns:1fr}}
 .lcard a.btn{color:#fff}.lp.contact .lmain{max-width:none;width:100%}
 .sech{font-size:28px;margin:22px 0 0;color:var(--navy);letter-spacing:-.5px}
+.cgray{background:#EEF0F5;border-radius:36px;padding:22px}
+.cgray .lcard{box-shadow:none}
+.lp.contact .sech{margin:30px 0 0;padding:0}
+.lp.contact .faq details,.lp.contact details{background:#fff}
+.ltoc{max-height:calc(100vh - 124px);overflow-y:auto}
