@@ -107,4 +107,25 @@ const en = {
   },
 };
 
+sq.about = {
+  title: 'Rreth nesh',
+  intro: 'Ankese.com është vendi ku konsumatorët në Shqipëri dhe Kosovë publikojnë ankesat e tyre për kompanitë, dhe kompanitë përgjigjen hapur.',
+  sections: [
+    { h: 'Pse ekziston Ankese.com', p: ['Shumë ankesa humbasin në telefona që nuk përgjigjen, në mesazhe të pa lexuara ose në komente që fshihen. Ne besojmë se çdo konsumator meriton një adresë të qartë për problemin e vet dhe një përgjigje të vërtetë.', 'Ankese.com i sjell ankesat në një vend publik, të organizuar sipas kompanisë dhe sektorit, që të gjithë të mund të shohin si sillet një kompani para se të blejnë.'] },
+    { h: 'Si funksionon', p: [{ ul: ['Konsumatori krijon llogari, zgjedh kompaninë dhe përshkruan çfarë ka ndodhur.', 'Ne e shqyrtojmë ankesën para publikimit, sipas Rregullave të komunitetit.', 'Kompania mund t\'i përgjigjet publikisht dhe ta zgjidhë problemin.', 'Kur problemi zgjidhet, ankesa shënohet si e zgjidhur dhe kjo ndikon në renditjen e kompanisë.'] }] },
+    { h: 'Parimet tona', p: [{ ul: ['Drejtësi: i japim hapësirë si konsumatorit ashtu edhe kompanisë.', 'Transparencë: rregullat e moderimit janë publike.', 'Privatësi: email-i yt nuk shfaqet kurrë publikisht.', 'Përgjegjësi: ankesat duhet të bazohen në përvoja reale.'] }] },
+    { h: 'Kush qëndron pas projektit', p: ['Ankese.com është një projekt i One Community, Prishtinë. Për pyetje, bashkëpunime ose kërkesa, na shkruaj te info@ankese.com ose përmes faqes Kontakt.'] },
+  ],
+};
+en.about = {
+  title: 'About us',
+  intro: 'Ankese.com is where consumers in Albania and Kosovo publish complaints about companies, and companies reply in the open.',
+  sections: [
+    { h: 'Why Ankese.com exists', p: ['Too many complaints get lost in phones nobody answers, unread messages or deleted comments. We believe every consumer deserves a clear address for their problem and a real answer.', 'Ankese.com brings complaints into one public place, organised by company and sector, so anyone can see how a company behaves before they buy.'] },
+    { h: 'How it works', p: [{ ul: ['A consumer creates an account, picks the company and describes what happened.', 'We review the complaint before publishing it, following the Community rules.', 'The company can reply publicly and fix the problem.', 'When the problem is solved, the complaint is marked resolved and this counts toward the company\'s ranking.'] }] },
+    { h: 'Our principles', p: [{ ul: ['Fairness: we give space to both the consumer and the company.', 'Transparency: our moderation rules are public.', 'Privacy: your email is never shown publicly.', 'Responsibility: complaints must be based on real experiences.'] }] },
+    { h: 'Who is behind it', p: ['Ankese.com is a project by One Community, Prishtina. For questions, partnerships or requests, write to info@ankese.com or use the Contact page.'] },
+  ],
+};
+
 module.exports = { sq, en, UPDATED };
