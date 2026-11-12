@@ -420,4 +420,9 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 .lp.contact .faq details,.lp.contact details{background:#fff}
 .ltoc{max-height:calc(100vh - 124px);overflow-y:auto}
 .lp:not(.contact){background:var(--bg)}
-.lp:not(.contact) .lhero{background:linear-gradient(180deg,var(--lav-l) 0%,var(--bg) 100%);border-bottom:0}
+.lhero{background:var(--bg);border-bottom:1px solid #E3E6EE}
+.lp:not(.contact) .lhero{border-bottom:0}
+.lhero .cband{padding-top:0;padding-bottom:40px}
+.lp.contact .lhero{padding-bottom:0}
+.lp.contact .lbody{padding-top:20px}
+.lp.contact .sech{margin:10px 0 0}

@@ -20,7 +20,7 @@ const C = {
 const MAIL = 'info@ankese.com', WA = '+34 643 113 844', WA_URL = 'https://wa.me/34643113844';
 
 const TOC = { sq: 'Në këtë faqe', en: 'On this page' };
-const shell = (loc, { title, intro, meta, toc = [], inner, cls = '' }) => `<div class="lp ${cls}"><header class="lhero"><div class="w"><nav class="crumbs" aria-label="breadcrumb"><a href="${PATHS[loc].home}">Ankese.com</a> / <span>${esc(title)}</span></nav><h1>${esc(title)}</h1>${intro ? `<p class="lintro">${intro}</p>` : ''}${meta ? `<p class="lmeta">${esc(meta)}</p>` : ''}</div></header>
+const shell = (loc, { title, intro, meta, toc = [], inner, band = '', cls = '' }) => `<div class="lp ${cls}"><header class="lhero"><div class="w"><nav class="crumbs" aria-label="breadcrumb"><a href="${PATHS[loc].home}">Ankese.com</a> / <span>${esc(title)}</span></nav><h1>${esc(title)}</h1>${intro ? `<p class="lintro">${intro}</p>` : ''}${meta ? `<p class="lmeta">${esc(meta)}</p>` : ''}</div>${band ? `<div class="w cband">${band}</div>` : ''}</header>
 <div class="w lbody${toc.length ? ' hastoc' : ''}">${toc.length ? `<aside class="ltoc"><b>${TOC[loc]}</b>${toc.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join('')}</aside>` : ''}<div class="lmain">${inner}</div></div></div>`;
 const prose = (d, loc) => {
   const sec = d.sections.map((s, i) => `<section class="lcard" id="s${i + 1}"><h2>${esc(s.h)}</h2>${s.p.map((x) => (typeof x === 'string' ? `<p>${esc(x)}</p>` : `<ul>${x.ul.map((li) => `<li>${esc(li)}</li>`).join('')}</ul>`)).join('')}</section>`).join('');
@@ -49,7 +49,7 @@ function mount(loc) {
     const card = (g, id, href, label, icon) => `<section class="lcard cbox" id="${id}"><h2>${esc(g.h)}</h2><p>${esc(g.p)}</p><a class="btn" href="${href}"${id === 'business' ? ' target="_blank" rel="noopener"' : ''}>${esc(g.cta)}</a><p class="cval">${esc(label)}</p></section>`;
     const d = FAQ[loc];
     const faq = `<h2 class="sech">${esc(d.title)}</h2>` + d.groups.map((g, i) => `<section class="lcard" id="g${i + 1}"><h2>${esc(g.h)}</h2>${g.q.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</section>`).join('');
-    const body = shell(loc, { title: c.title, intro: esc(c.intro), cls: 'contact faq', inner: `<div class="cgray"><div class="cgrid">${card(c.members, 'members', 'mailto:' + MAIL, MAIL)}${card(c.business, 'business', WA_URL, WA)}</div></div>${faq}` });
+    const body = shell(loc, { title: c.title, intro: esc(c.intro), cls: 'contact faq', band: `<div class="cgrid">${card(c.members, 'members', 'mailto:' + MAIL, MAIL)}${card(c.business, 'business', WA_URL, WA)}</div>`, inner: faq });
     page(req, res, loc, { title: c.title, body, otherPath: o.contact, robots: 'index,follow', canonical: `${config.siteOrigin}${p.contact}`,
       alternates: [{ lang: 'sq', href: `${config.siteOrigin}${PATHS.sq.contact}` }, { lang: 'en', href: `${config.siteOrigin}${PATHS.en.contact}` }] });
   });
