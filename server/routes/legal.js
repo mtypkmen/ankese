@@ -43,7 +43,7 @@ const prose = (d, loc) => {
 
 function mount(loc) {
   const p = PATHS[loc], o = PATHS[loc === 'sq' ? 'en' : 'sq'], c = C[loc];
-  for (const key of ['terms', 'privacy', 'rules', 'cookies']) {
+  for (const key of ['terms', 'privacy', 'privacyMembers', 'privacyVisitors', 'rules', 'cookies']) {
     router.get(p[key], (req, res) => {
       const d = L[loc][key];
       page(req, res, loc, { title: d.title, body: prose(d, loc), otherPath: o[key], robots: 'index,follow', canonical: `${config.siteOrigin}${p[key]}`,
