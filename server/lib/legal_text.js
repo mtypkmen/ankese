@@ -53,6 +53,20 @@ const sq = {
       { h: 'Si t\'i menaxhosh', p: ['Mund t\'i fshish ose t\'i bllokosh cookie nga cilësimet e shfletuesit; pa to hyrja në llogari nuk do të funksionojë.'] },
     ],
   },
+  transparency: {
+    title: 'Shënime transparence',
+    intro: 'Këtu shpjegojmë qartë si funksionon Ankese.com: kush e operon, si moderohen ankesat, çfarë hiqet dhe si mund të na kërkosh korrigjim. Nuk botojmë shifra që nuk i kemi matur.',
+    sections: [
+      { h: 'Kush e operon platformën', p: ['Ankese.com operohet nga One Community. Mund të na shkruash te info@ankese.com ose përmes faqes Kontakt.'] },
+      { h: 'Si shqyrtohen ankesat', p: ['Çdo ankesë kalon një kontroll automatik (gjuhë, të dhëna personale, spam) dhe pastaj shqyrtohet nga një moderator para publikimit. Rregullat janë të njëjta për të gjitha kompanitë dhe nuk varen nga fakti nëse një kompani është anëtare apo jo.', 'Ankesat nuk verifikohen fakt pas fakti. Ato shprehin përvojën e autorit; ne kontrollojmë që të respektojnë Rregullat e publikimit.'] },
+      { h: 'Çfarë maskojmë ose heqim', p: [{ ul: ['të dhëna personale (telefon, adresë, email, IBAN, numra identiteti, targa);', 'fyerje, kërcënime dhe gjuhë urrejtjeje;', 'akuza penale pa bazë ndaj personave të emëruar;', 'spam, reklama, ankesa të kopjuara ose të rreme.'] }, 'Nëse një ankesë maskohet ose refuzohet, autori njoftohet me email dhe me arsyen.'] },
+      { h: 'Kompanitë nuk mund të blejnë heqje ose renditje', p: ['Asnjë kompani nuk mund të paguajë për të hequr një ankesë, për të ndryshuar vlerësimin ose për të përmirësuar renditjen. Anëtarësimi për biznese ofron mjete për t\'iu përgjigjur ankesave më shpejt, jo ndikim mbi përmbajtjen.', 'Renditjet e kompanive bazohen vetëm në të dhëna nga platforma, si përqindja e ankesave të zgjidhura.'] },
+      { h: 'Si përgjigjen kompanitë', p: ['Çdo kompani ka të drejtën e përgjigjes publike. Përgjigjja shfaqet pranë ankesës dhe i nënshtrohet të njëjtave rregulla.'] },
+      { h: 'Kërkesa për heqje ose korrigjim', p: ['Çdo person ose kompani mund të kërkojë heqjen ose korrigjimin e një ankese përmes faqes Kontakt, duke dërguar lidhjen dhe arsyen. Kërkesat shqyrtohen individualisht; kur ankesa shkel rregullat ose të drejtat e dikujt, ajo korrigjohet ose hiqet. Kur nuk ka shkelje, ankesa mbetet dhe kërkuesi merr arsyen.'] },
+      { h: 'Kompanitë dhe logot', p: ['Emrat dhe logot e kompanive shfaqen vetëm për t\'i identifikuar ato; nuk nënkuptojnë lidhje, miratim ose bashkëpunim me Ankese.com. Nëse je pronar i një marke dhe dëshiron korrigjimin ose heqjen e logos, na shkruaj përmes faqes Kontakt.'] },
+      { h: 'Kërkesat nga autoritetet', p: ['Të dhënat ndahen me autoritete vetëm kur kërkohet me ligj. Kur shifrat e kërkesave të tilla do të jenë të matura, do t\'i publikojmë këtu.'] },
+    ],
+  },
 };
 
 const en = {
@@ -103,6 +117,20 @@ const en = {
       { h: 'Cookies we set', p: [{ ul: ['__Host-ank — the login session (only if you log in).', '__Host-ank-c — protection against form forgery (CSRF).'] }, 'These are strictly necessary for operation and security and do not require consent.'] },
       { h: 'Cookies from other services', p: ['Cloudflare, which protects and delivers the site, may set technical security cookies (for example against bots). They are used for security only.'] },
       { h: 'Managing them', p: ['You can delete or block cookies in your browser settings; without them login will not work.'] },
+    ],
+  },
+  transparency: {
+    title: 'Transparency notes',
+    intro: 'Here we explain plainly how Ankese.com works: who runs it, how complaints are moderated, what gets removed, and how you can ask for a correction. We do not publish numbers we have not measured.',
+    sections: [
+      { h: 'Who runs the platform', p: ['Ankese.com is operated by One Community. You can write to info@ankese.com or use the Contact page.'] },
+      { h: 'How complaints are reviewed', p: ['Every complaint goes through an automatic check (language, personal data, spam) and is then reviewed by a moderator before publication. The rules are the same for every company and do not depend on whether a company is a member.', 'Complaints are not fact-checked line by line. They express the author\'s experience; we check that they follow the Publishing rules.'] },
+      { h: 'What we mask or remove', p: [{ ul: ['personal data (phone, address, email, IBAN, ID numbers, license plates);', 'insults, threats and hate speech;', 'unfounded criminal accusations against named individuals;', 'spam, advertising, copied or fake complaints.'] }, 'If a complaint is masked or rejected, the author is told by email, with the reason.'] },
+      { h: 'Companies cannot buy removal or ranking', p: ['No company can pay to remove a complaint, change a rating or improve its ranking. Business membership gives tools to reply to complaints faster, not influence over content.', 'Company rankings are based only on data from the platform, such as the share of complaints resolved.'] },
+      { h: 'How companies reply', p: ['Every company has a public right of reply. The reply appears next to the complaint and is subject to the same rules.'] },
+      { h: 'Takedown and correction requests', p: ['Any person or company can ask for a complaint to be removed or corrected through the Contact page, sending the link and the reason. Requests are reviewed one by one; where a complaint breaks the rules or someone\'s rights it is corrected or removed. Where there is no violation it stays up and the requester is given the reason.'] },
+      { h: 'Companies and logos', p: ['Company names and logos are shown only to identify them; they do not imply any affiliation, endorsement or partnership with Ankese.com. If you own a brand and want a logo corrected or removed, write to us through the Contact page.'] },
+      { h: 'Requests from authorities', p: ['Data is shared with authorities only when required by law. Once such requests are measured, we will publish the figures here.'] },
     ],
   },
 };

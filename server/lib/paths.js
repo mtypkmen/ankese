@@ -8,7 +8,7 @@ const PATHS = {
 module.exports = PATHS;
 Object.assign(PATHS.sq, { write: '/shkruaj', company: '/kompani', category: '/sektori', city: '/qyteti', search: '/kerko' });
 Object.assign(PATHS.en, { write: '/en/write', company: '/en/company', category: '/en/category', city: '/en/city', search: '/en/search' });
-Object.assign(PATHS.sq, { rules: '/rregullat', cookies: '/cookies', contact: '/kontakt' });
-Object.assign(PATHS.en, { rules: '/en/rules', cookies: '/en/cookies', contact: '/en/contact' });
+Object.assign(PATHS.sq, { rules: '/rregullat', cookies: '/cookies', contact: '/kontakt', transparency: '/transparenca' });
+Object.assign(PATHS.en, { rules: '/en/rules', cookies: '/en/cookies', contact: '/en/contact', transparency: '/en/transparency' });
 Object.assign(PATHS.sq, { complaints: '/ankesat', top: '/top-20', best: '/me-te-mirat-e-muajit' });
 Object.assign(PATHS.en, { complaints: '/en/complaints', top: '/en/top-20', best: '/en/best-of-month' });
