@@ -413,3 +413,4 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 .lp.contact .lcard{max-width:none}
 @media(max-width:700px){.cgrid{grid-template-columns:1fr}}
 .lcard a.btn{color:#fff}.lp.contact .lmain{max-width:none;width:100%}
+.sech{font-size:28px;margin:22px 0 0;color:var(--navy);letter-spacing:-.5px}

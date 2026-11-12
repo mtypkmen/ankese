@@ -47,7 +47,9 @@ function mount(loc) {
 
   router.get(p.contact, (req, res) => {
     const card = (g, id, href, label, icon) => `<section class="lcard cbox" id="${id}"><h2>${esc(g.h)}</h2><p>${esc(g.p)}</p><a class="btn" href="${href}"${id === 'business' ? ' target="_blank" rel="noopener"' : ''}>${esc(g.cta)}</a><p class="cval">${esc(label)}</p></section>`;
-    const body = shell(loc, { title: c.title, intro: esc(c.intro), cls: 'contact', inner: `<div class="cgrid">${card(c.members, 'members', 'mailto:' + MAIL, MAIL)}${card(c.business, 'business', WA_URL, WA)}</div>` });
+    const d = FAQ[loc];
+    const faq = `<h2 class="sech">${esc(d.title)}</h2>` + d.groups.map((g, i) => `<section class="lcard" id="g${i + 1}"><h2>${esc(g.h)}</h2>${g.q.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</section>`).join('');
+    const body = shell(loc, { title: c.title, intro: esc(c.intro), cls: 'contact faq', inner: `<div class="cgrid">${card(c.members, 'members', 'mailto:' + MAIL, MAIL)}${card(c.business, 'business', WA_URL, WA)}</div>${faq}` });
     page(req, res, loc, { title: c.title, body, otherPath: o.contact, robots: 'index,follow', canonical: `${config.siteOrigin}${p.contact}`,
       alternates: [{ lang: 'sq', href: `${config.siteOrigin}${PATHS.sq.contact}` }, { lang: 'en', href: `${config.siteOrigin}${PATHS.en.contact}` }] });
   });
