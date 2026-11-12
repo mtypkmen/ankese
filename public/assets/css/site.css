@@ -463,6 +463,13 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 .lcta .btn{display:inline-block}
 .lcard a.btn{color:#fff}
 @media(max-width:700px){.fgrid{grid-template-columns:1fr}}
+/* icindekiler kutusu olan sayfalar (.lside): kutu sol kolonda, sayfa basindan itibaren top:104px'te sabit; footer bosluga biner */
+.lside{background:var(--bg)}
+.lside .lgrid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:32px;align-items:start;padding-top:20px;padding-bottom:72px;margin-bottom:-400px}
+.lside .lright{min-width:0;padding-bottom:400px}
+.lside .lhero{background:none;border:0;padding:0 0 26px}
+.lside .lmain{display:flex;flex-direction:column;gap:18px;min-width:0}
+@media(max-width:860px){.lside .lgrid{display:block;margin-bottom:0;padding-top:12px}.lside .lright{padding-bottom:0}.lside .ltoc{margin-bottom:16px}.lside .lhero{padding-top:6px}}
 /* "On this page" kutusu footer gelene kadar sabit kalsin: hareket alanini 320px uzat, footer bu bosluga biner */
 @media(min-width:861px){
   .lbody.hastoc{margin-bottom:-400px}
