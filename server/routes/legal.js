@@ -4,6 +4,7 @@ const config = require('../config');
 const pool = require('../db');
 const PATHS = require('../lib/paths');
 const L = require('../lib/legal_text');
+const FAQ = require('../lib/faq_text');
 const { esc, field, textarea, select } = require('../lib/html');
 const { page } = require('../lib/page');
 const rl = require('../lib/ratelimit');
@@ -51,6 +52,13 @@ function mount(loc) {
         alternates: [{ lang: 'sq', href: `${config.siteOrigin}${PATHS.sq[key]}` }, { lang: 'en', href: `${config.siteOrigin}${PATHS.en[key]}` }] });
     });
   }
+
+  router.get(p.faq, (req, res) => {
+    const d = FAQ[loc];
+    const body = `<div class="pub prose faq"><h1>${esc(d.title)}</h1><p class="lead2">${esc(d.intro)}</p>${d.groups.map((g) => `<h2>${esc(g.h)}</h2>${g.q.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}`).join('')}<p class="more"><a href="${p.contact}">${esc(c.title)} →</a></p></div>`;
+    page(req, res, loc, { title: d.title, body, otherPath: o.faq, robots: 'index,follow', canonical: `${config.siteOrigin}${p.faq}`, description: d.intro,
+      alternates: [{ lang: 'sq', href: `${config.siteOrigin}${PATHS.sq.faq}` }, { lang: 'en', href: `${config.siteOrigin}${PATHS.en.faq}` }] });
+  });
 
   const form = (req, v = {}, m = '') => `<div class="pub"><h1>${esc(c.title)}</h1><p>${esc(c.intro)} <a href="mailto:info@ankese.com">info@ankese.com</a>.</p>${m}
 <form method="post" action="${p.contact}" class="form" novalidate>${csrfInput(req)}
