@@ -463,3 +463,9 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 .lcta .btn{display:inline-block}
 .lcard a.btn{color:#fff}
 @media(max-width:700px){.fgrid{grid-template-columns:1fr}}
+/* "On this page" kutusu footer gelene kadar sabit kalsin: hareket alanini 320px uzat, footer bu bosluga biner */
+@media(min-width:861px){
+  .lbody.hastoc{margin-bottom:-400px}
+  .lbody.hastoc .lmain{padding-bottom:400px}
+  footer.foot2{position:relative;z-index:6}
+}
