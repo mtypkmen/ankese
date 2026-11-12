@@ -439,3 +439,5 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 [hidden]{display:none!important}
 .lband .lsearch{margin:30px 0 0}
 .lp.contact .lhero{padding-bottom:24px}
+.lband .lsearch{margin-top:56px}
+.lband .lsearch h2{font-size:34px;letter-spacing:-.6px;margin-bottom:16px}
