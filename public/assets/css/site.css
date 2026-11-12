@@ -419,10 +419,5 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 .lp.contact .sech{margin:30px 0 0;padding:0}
 .lp.contact .faq details,.lp.contact details{background:#fff}
 .ltoc{max-height:calc(100vh - 124px);overflow-y:auto}
-/* bilgi sayfalari: ekranin tamami */
-.lhero .w,.lbody{max-width:none;padding-left:32px;padding-right:32px}
-.lbody:not(.hastoc) .lmain{max-width:none;margin:0}
-.lbody.hastoc{grid-template-columns:260px minmax(0,1fr)}
-@media(max-width:640px){.lhero .w,.lbody{padding-left:16px;padding-right:16px}}
 .lp:not(.contact){background:var(--bg)}
 .lp:not(.contact) .lhero{background:linear-gradient(180deg,var(--lav-l) 0%,var(--bg) 100%);border-bottom:0}
