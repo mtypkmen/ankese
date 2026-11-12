@@ -19,7 +19,8 @@ const csrfInput = (req) => `<input type="hidden" name="_csrf" value="${esc(req.c
 const C = {
   sq: {
     title: 'Kontakt', intro: 'Për pyetje, kërkesa për heqje ose korrigjim të një ankese, përgjigje nga kompania ose kërkesa për të dhënat e tua, na shkruaj këtu ose në',
-    type: 'Lloji i kërkesës', types: { removal: 'Kërkesë për heqje/korrigjim të një ankese', reply: 'Jam përfaqësues i një kompanie', data: 'Kërkesë për të dhënat e mia personale', other: 'Tjetër' },
+    tabs: { members: 'Për anëtarët', business: 'Për kompanitë' },
+    type: 'Lloji i kërkesës', types: { removal: 'Kërkesë për heqje/korrigjim të një ankese', reply: 'Përgjigje ose korrigjim nga kompania', data: 'Kërkesë për të dhënat e mia personale', other: 'Tjetër' },
     name: 'Emri', email: 'Email', url: 'Lidhja e ankesës (opsionale)', message: 'Mesazhi', hint: 'Të paktën 20 karaktere. Mos dërgo fjalëkalime.',
     send: 'Dërgo', ok: 'Faleminderit. E morëm kërkesën dhe do të të përgjigjemi sa më shpejt, zakonisht brenda 5 ditëve pune.',
     eName: 'Shkruaj emrin.', eEmail: 'Shkruaj një email të vlefshëm.', eMsg: 'Mesazhi duhet të ketë 20–3000 karaktere.', eUrl: 'Lidhja nuk është e vlefshme.',
@@ -27,7 +28,8 @@ const C = {
   },
   en: {
     title: 'Contact', intro: 'For questions, takedown or correction requests about a complaint, company replies, or requests about your personal data, write to us here or at',
-    type: 'Request type', types: { removal: 'Takedown/correction request about a complaint', reply: 'I represent a company', data: 'Request about my personal data', other: 'Other' },
+    tabs: { members: 'For members', business: 'For businesses' },
+    type: 'Request type', types: { removal: 'Takedown/correction request about a complaint', reply: 'Company reply or correction', data: 'Request about my personal data', other: 'Other' },
     name: 'Name', email: 'Email', url: 'Complaint link (optional)', message: 'Message', hint: 'At least 20 characters. Do not send passwords.',
     send: 'Send', ok: 'Thank you. We received your request and will reply as soon as possible, usually within 5 business days.',
     eName: 'Enter your name.', eEmail: 'Enter a valid email address.', eMsg: 'Message must be 20–3000 characters.', eUrl: 'The link is not valid.',
@@ -35,6 +37,8 @@ const C = {
   },
 };
 
+const AUD = { members: ['removal', 'data', 'other'], business: ['reply', 'removal', 'other'] };
+const aud = (v) => (v === 'business' ? 'business' : 'members');
 const msg = (c, t) => `<p class="msg ${c}" role="status">${esc(t)}</p>`;
 const prose = (d, loc) => {
   const sec = d.sections.map((s) => `<h2>${esc(s.h)}</h2>${s.p.map((x) => (typeof x === 'string' ? `<p>${esc(x)}</p>` : `<ul>${x.ul.map((li) => `<li>${esc(li)}</li>`).join('')}</ul>`)).join('')}`).join('');
@@ -52,10 +56,11 @@ function mount(loc) {
     });
   }
 
-  const form = (req, v = {}, m = '') => `<div class="pub"><h1>${esc(c.title)}</h1><p>${esc(c.intro)} <a href="mailto:info@ankese.com">info@ankese.com</a>.</p>${m}
-<form method="post" action="${p.contact}" class="form" novalidate>${csrfInput(req)}
+  const form = (req, v = {}, m = '', a = 'members') => `<div class="pub"><h1>${esc(c.title)}</h1><p>${esc(c.intro)} <a href="mailto:info@ankese.com">info@ankese.com</a>.</p>
+<nav class="ctabs">${Object.keys(AUD).map((k) => `<a href="${p.contact}${k === 'business' ? '?for=business' : ''}"${k === a ? ' class="on" aria-current="page"' : ''}>${esc(c.tabs[k])}</a>`).join('')}</nav>${m}
+<form method="post" action="${p.contact}" class="form" novalidate>${csrfInput(req)}<input type="hidden" name="aud" value="${a}">
 <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
-${select('type', c.type, Object.entries(c.types).map(([k, l]) => ({ value: k, label: l })), { value: v.type, placeholder: '—' })}
+${select('type', c.type, AUD[a].map((k) => ({ value: k, label: c.types[k] })), { value: v.type, placeholder: '—' })}
 ${field('name', c.name, { value: v.name, maxlength: 100, autocomplete: 'name' })}
 ${field('email', c.email, { type: 'email', value: v.email, autocomplete: 'email' })}
 ${field('url', c.url, { value: v.url, required: false, maxlength: 300 })}
@@ -63,7 +68,7 @@ ${textarea('message', c.message, { value: v.message, hint: c.hint, rows: 7, maxl
 <button class="btn block" type="submit">${esc(c.send)}</button></form></div>`;
 
   router.get(p.contact, (req, res) => {
-    page(req, res, loc, { title: c.title, body: form(req), otherPath: o.contact, robots: 'index,follow', canonical: `${config.siteOrigin}${p.contact}`,
+    page(req, res, loc, { title: c.title, body: form(req, {}, '', aud(req.query.for)), otherPath: o.contact, robots: 'index,follow', canonical: `${config.siteOrigin}${p.contact}`,
       alternates: [{ lang: 'sq', href: `${config.siteOrigin}${PATHS.sq.contact}` }, { lang: 'en', href: `${config.siteOrigin}${PATHS.en.contact}` }] });
   });
 
@@ -71,11 +76,12 @@ ${textarea('message', c.message, { value: v.message, hint: c.hint, rows: 7, maxl
     try {
       const b = req.body || {};
       const v = { type: str(b.type), name: str(b.name), email: str(b.email), url: str(b.url), message: str(b.message) };
-      const fail = (key, status = 400) => page(req, res, loc, { status, title: c.title, body: form(req, v, msg('err', c[key])), otherPath: o.contact });
+      const a = aud(b.aud);
+      const fail = (key, status = 400) => page(req, res, loc, { status, title: c.title, body: form(req, v, msg('err', c[key]), a), otherPath: o.contact });
       if (sess.checkPost(req)) return fail('eCsrf', 403);
       if (!rl.hit(`contact:${sess.clientIp(req)}`, 8, 3600000).ok) return fail('eRate', 429);
       if (str(b.website) !== '') return page(req, res, loc, { title: c.title, body: `<div class="pub"><h1>${esc(c.title)}</h1>${msg('ok', c.ok)}</div>`, otherPath: o.contact });
-      const type = Object.keys(c.types).includes(v.type) ? v.type : null;
+      const type = AUD[a].includes(v.type) ? v.type : null;
       const name = one(b.name, 100), email = one(b.email, 254).toLowerCase(), message = multi(b.message, 3000);
       let url = one(b.url, 300) || null;
       if (!type) return fail('eType');
@@ -84,7 +90,8 @@ ${textarea('message', c.message, { value: v.message, hint: c.hint, rows: 7, maxl
       if ([...message].length < 20) return fail('eMsg');
       if (url) { try { const u = new URL(url); if (!/^https?:$/.test(u.protocol)) return fail('eUrl'); } catch { return fail('eUrl'); } }
       await pool.query('INSERT INTO legal_requests (type, name, email, url, message, ip_hmac) VALUES (?,?,?,?,?,?)', [type, name, email, url, message, sess.ipHmac(req)]);
-      mailer.send({ to: 'info@ankese.com', subject: `[Ankese] ${type}: ${name}`, text: `Tip: ${type}\nEmri: ${name}\nEmail: ${email}\nURL: ${url || '-'}\n\n${message}` }).catch(() => {});
+      mailer.send({ to: 'info@ankese.com', subject: `[Ankese/${a}] ${type}: ${name}`, text: `Grupi: ${a}
+Tip: ${type}\nEmri: ${name}\nEmail: ${email}\nURL: ${url || '-'}\n\n${message}` }).catch(() => {});
       page(req, res, loc, { title: c.title, body: `<div class="pub"><h1>${esc(c.title)}</h1>${msg('ok', c.ok)}</div>`, otherPath: o.contact });
     } catch (e) { next(e); }
   });
