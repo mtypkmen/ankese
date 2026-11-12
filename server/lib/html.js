@@ -70,7 +70,7 @@ function layout({ loc, title, body, user, csrf, otherPath, robots = 'noindex,nof
 ${menu}
 <div class="right">${userNav}${langSwitch}</div>
 </div></header>
-${isHome ? `<main>${body}</main>` : body.startsWith('<div class="lp') ? `<main>${body}</main>` : `<main class="w ${body.startsWith('<div class="pub">') ? 'pubmain' : 'auth'}">${body}</main>`}
+${isHome ? `<main>${body}</main>` : (body.startsWith('<div class="lp') || body.startsWith('<div class="home')) ? `<main>${body}</main>` : `<main class="w ${body.startsWith('<div class="pub">') ? 'pubmain' : 'auth'}">${body}</main>`}
 ${footer.render(loc, otherPath)}
 </body>
 </html>`;
