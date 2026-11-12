@@ -44,6 +44,18 @@ const sq = {
       { h: 'Gabime ose kërkesa për heqje', p: ['Nëse ankesa është e pasaktë ose shkel të drejtat e tua, na shkruaj përmes faqes Kontakt.'] },
     ],
   },
+  reviewGuide: {
+    title: 'Udhëzuesi i vlerësimit',
+    intro: 'Ky udhëzues shpjegon si i shqyrtojmë ankesat dhe përgjigjet e kompanive, dhe si mbahet i drejtë vlerësimi i kompanive.',
+    sections: [
+      { h: 'Çfarë kontrollojmë', p: [{ ul: ['A përshkruan ankesa një përvojë reale, të drejtpërdrejtë, me kompaninë e duhur.', 'A janë faktet të qarta: çfarë u premtua, çfarë ndodhi, çfarë kërkohet.', 'A ka të dhëna personale që duhen maskuar.', 'A respekton Rregullat e publikimit (pa fyerje, kërcënime, spam ose akuza pa bazë ndaj personave).'] }] },
+      { h: 'Vendimet e mundshme', p: [{ ul: ['Publikim siç është shkruar.', 'Publikim me maskim të pjesshëm (p.sh. të dhëna personale).', 'Kthim për korrigjim, me shpjegim se çfarë duhet ndryshuar.', 'Refuzim me arsye.'] }, 'Çdo vendim të njoftojmë me email. Nuk publikojmë ose refuzojmë ankesa në bazë të kërkesës së kompanisë; vendimi mbështetet vetëm te rregullat.'] },
+      { h: 'Pa anësi', p: ['Kompanitë nuk mund të paguajnë për të hequr, ndryshuar ose rritur renditjen e një ankese. Renditjet bazohen vetëm në të dhënat e publikuara, si ankesat e zgjidhura dhe përgjigjet e kompanisë.'] },
+      { h: 'Përgjigjet e kompanive', p: ['Përgjigjet e kompanive vlerësohen me të njëjtat rregulla: pa fyerje, pa të dhëna personale të të tjerëve, pa reklamë. Një përgjigje që nuk i përmbahet rregullave kthehet ose refuzohet.'] },
+      { h: 'Heqja e përmbajtjes pas publikimit', p: ['Një ankesë e publikuar mund të hiqet ose korrigjohet nëse del se shkel rregullat ose të drejta të tjera. Mund të na kërkosh ta rishqyrtojmë një vendim përmes faqes Kontakt; zakonisht përgjigjemi brenda 5 ditëve pune.'] },
+      { h: 'Ankesa të rreme ose të manipuluara', p: ['Ankesat e shkruara për të dëmtuar një konkurrent, të porositura ose të shumëfishuara refuzohen dhe llogaria mund të mbyllet. Të njëjtën rregull zbatojmë për vlerësime të rreme pozitive nga kompanitë.'] },
+    ],
+  },
   cookies: {
     title: 'Cookies',
     intro: 'Ankese.com përdor vetëm cookie të nevojshme. Nuk përdorim cookie reklamimi dhe nuk përdorim analitikë të palëve të treta.',
@@ -94,6 +106,18 @@ const en = {
       { h: 'How we review', p: ['Every complaint goes through an automatic check (language, personal data, spam) and is then reviewed by a moderator. We may publish it, partially mask it, or reject it with a reason. You are notified by email.'] },
       { h: 'Right of reply', p: ['The company may reply publicly. The reply appears next to the complaint.'] },
       { h: 'Errors or takedown requests', p: ['If a complaint is inaccurate or infringes your rights, write to us through the Contact page.'] },
+    ],
+  },
+  reviewGuide: {
+    title: 'Review guidelines',
+    intro: 'This guide explains how we review complaints and company replies, and how company rankings are kept fair.',
+    sections: [
+      { h: 'What we check', p: [{ ul: ['Whether the complaint describes a real, first-hand experience with the right company.', 'Whether the facts are clear: what was promised, what happened, what is requested.', 'Whether personal data needs to be masked.', 'Whether it follows the Publishing rules (no insults, threats, spam or unfounded accusations against individuals).'] }] },
+      { h: 'Possible decisions', p: [{ ul: ['Published as written.', 'Published with partial masking (for example personal data).', 'Returned for correction, with an explanation of what to change.', 'Rejected, with a reason.'] }, 'We notify you of every decision by email. We do not publish or reject complaints at a company\'s request; decisions rest only on the rules.'] },
+      { h: 'Impartiality', p: ['Companies cannot pay to remove, change or reposition a complaint. Rankings are based only on published data, such as resolved complaints and company replies.'] },
+      { h: 'Company replies', p: ['Company replies are reviewed under the same rules: no insults, no personal data of others, no advertising. A reply that does not follow the rules is returned or rejected.'] },
+      { h: 'Removing content after publication', p: ['A published complaint may be removed or corrected if it turns out to break the rules or infringe other rights. You can ask us to reconsider a decision through the Contact page; we usually reply within 5 business days.'] },
+      { h: 'Fake or manipulated complaints', p: ['Complaints written to harm a competitor, commissioned, or duplicated are rejected and the account may be closed. The same rule applies to fake positive reviews by companies.'] },
     ],
   },
   cookies: {

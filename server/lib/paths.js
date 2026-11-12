@@ -12,3 +12,5 @@ Object.assign(PATHS.sq, { rules: '/rregullat', cookies: '/cookies', contact: '/k
 Object.assign(PATHS.en, { rules: '/en/rules', cookies: '/en/cookies', contact: '/en/contact' });
 Object.assign(PATHS.sq, { complaints: '/ankesat', top: '/top-20', best: '/me-te-mirat-e-muajit' });
 Object.assign(PATHS.en, { complaints: '/en/complaints', top: '/en/top-20', best: '/en/best-of-month' });
+Object.assign(PATHS.sq, { reviewGuide: '/udhezuesi-i-vleresimit' });
+Object.assign(PATHS.en, { reviewGuide: '/en/review-guidelines' });
