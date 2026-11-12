@@ -392,11 +392,12 @@
 .onec-loc{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 20px 0 16px;border-radius:23px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:15px;font-weight:600}
 .onec-loc svg{width:20px;height:20px;fill:none;stroke:var(--gr);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-/* Top 20 sayfasi: ana sayfadaki kutu/satir tasarimi, sahte grafik olmadan */
+/* Top 20 sayfasi: ana sayfadaki kutu/satir tasarimi. .live = trend verisi (top20.js) ile cizilmis, tiklanabilir satirlar */
 .t20page .top20{padding:64px 0 96px}
 .t20page .top20 h1{margin:0 0 14px;text-align:center;font-size:clamp(36px,3.8vw,56px);line-height:1.05;letter-spacing:-1px;font-weight:700;color:#1a1a2e}
 .t20page .top20 h1 span{color:var(--gr2)}
-.t20page .t20-row{grid-template-columns:40px 92px minmax(0,1fr) auto;cursor:default}
 .t20page .t20 img.lg{object-fit:contain;background:#fff;border:1px solid #E6E8EE;padding:8px;box-sizing:border-box}
-.t20page .t20 .pc b{color:#1a1a2e}
-@media(max-width:600px){.t20page .top20 .w{padding-left:16px;padding-right:16px}.t20page .top20-box{padding:14px}.t20page .t20-row{grid-template-columns:28px 64px minmax(0,1fr) auto;column-gap:12px;height:96px;padding:0 14px}.t20page .t20 .lg{width:64px;height:48px}.t20page .t20 .nm a{font-size:17px}}
+.t20page .t20:not(.live) .t20-row{grid-template-columns:40px 92px minmax(0,1fr) auto;cursor:default}
+.t20page .t20:not(.live) .pc b{color:#1a1a2e}
+@media(max-width:1000px){.t20page .t20 .sp{display:none}.t20page .t20-row{grid-template-columns:40px 92px minmax(0,1fr) auto 24px}.t20page .t20:not(.live) .t20-row{grid-template-columns:40px 92px minmax(0,1fr) auto}}
+@media(max-width:600px){.t20page .top20 .w{padding-left:16px;padding-right:16px}.t20page .top20-box{padding:14px}.t20page .t20-row{grid-template-columns:28px 56px minmax(0,1fr) auto 20px;column-gap:12px;height:96px;padding:0 14px}.t20page .t20:not(.live) .t20-row{grid-template-columns:28px 56px minmax(0,1fr) auto}.t20page .t20 .lg{width:56px;height:44px}.t20page .t20 .nm a{font-size:17px}.t20page .t20-in{margin:0 14px}}

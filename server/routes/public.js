@@ -162,9 +162,12 @@ function mount(loc) {
   router.get(p.top, async (req, res, next) => {
     try {
       const [rows] = await pool.query(`${COMPANY_SQL} WHERE c.status = 'active' ORDER BY n DESC, CRC32(CONCAT(c.id, YEARWEEK(UTC_DATE(), 3))), c.id LIMIT 20`); // sikayet yokken esitlikte haftalik sabit rastgele 20
+      // trend verisi (demo) yalniz gelistirmede; uretimde sade liste, uydurma rakam yok
+      const trend = !config.prod && rows.length
+        ? `<script type="application/json" id="t20-data">${JSON.stringify(require('../lib/top20_demo').build(rows, loc, (r) => `${p.company}/${r.slug}`, (r) => `${r.city ? `${r.city}, ` : ''}${t.countries[r.country_code]}`)).replace(/</g, '\\u003c')}</script>` : '';
       out(req, res, { title: L.topH, otherPath: o.top, canonical: `${config.siteOrigin}${p.top}`, robots: rows.length ? 'index,follow' : 'noindex,follow', description: L.topP,
-        head: '<link rel="stylesheet" href="/assets/css/home.css?v=2">',
-        body: top20Body(rows, L, t, p) });
+        head: `<link rel="stylesheet" href="/assets/css/home.css?v=2">${trend ? '<script src="/assets/js/top20.js" defer></script>' : ''}`,
+        body: top20Body(rows, L, t, p) + trend });
     } catch (e) { next(e); }
   });
 
