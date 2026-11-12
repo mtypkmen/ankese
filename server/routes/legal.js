@@ -1,5 +1,6 @@
 'use strict';
 const FAQ = require('../lib/faq_text');
+const BIZ = require('../lib/biz_text');
 const express = require('express');
 const config = require('../config');
 const PATHS = require('../lib/paths');
@@ -22,12 +23,25 @@ const C = {
 const MAIL = 'info@ankese.com', WA = '+34 643 113 844', WA_URL = 'https://wa.me/34643113844';
 
 const TOC = { sq: 'Në këtë faqe', en: 'On this page' };
-const shell = (loc, { title, intro, meta, toc = [], inner, band = '', extra = '', tocLabel = '', cls = '' }) => `<div class="lp ${cls}"><header class="lhero"><div class="w"><nav class="crumbs" aria-label="breadcrumb"><a href="${PATHS[loc].home}">Ankese.com</a> / <span>${esc(title)}</span></nav><h1>${esc(title)}</h1>${intro ? `<p class="lintro">${intro}</p>` : ''}${meta ? `<p class="lmeta">${esc(meta)}</p>` : ''}${extra}</div></header>${band ? `<div class="lband"><div class="w">${band}</div></div>` : ''}
-<div class="w lbody${toc.length ? ' hastoc' : ''}">${toc.length ? `<aside class="ltoc"><b>${esc(tocLabel || TOC[loc])}</b>${toc.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join('')}</aside>` : ''}<div class="lmain">${inner}</div></div></div>`;
+const shellFlat = (loc, { title, intro, meta, toc = [], inner, band = '', extra = '', tocLabel = '', cls = '' }) => `<div class="lp ${cls}${toc.length && !band ? ' lpin' : ''}"><header class="lhero"><div class="w"><nav class="crumbs" aria-label="breadcrumb"><a href="${PATHS[loc].home}">Ankese.com</a> / <span>${esc(title)}</span></nav><h1>${esc(title)}</h1>${intro ? `<p class="lintro">${intro}</p>` : ''}${meta ? `<p class="lmeta">${esc(meta)}</p>` : ''}${extra}</div></header>${band ? `<div class="lband"><div class="w">${band}</div></div>` : ''}
+<div class="w lbody${toc.length ? ' hastoc' : ''}">${toc.length ? `<aside class="ltoc"><b>${esc(tocLabel || TOC[loc])}</b>${toc.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join('')}</aside>` : ''}<div class="lmain">${inner}</div></div>${toc.length && !band ? '<script src="/assets/js/toc-pin.js" defer></script>' : ''}</div>`;
+const shell = shellFlat;
 const prose = (d, loc) => {
   const sec = d.sections.map((s, i) => `<section class="lcard" id="s${i + 1}"><h2>${esc(s.h)}</h2>${s.p.map((x) => (typeof x === 'string' ? `<p>${esc(x)}</p>` : `<ul>${x.ul.map((li) => `<li>${esc(li)}</li>`).join('')}</ul>`)).join('')}</section>`).join('');
   return shell(loc, { title: d.title, intro: d.intro ? esc(d.intro) : '', meta: L.UPDATED[loc], toc: d.sections.map((s, i) => ['s' + (i + 1), s.h]), inner: sec });
 };
+
+// Isletme ve odul sayfalari: biz_text.js bloklarini kartlara cevirir
+const blocks = (x) => (typeof x === 'string' ? `<p>${esc(x)}</p>`
+  : x.ul ? `<ul>${x.ul.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`
+  : x.cards ? `<div class="fgrid">${x.cards.map(([h, t]) => `<div class="fcard"><h3>${esc(h)}</h3><p>${esc(t)}</p></div>`).join('')}</div>`
+  : x.steps ? `<ol class="lsteps">${x.steps.map(([h, t]) => `<li><b>${esc(h)}</b><span>${esc(t)}</span></li>`).join('')}</ol>`
+  : `<div class="lfaq">${x.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div>`);
+function bizPage(d, loc, ctaHref, external) {
+  const sec = d.sections.map((s, i) => `<section class="lcard" id="s${i + 1}"><h2>${esc(s.h)}</h2>${s.p.map(blocks).join('')}</section>`).join('');
+  const cta = `<section class="lcard lcta"><h2>${esc(d.cta.h)}</h2><p>${esc(d.cta.p)}</p><a class="btn" href="${ctaHref}"${external ? ' target="_blank" rel="noopener"' : ''}>${esc(d.cta.btn)}</a></section>`;
+  return shell(loc, { title: d.title, intro: esc(d.intro), toc: d.sections.map((s, i) => ['s' + (i + 1), s.h]), inner: sec + cta });
+}
 
 function mount(loc) {
   const p = PATHS[loc], o = PATHS[loc === 'sq' ? 'en' : 'sq'], c = C[loc];
@@ -36,6 +50,14 @@ function mount(loc) {
       const d = L[loc][key];
       page(req, res, loc, { title: d.title, body: prose(d, loc), otherPath: o[key], robots: 'index,follow', canonical: `${config.siteOrigin}${p[key]}`,
         description: d.intro || d.sections[0].p[0].slice(0, 150),
+        alternates: [{ lang: 'sq', href: `${config.siteOrigin}${PATHS.sq[key]}` }, { lang: 'en', href: `${config.siteOrigin}${PATHS.en[key]}` }] });
+    });
+  }
+
+  for (const [key, href, ext] of [['business', WA_URL, true], ['awards', p.top, false]]) {
+    router.get(p[key], (req, res) => {
+      const d = BIZ[loc][key];
+      page(req, res, loc, { title: d.title, body: bizPage(d, loc, href, ext), otherPath: o[key], robots: 'index,follow', canonical: `${config.siteOrigin}${p[key]}`, description: d.intro,
         alternates: [{ lang: 'sq', href: `${config.siteOrigin}${PATHS.sq[key]}` }, { lang: 'en', href: `${config.siteOrigin}${PATHS.en[key]}` }] });
     });
   }

@@ -102,7 +102,8 @@ async function data(loc) {
      ) r WHERE rn <= 5 ORDER BY category_id, rn`);
   const lb = {};
   for (const r of lbRows) (lb[r.cat] ||= []).push(r);
-  const d = { st, cats, latest, top, lb };
+  const t20 = await require('../lib/top20_data').block(loc); // /top-20 sayfasiyla ayni liste
+  const d = { st, cats, latest, top, lb, t20 };
   cache[loc] = { at: Date.now(), d };
   return d;
 }
@@ -117,7 +118,7 @@ function mount(loc) {
   const t = H[loc], p = PATHS[loc], o = PATHS[loc === 'sq' ? 'en' : 'sq'];
   router.get(p.home, async (req, res, next) => {
     try {
-      const [{ st, cats, latest, top, lb }] = await Promise.all([data(loc), footer.refresh()]);
+      const [{ st, cats, latest, top, lb, t20 }] = await Promise.all([data(loc), footer.refresh()]);
       const bestCats = cats.filter((k) => lb[k.slug]); // yalnizca markasi olan kategoriler
       const STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>';
       // preview'daki baş harf kutusu sahte veri icindi; gercek markada logo, logo yoksa ayni renkli bas harf kutusu
@@ -210,7 +211,7 @@ ${lbLists ? `<div class="lb-head" aria-hidden="true"><span>${esc(t.sinceY)}</spa
 
 <section class="top20" aria-labelledby="top20-h"><div class="w">
 <h2 id="top20-h">Top <span>20</span></h2><p class="top20-sub">${esc(t.topSub)}</p>
-<div class="top20-box">${soonBox(t, t.topSoon)}</div>
+${t20.html || `<div class="top20-box">${soonBox(t, t.topSoon)}</div>`}
 <div class="top20-more"><a class="t20-more" href="${p.top}">${esc(t.topMore)}${ARROW}</a></div>
 </div></section>
 
@@ -221,7 +222,7 @@ ${lbLists ? `<div class="lb-head" aria-hidden="true"><span>${esc(t.sinceY)}</spa
 <a class="onec-link" href="https://joinonecommunity.com" target="_blank" rel="noopener">joinonecommunity.com</a></div></div>
 </div></div></section></div>`;
       page(req, res, loc, { title: t.title, body, otherPath: o.home, robots: 'index,follow', canonical: `${config.siteOrigin}${p.home}`, description: t.desc,
-        head: '\n<link rel="stylesheet" href="/assets/css/home.css?v=2">\n<script src="/assets/js/home.js?v=2" defer></script>',
+        head: '\n<link rel="stylesheet" href="/assets/css/home.css?v=2">\n<script src="/assets/js/home.js?v=2" defer></script>' + (t20.rows.length ? '\n<script src="/assets/js/top20.js" defer></script>' : ''),
         alternates: [{ lang: 'sq', href: `${config.siteOrigin}/` }, { lang: 'en', href: `${config.siteOrigin}/en/` }, { lang: 'x-default', href: `${config.siteOrigin}/` }] });
     } catch (e) { next(e); }
   });

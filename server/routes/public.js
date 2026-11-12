@@ -28,8 +28,6 @@ const logoTag = (r, size = 44) => logoOk(r.logo)
   ? `<img class="clogo" src="/assets/logos/${r.logo}" width="${size}" height="${size}" alt="${esc(r.name)}" loading="lazy">`
   : `<span class="clogo ph" aria-hidden="true">${esc([...r.name][0].toUpperCase())}</span>`;
 
-const top20Row = (r, i, t, p) => `<li><div class="t20-row"><span class="n">${i + 1}</span>${logoOk(r.logo) ? `<img class="lg" src="/assets/logos/${r.logo}" width="92" height="64" alt="${esc(r.name)}" loading="lazy">` : `<span class="av lg av${i % 6}" aria-hidden="true">${esc([...r.name][0].toUpperCase())}</span>`}<div class="nm"><a href="${p.company}/${esc(r.slug)}">${esc(r.name)}</a><small>${esc(r.city || '')}${r.city ? ', ' : ''}${esc(t.countries[r.country_code])}</small></div><div class="pc"><b>${r.n}</b><small>${esc(t.complaints.toLowerCase())}</small></div></div></li>`;
-const top20Body = (rows, L, t, p) => `<div class="home t20page"><section class="top20"><div class="w"><h1>Top <span>20</span></h1><p class="top20-sub">${esc(L.topP)}</p>${rows.length ? `<div class="top20-box"><ol class="t20">${rows.map((r, i) => top20Row(r, i, t, p)).join('')}</ol></div>` : `<p class="top20-sub">${esc(L.empty)}</p>`}</div></section></div>`;
 
 function companyList(rows, t, p) {
   if (!rows.length) return `<p>${esc(t.no_companies)}</p>`;
@@ -55,6 +53,10 @@ function mount(loc) {
            FROM companies c LEFT JOIN cities ci ON ci.id = c.city_id JOIN categories k ON k.id = c.category_id
           WHERE c.slug = ? AND c.status = 'active'`, [req.params.slug]);
       const c = cr[0]; if (!c) return notFound(req, res);
+      // gunluk goruntulenme sayaci (Top 20 trendi); botlari ve ikinci sayfalari sayma, hata sayfayi bozmasin
+      if (!/bot|crawl|spider|slurp|preview|headless/i.test(req.get('user-agent') || '') && !req.query.page) {
+        pool.query('INSERT INTO company_visits (company_id, day, hits) VALUES (?, UTC_DATE(), 1) ON DUPLICATE KEY UPDATE hits = hits + 1', [c.id]).catch(() => {});
+      }
       const pg = pageNo(req.query.page);
       const [[st]] = await pool.query(`SELECT COUNT(*) total, SUM(status = 'resolved') resolved FROM complaints WHERE company_id = ? AND status IN ('published','resolved')`, [c.id]);
       const [rows] = await pool.query(
@@ -161,10 +163,10 @@ function mount(loc) {
 
   router.get(p.top, async (req, res, next) => {
     try {
-      const [rows] = await pool.query(`${COMPANY_SQL} WHERE c.status = 'active' ORDER BY n DESC, CRC32(CONCAT(c.id, YEARWEEK(UTC_DATE(), 3))), c.id LIMIT 20`); // sikayet yokken esitlikte haftalik sabit rastgele 20
+      const { rows, html } = await require('../lib/top20_data').block(loc); // ana sayfadaki Top 20 ile ayni liste
       out(req, res, { title: L.topH, otherPath: o.top, canonical: `${config.siteOrigin}${p.top}`, robots: rows.length ? 'index,follow' : 'noindex,follow', description: L.topP,
-        head: '<link rel="stylesheet" href="/assets/css/home.css?v=2">',
-        body: top20Body(rows, L, t, p) });
+        head: `<link rel="stylesheet" href="/assets/css/home.css?v=2">${rows.length ? '<script src="/assets/js/top20.js" defer></script>' : ''}`,
+        body: `<div class="home t20page"><section class="top20"><div class="w"><h1>Top <span>20</span></h1><p class="top20-sub">${esc(L.topP)}</p>${html || `<p class="top20-sub">${esc(L.empty)}</p>`}</div></section></div>` });
     } catch (e) { next(e); }
   });
 
