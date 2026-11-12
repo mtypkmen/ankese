@@ -16,3 +16,5 @@ Object.assign(PATHS.sq, { complaints: '/ankesat', top: '/top-20', best: '/me-te-
 Object.assign(PATHS.en, { complaints: '/en/complaints', top: '/en/top-20', best: '/en/best-of-month', brands: '/en/brands', newBrands: '/en/new-brands' });
 Object.assign(PATHS.sq, { privacyMembers: '/privatesia/anetaret', privacyVisitors: '/privatesia/vizitoret', reviewGuide: '/udhezuesi-i-vleresimit', transparency: '/transparenca' });
 Object.assign(PATHS.en, { privacyMembers: '/en/privacy/members', privacyVisitors: '/en/privacy/visitors', reviewGuide: '/en/review-guidelines', transparency: '/en/transparency' });
+Object.assign(PATHS.sq, { business: '/biznes', awards: '/cmimet' });
+Object.assign(PATHS.en, { business: '/en/business', awards: '/en/awards' });

@@ -441,3 +441,25 @@ textarea:focus,select:focus{outline:2px solid var(--blue);outline-offset:1px;bor
 .lp.contact .lhero{padding-bottom:24px}
 .lband .lsearch{margin-top:56px}
 .lband .lsearch h2{font-size:34px;letter-spacing:-.6px;margin-bottom:16px}
+/* isletme / odul sayfalari */
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:6px 0 0}
+.fcard{background:var(--bg);border:1px solid #ECEBF8;border-radius:20px;padding:20px 22px}
+.fcard h3{margin:0 0 6px;font-size:17px;color:var(--navy)}
+.fcard p{margin:0;font-size:15px;line-height:1.6;color:var(--mute)}
+.lsteps{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px;counter-reset:st}
+.lsteps li{counter-increment:st;position:relative;padding:4px 0 4px 54px;margin:0;font-size:16px}
+.lsteps li::before{content:counter(st);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700}
+.lsteps b{display:block;color:var(--navy);font-size:17px}
+.lsteps span{color:var(--mute)}
+.lfaq details{border:1px solid #ECEBF8;border-radius:18px;background:#fff;margin:0 0 10px}
+.lfaq summary{cursor:pointer;padding:14px 18px;font-weight:600;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:12px}
+.lfaq summary::-webkit-details-marker{display:none}
+.lfaq summary::after{content:"+";font-size:22px;line-height:1;color:var(--blue)}
+.lfaq details[open] summary::after{content:"\2212"}
+.lfaq details p{margin:0;padding:0 18px 16px}
+.lcta{background:var(--navy);border-color:var(--navy)}
+.lcta h2,.lcta p{color:#fff}
+.lcta p{opacity:.85;margin-bottom:18px}
+.lcta .btn{display:inline-block}
+.lcard a.btn{color:#fff}
+@media(max-width:700px){.fgrid{grid-template-columns:1fr}}
